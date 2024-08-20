@@ -1,3 +1,63 @@
+@font-face {
+  font-family: 'Arial';
+  src: url('./assets/fonts/Arial.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Black';
+  src: url('./assets/fonts/ArialBlack.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Bold';
+  src: url('./assets/fonts/ArialBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Bold Italic';
+  src: url('./assets/fonts/ArialBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Italic';
+  src: url('./assets/fonts/ArialItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('./assets/fonts/ArialNarrow.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Narrow Bold';
+  src: url('./assets/fonts/ArialNarrowBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Narrow Bold Italic';
+  src: url('./assets/fonts/ArialNarrowBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Narrow Italic';
+  src: url('./assets/fonts/ArialNarrowItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Rounded Bold';
+  src: url('./assets/fonts/ArialRoundedBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Unicode';
+  src: url('./assets/fonts/ArialUnicode.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./assets/fonts/Avenir.ttc') format('truetype');
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
