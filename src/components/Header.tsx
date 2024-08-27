@@ -1,7 +1,7 @@
 import Nav from './Nav'
 import MobileNav from './MobileNav'
 
-function Header () {
+const Header = () => {
     return (
         <header className="sticky top-0 bg-advancedDarkBlue text-white h-16 flex items-center">
             <Nav className="hidden md:block"/>
