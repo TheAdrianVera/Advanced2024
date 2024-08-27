@@ -21,15 +21,15 @@ const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
             </Link>
             <TiThMenu className='hover:text-advancedLightBlue' size={32} onClick={toggleMenu}/>
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center z-50">
-                    <button className="absolute top-5 right-5 text-white text-3xl" onClick={toggleMenu}>&times;</button>
+                <div className="fixed inset-0 bg-advancedBlue flex flex-col items-center justify-center z-50">
+                    <button className="hover:text-red-500 absolute top-5 right-5 text-white text-3xl" onClick={toggleMenu}>&times;</button>
                     <ul className="flex flex-col space-y-4 text-white text-2xl">
-                        <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
-                        <li><Link to="/careers" onClick={toggleMenu}>Careers</Link></li>
-                        <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
-                        <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
-                        <li><Link to="/community" onClick={toggleMenu}>Community</Link></li>
-                        <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+                        <li className='hover:text-advancedNavyBlue'><Link to="/" onClick={toggleMenu}>Home</Link></li>
+                        <li className='hover:text-advancedNavyBlue'><Link to="/careers" onClick={toggleMenu}>Careers</Link></li>
+                        <li className='hover:text-advancedNavyBlue'><Link to="/about" onClick={toggleMenu}>About</Link></li>
+                        <li className='hover:text-advancedNavyBlue'><Link to="/services" onClick={toggleMenu}>Services</Link></li>
+                        <li className='hover:text-advancedNavyBlue'><Link to="/community" onClick={toggleMenu}>Community</Link></li>
+                        <li className='hover:text-advancedNavyBlue'><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
                     </ul>
                 </div>
             )}
