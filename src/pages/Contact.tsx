@@ -1,14 +1,12 @@
 import React from 'react'
-import PageBanner from '../components/PageBanner'
+import ContactSection from '../components/pagesections/ContactSection'
+import PageBanner from '../components/pagesections/PageBanner'
 
 const Contact: React.FC = () => {
   return (
     <>
       <PageBanner title='Contact Our Team' subtitle='Let’s work together—contact us today.' />
-      <div>
-        <h1>Contact Page</h1>
-        <p>Centent</p>
-      </div>
+      <ContactSection />
     </>
 
   )

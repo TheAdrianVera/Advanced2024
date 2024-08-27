@@ -1,5 +1,5 @@
 import React from 'react'
-import PageBanner from '../components/PageBanner'
+import PageBanner from '../components/pagesections/PageBanner'
 
 const Services: React.FC = () => {
   return (
