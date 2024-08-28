@@ -1,11 +1,16 @@
 import React from 'react'
+import PageBanner from '../components/pagesections/PageBanner'
 
 const About: React.FC = () => {
   return (
-    <div>
-      <h1>About Page</h1>
-      <p>What's this all aboot.</p>
-    </div>
+    <>
+      <PageBanner title='About Our Practice' subtitle='Learn more about high quality Home Healthcare we provide.' />
+      <div>
+        <h1>About Page</h1>
+        <p>What's this all aboot.</p>
+      </div>
+    </>
+
   )
 }
 
