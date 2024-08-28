@@ -1,5 +1,5 @@
 import React from 'react'
-import { APIProvider, Map } from '@vis.gl/react-google-maps'
+import { APIProvider, Map, MapCameraChangedEvent } from '@vis.gl/react-google-maps'
 
 interface ContactSectionProps {
 
@@ -12,7 +12,7 @@ const containerStyle = {
 
 const ContactSection: React.FC = () => {
     const apiKey = 'AIzaSyAZXGtGLFPg67JJm4IyKqQjx8Plgdx4whI';
-
+    
     return (
         <div className='section'>
             <div className='flex flex-col'>
@@ -24,25 +24,26 @@ const ContactSection: React.FC = () => {
                         <APIProvider apiKey={apiKey}>
                             <Map
                                 className='map-container'
-                                defaultCenter={{lat: 22.54992, lng: 0}}
-                                defaultZoom={3}
-                                gestureHandling={'greedy'}
-                                disableDefaultUI={true}
+                                defaultZoom={15}
+                                defaultCenter={ { lat: 39.74320052102959, lng: -89.71238270299604 } }
+                                onCameraChanged={ (ev: MapCameraChangedEvent) =>
+                                    console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
+                                }
                             />
                         </APIProvider>
                     </div>
                     <div className='contact-info'>
-                        <h2>Advanced Healthcare Services LLC.</h2>
-                        <p>3900 Pintail Drive, Suite A <br /> Springfield, IL 62711</p>
+                        <h2 className='font-bold'>Advanced Healthcare Services LLC.</h2>
+                        <p className='pb-3'>3900 Pintail Drive, Suite A <br /> Springfield, IL 62711</p>
                         <h2>Phone:</h2>
-                        <p>(217) 726-6956</p>
-                        <h2>Fax</h2>
-                        <p>(217) 726-7082</p>
-                        <h2>Email</h2>
-                        <p>info@ahsllc.org</p>
-                        <h2>Hours</h2>
+                        <p className='pb-3'>(217) 726-6956</p>
+                        <h2>Fax:</h2>
+                        <p className='pb-3'>(217) 726-7082</p>
+                        <h2>Email:</h2>
+                        <p className='pb-3'>info@ahsllc.org</p>
+                        <h2>Hours:</h2>
                         <p>Monday - Friday: 8:00 AM to 4:30 PM</p>
-                        <p>Saturday - Sunday: On Call</p>
+                        <p className='pb-3'>Saturday - Sunday: On Call</p>
                     </div>
                 </div>
 
