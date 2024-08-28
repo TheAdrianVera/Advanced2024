@@ -2,6 +2,16 @@
   padding: 2rem;
 }
 
+.map-container {
+  width: 100%;
+  height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .map-container {
+      width: 50vw;
+  }
+}
 
 
 
