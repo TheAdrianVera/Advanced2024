@@ -1,8 +1,17 @@
 import React from 'react'
-import { APIProvider, Map, MapCameraChangedEvent } from '@vis.gl/react-google-maps'
+import { 
+    Marker,
+    APIProvider, 
+    Map
+} from '@vis.gl/react-google-maps'
 
-interface ContactSectionProps {
+interface ContactSectionProps {}
 
+type Poi ={ 
+    key: string, 
+    location: google.maps.LatLngLiteral, 
+    label?: string,
+    labelColor?: string
 }
 
 const containerStyle = {
@@ -10,9 +19,36 @@ const containerStyle = {
     height: '400px'
 }
 
+const locations: Poi[] = [
+    {
+        key: "Advanced Healthcare LLC.", 
+        location: {lat: 39.74320052102959, lng: -89.71238270299604},
+        label: `Advanced \nHealthcare LLC.`,
+        labelColor: "#FF0000",
+    }
+]
+
+const PoiMarkers = (props: {pois: Poi[]}) => {
+    return (
+        <>
+            {props.pois.map((poi: Poi) => (
+                <Marker
+                    key={poi.key}
+                    position={poi.location}
+                    label={{ 
+                        text: poi.label || '', 
+                        color: poi.labelColor,
+                        className: 'marker-label'
+                    }}
+                />
+            ))}
+        </>
+    )
+}
+
 const ContactSection: React.FC = () => {
-    const apiKey = 'AIzaSyAZXGtGLFPg67JJm4IyKqQjx8Plgdx4whI';
-    
+    const apiKey = 'AIzaSyAZXGtGLFPg67JJm4IyKqQjx8Plgdx4whI'
+
     return (
         <div className='section'>
             <div className='flex flex-col'>
@@ -26,21 +62,20 @@ const ContactSection: React.FC = () => {
                                 className='map-container'
                                 defaultZoom={15}
                                 defaultCenter={ { lat: 39.74320052102959, lng: -89.71238270299604 } }
-                                onCameraChanged={ (ev: MapCameraChangedEvent) =>
-                                    console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
-                                }
-                            />
+                            >
+                                <PoiMarkers pois={locations} />
+                            </Map>
                         </APIProvider>
                     </div>
-                    <div className='contact-info'>
-                        <h2 className='font-bold'>Advanced Healthcare Services LLC.</h2>
+                    <div className='contact-info mt-10 md:mt-0'>
+                        <h2 className='mb-1 font-bold'>Advanced Healthcare Services LLC.</h2>
                         <p className='pb-3'>3900 Pintail Drive, Suite A <br /> Springfield, IL 62711</p>
                         <h2>Phone:</h2>
-                        <p className='pb-3'>(217) 726-6956</p>
+                        <p className='pb-3'><a href='tel:+12177266956' className='text-blue-500'>(217) 726-6956</a></p>
                         <h2>Fax:</h2>
-                        <p className='pb-3'>(217) 726-7082</p>
+                        <p className='pb-3'><a href='tel:+12177267082' className='text-blue-500'>(217) 726-7082</a></p>
                         <h2>Email:</h2>
-                        <p className='pb-3'>info@ahsllc.org</p>
+                        <p className='pb-3'><a href='mailto:info@ahsllc.org' className='text-blue-500'>info@ahsllc.org</a></p>
                         <h2>Hours:</h2>
                         <p>Monday - Friday: 8:00 AM to 4:30 PM</p>
                         <p className='pb-3'>Saturday - Sunday: On Call</p>
