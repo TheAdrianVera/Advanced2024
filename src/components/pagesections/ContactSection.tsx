@@ -3,7 +3,7 @@ import React from 'react'
 interface ContactSectionProps {}
 
 const ContactSection: React.FC = () => {
-    const apiKey = import.meta.env.REACT_APP_GOOGLE_MAPS_API_KEY || ''
+    const apiKey = import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY || ''
 
     return (
         <div className='section'>
@@ -13,11 +13,9 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div className='flex flex-col md:flex-row py-10'>
                         <iframe
-                            
                             height="400px"
                             loading="lazy"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZXGtGLFPg67JJm4IyKqQjx8Plgdx4whI
-                                &q=Advanced+Healthcare+Services+Springfield"
+                            src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Advanced+Healthcare+Services+Springfield`}
                             className='w-full md:w-1/2 md:mr-5'
                         >
                         </iframe>
