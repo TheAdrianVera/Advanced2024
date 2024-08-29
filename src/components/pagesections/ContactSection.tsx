@@ -6,20 +6,19 @@ const ContactSection: React.FC = () => {
     const apiKey = import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY || ''
 
     return (
-        <div className='section'>
+        <div className='section bg-advancedNavyBlue text-white'>
             <div className='flex flex-col'>
                 <div className='flex justify-center py-10'>
                     <h1 className='section-title'>Contact Us</h1>
                 </div>
                 <div className='flex flex-col md:flex-row py-10'>
-                        <iframe
-                            height="400px"
-                            loading="lazy"
-                            src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Advanced+Healthcare+Services+Springfield`}
-                            className='w-full md:w-1/2 md:mr-5'
-                        >
-                        </iframe>
-
+                    <iframe
+                        height="400px"
+                        loading="lazy"
+                        src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Advanced+Healthcare+Services+Springfield`}
+                        className='w-full md:w-1/2 md:mr-5'
+                    >
+                    </iframe>
                     <div className='contact-info mt-10 md:mt-0'>
                         <h2 className='mb-1 font-bold'>Advanced Healthcare Services LLC.</h2>
                         <p className='pb-3'>3900 Pintail Drive, Suite A <br /> Springfield, IL 62711</p>
