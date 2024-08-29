@@ -12,18 +12,9 @@
   z-index: 1; /* Ensure the map is below the header nav */
 }
 
-.map-container {
-  width: 100%;
-  height: 50vh;
+.section-title {
+  font-size: 2rem;
 }
-
-@media (min-width: 768px) {
-  .map-container {
-      width: 50vw;
-  }
-}
-
-
 
 
 /* #root {
