@@ -12,29 +12,6 @@
   z-index: 1; /* Ensure the map is below the header nav */
 }
 
-.map-container {
-  width: 100%;
-  height: 50vh;
-}
-
-.marker-label {
-  white-space: pre-wrap;
-  text-align: left;    /* Optional: Center align the text */
-  width: 100px;          /* Adjust the width as needed */
-  position: relative;    /* Position relative to adjust the label */
-  top: 40px;            /* Adjust the vertical position */
-  left: 60px;
-  font-weight: 500;    
-}
-
-@media (min-width: 768px) {
-  .map-container {
-      width: 50vw;
-  }
-}
-
-
-
 
 /* #root {
   max-width: 1280px;
