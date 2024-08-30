@@ -22,7 +22,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                 <div className="absolute inset-0 bg-advancedLightBlue opacity-50"></div> // Change this line for different overlay colors and opacities
             )}
 
-            <div className="relative z-10">
+            <div className="relative">
                 <h1 className="text-4xl font-bold mb-2 uppercase">{title}</h1>
                 {subtitle && (
                     <p className="text-lg">{subtitle}</p>

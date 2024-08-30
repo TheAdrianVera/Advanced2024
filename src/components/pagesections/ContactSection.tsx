@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface ContactSectionProps {}
+// interface ContactSectionProps {}
 
 const ContactSection: React.FC = () => {
     const apiKey = import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY || ''
