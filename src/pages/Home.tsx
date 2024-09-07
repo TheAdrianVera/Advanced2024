@@ -13,6 +13,9 @@ const Home: React.FC = () => {
           text: 'Learn More', 
           link: ''}}
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
+        logo={true}
+        logoUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/ahsllc_logo.png'
+
       />
       <div>
         <h1>Home Page</h1>
