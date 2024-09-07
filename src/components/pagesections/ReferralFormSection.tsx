@@ -1,19 +1,19 @@
-import React, { useState} from 'react'
+import React, { useState, useRef} from 'react'
 import emailjs from '@emailjs/browser'
 
 // interface FormSectionProps {}
 
 const ReferralFormSection:React.FC = () => {
+    // Referral Form Ref
+    const form = useRef<HTMLFormElement>(null)
+
     // Form Variables
     const serviceId = import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID
     const templateId = import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID
-    const publicKey = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY
-    const privateKey = import.meta.env.VITE_REACT_APP_EMAILJS_PRIVATE_KEY
+    const myPublicKey = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY
 
     // Form State Variables
     const [isMedicareCovered, setIsMedicareCovered] = useState("yes")
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [stateMessage, setStateMessage] = useState(null)
 
     // Form Handlers
     const handleMedicareChangeYes = () => {
@@ -23,47 +23,31 @@ const ReferralFormSection:React.FC = () => {
         setIsMedicareCovered("no")
     }
 
+    // Decalre EmailJS Service
+    emailjs.init({
+            publicKey: myPublicKey,
+            limitRate: {
+                id: 'app',
+                throttle: 1000
+            }
+        },
+    )
+
     // Form Logic
     const sendEmail = (e: React.FormEvent) => {
-        e.persist()
         e.preventDefault()
-        setIsSubmitting(true)
         console.log('sending email ...')
+        if (form.current) {
+            emailjs.sendForm(serviceId, templateId, form.current, myPublicKey)
+                .then((result) => {
+                    console.log("Success!!", result.text)
+                }, (error) => {
+                    console.log("Failed :(", error.text)
+                })
+        }
 
 
     }
-
-    // const sendEmail = (e) => {
-    //     e.persist();
-    //     e.preventDefault();
-    //     setIsSubmitting(true);
-    //     emailjs
-    //       .sendForm(
-    //         process.env.REACT_APP_SERVICE_ID,
-    //         process.env.REACT_APP_TEMPLATE_ID,
-    //         e.target,
-    //         process.env.REACT_APP_PUBLIC_KEY
-    //       )
-    //       .then(
-    //         (result) => {
-    //           setStateMessage('Message sent!');
-    //           setIsSubmitting(false);
-    //           setTimeout(() => {
-    //             setStateMessage(null);
-    //           }, 5000); // hide message after 5 seconds
-    //         },
-    //         (error) => {
-    //           setStateMessage('Something went wrong, please try again later');
-    //           setIsSubmitting(false);
-    //           setTimeout(() => {
-    //             setStateMessage(null);
-    //           }, 5000); // hide message after 5 seconds
-    //         }
-    //       );
-        
-    //     // Clears the form after sending the email
-    //     e.target.reset();
-    // }
 
     return (
         <div className='section bg-white'>
@@ -73,7 +57,7 @@ const ReferralFormSection:React.FC = () => {
                     <h1 className='section-title mb-10'>Referral Form</h1>
                 </div>
                 {/* Referral Form */}
-                <form onSubmit={sendEmail} className="max-w-lg mx-auto">
+                <form ref={form} onSubmit={sendEmail} className="max-w-lg mx-auto">
                     {/* Patient Information */}
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Patient Information</legend>
