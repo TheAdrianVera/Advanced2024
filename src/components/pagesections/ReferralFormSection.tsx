@@ -4,20 +4,66 @@ import emailjs from '@emailjs/browser'
 // interface FormSectionProps {}
 
 const ReferralFormSection:React.FC = () => {
-    const [isMedicareCovered, setIsMedicareCovered] = useState("yes")
+    // Form Variables
+    const serviceId = import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY
+    const privateKey = import.meta.env.VITE_REACT_APP_EMAILJS_PRIVATE_KEY
 
+    // Form State Variables
+    const [isMedicareCovered, setIsMedicareCovered] = useState("yes")
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [stateMessage, setStateMessage] = useState(null)
+
+    // Form Handlers
     const handleMedicareChangeYes = () => {
         setIsMedicareCovered("yes")
     }
-
     const handleMedicareChangeNo = () => {
         setIsMedicareCovered("no")
     }
 
+    // Form Logic
     const sendEmail = (e: React.FormEvent) => {
+        e.persist()
         e.preventDefault()
-        console.log('sending email')
+        setIsSubmitting(true)
+        console.log('sending email ...')
+
+
     }
+
+    // const sendEmail = (e) => {
+    //     e.persist();
+    //     e.preventDefault();
+    //     setIsSubmitting(true);
+    //     emailjs
+    //       .sendForm(
+    //         process.env.REACT_APP_SERVICE_ID,
+    //         process.env.REACT_APP_TEMPLATE_ID,
+    //         e.target,
+    //         process.env.REACT_APP_PUBLIC_KEY
+    //       )
+    //       .then(
+    //         (result) => {
+    //           setStateMessage('Message sent!');
+    //           setIsSubmitting(false);
+    //           setTimeout(() => {
+    //             setStateMessage(null);
+    //           }, 5000); // hide message after 5 seconds
+    //         },
+    //         (error) => {
+    //           setStateMessage('Something went wrong, please try again later');
+    //           setIsSubmitting(false);
+    //           setTimeout(() => {
+    //             setStateMessage(null);
+    //           }, 5000); // hide message after 5 seconds
+    //         }
+    //       );
+        
+    //     // Clears the form after sending the email
+    //     e.target.reset();
+    // }
 
     return (
         <div className='section bg-white'>
