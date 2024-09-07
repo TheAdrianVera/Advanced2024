@@ -3,13 +3,13 @@ import emailjs from '@emailjs/browser'
 
 // interface FormSectionProps {}
 
-const FormSection:React.FC = () => {
+const ReferralFormSection:React.FC = () => {
     const [isMedicareCovered, setIsMedicareCovered] = useState<string | null>(null)
 
     const handleMedicareChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsMedicareCovered(event.target.value);
     }
-
+    
     const sendEmail = () => {
         console.log('sending email')
     }
@@ -17,11 +17,13 @@ const FormSection:React.FC = () => {
     return (
         <div className='section bg-white'>
             <div className='flex flex-col items-center py-10'>
+                {/* Form Header */}
                 <div>
                     <h1 className='section-title mb-10'>Referral Form</h1>
                 </div>
-
+                {/* Referral Form */}
                 <form onSubmit={sendEmail} className="max-w-lg mx-auto">
+                    {/* Patient Information */}
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Patient Information</legend>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -81,7 +83,7 @@ const FormSection:React.FC = () => {
                             </div>
                         </div>
                     </fieldset>
-
+                    {/* Referral Details */}
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Referral Details</legend>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -126,7 +128,7 @@ const FormSection:React.FC = () => {
                             )}
                         </div>
                     </fieldset>
-
+                    {/* Additional Information */}
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Additional Information</legend>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -149,7 +151,7 @@ const FormSection:React.FC = () => {
                             </div>
                         </div>
                     </fieldset>
-
+                    {/* Submit Button */}
                     <div className="text-center">
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600">Submit</button>
                     </div>
@@ -159,7 +161,7 @@ const FormSection:React.FC = () => {
     )
 }
 
-export default FormSection
+export default ReferralFormSection
 
 
 
