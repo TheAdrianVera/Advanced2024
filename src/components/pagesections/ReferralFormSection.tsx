@@ -14,7 +14,8 @@ const ReferralFormSection:React.FC = () => {
         setIsMedicareCovered("no")
     }
 
-    const sendEmail = () => {
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault()
         console.log('sending email')
     }
 
@@ -31,6 +32,7 @@ const ReferralFormSection:React.FC = () => {
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Patient Information</legend>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* Patient Name - Requried */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Patient Name *</label>
                                 <input 
@@ -40,6 +42,7 @@ const ReferralFormSection:React.FC = () => {
                                     required
                                 />
                             </div>
+                            {/* Patient Email - Requried */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Patient Email *</label>
                                 <input 
@@ -49,6 +52,7 @@ const ReferralFormSection:React.FC = () => {
                                     required
                                 />
                             </div>
+                            {/* Patient Phone - Requried */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Patient Phone *</label>
                                 <input 
@@ -58,6 +62,7 @@ const ReferralFormSection:React.FC = () => {
                                     required
                                 />
                             </div>
+                            {/* Patient Address - Required */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Patient Address *</label>
                                 <input 
@@ -67,6 +72,7 @@ const ReferralFormSection:React.FC = () => {
                                     required
                                 />
                             </div>
+                            {/* Patient City - Requried */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Patient City *</label>
                                 <input 
@@ -76,13 +82,13 @@ const ReferralFormSection:React.FC = () => {
                                     required
                                 />
                             </div>
+                            {/* Patient Physician */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Physician</label>
                                 <input 
                                     type="text" 
                                     name="user_physician" 
                                     className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
-                                    required
                                 />
                             </div>
                         </div>
@@ -91,6 +97,7 @@ const ReferralFormSection:React.FC = () => {
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Referral Details</legend>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* Type of Care Needed */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700"> What type of care is needed?</label>
                                 <textarea 
@@ -98,6 +105,7 @@ const ReferralFormSection:React.FC = () => {
                                     className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
                                 />
                             </div>
+                            {/* Covered By Medicare - Y/N */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Is the Patient Covered by Medicare</label>
                                 <div className="mt-1 flex items-center">
@@ -121,6 +129,7 @@ const ReferralFormSection:React.FC = () => {
                                     <label htmlFor="medicare_no">No</label>
                                 </div>
                             </div>
+                            {/* Medicare Covered Section */}
                             {isMedicareCovered === "no" && (
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700">If "No", who is the primary insurance carrier for the Patient?</label>
@@ -136,6 +145,7 @@ const ReferralFormSection:React.FC = () => {
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Additional Information</legend>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* Emergency Contact Name */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Emergency Contact Name</label>
                                 <input 
@@ -144,7 +154,7 @@ const ReferralFormSection:React.FC = () => {
                                     className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
                                 />
                             </div>
-
+                            {/* Emergency Contact Phone */}
                             <div className='mb-5'>
                                 <label className="block text-sm font-medium text-gray-700">Emergency Contact Phone</label>
                                 <input 
