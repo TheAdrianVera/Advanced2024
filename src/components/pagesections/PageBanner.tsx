@@ -30,7 +30,9 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
             </div>
 
             {button && (
-                <a href={button.link} className="bg-advancedNavyBlue text-white px-4 py-2 mt-4 rounded-md hover:bg-advancedLightBlue">{button.text}</a>
+                <a href={button.link} className="relative bg-blue-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600">
+                    {button.text}
+                </a>
             )}
             
         </div>

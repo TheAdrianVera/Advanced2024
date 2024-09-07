@@ -22,7 +22,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
             <TiThMenu className='hover:text-advancedLightBlue' size={32} onClick={toggleMenu}/>
             {isMenuOpen && (
                 <div className="fixed inset-0 bg-advancedBlue flex flex-col items-center justify-center z-50">
-                    <button className="hover:text-red-500 absolute top-5 right-5 text-white text-3xl" onClick={toggleMenu}>&times;</button>
+                    <button className="hover:text-rose-500 absolute top-5 right-5 text-white text-5xl"onClick={toggleMenu}>&times;</button>
                     <ul className="flex flex-col space-y-4 text-white text-2xl">
                         <li className='hover:text-advancedNavyBlue'><Link to="/" onClick={toggleMenu}>Home</Link></li>
                         <li className='hover:text-advancedNavyBlue'><Link to="/careers" onClick={toggleMenu}>Careers</Link></li>

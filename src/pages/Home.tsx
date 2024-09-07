@@ -8,7 +8,8 @@ const Home: React.FC = () => {
         title='Home'  
         button={{ 
           text: 'Learn More', 
-          link: '' }}
+          link: ''}}
+        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
       <div>
         <h1>Home Page</h1>
