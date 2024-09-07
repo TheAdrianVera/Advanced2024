@@ -17,7 +17,6 @@ const Home: React.FC = () => {
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
         logo={true}
         logoUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/ahsllc_logo.png'
-
       />
       <ServicesSection />
       <CoverageAreasSection />
