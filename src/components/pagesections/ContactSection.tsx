@@ -6,7 +6,7 @@ const ContactSection: React.FC = () => {
     const apiKey = import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY || ''
 
     return (
-        <div className='section bg-advancedNavyBlue text-white'>
+        <div className='section bg-advancedNavyBlue text-white px-20'>
             <div className='flex flex-col'>
                 <div className='flex justify-center py-10'>
                     <h1 className='section-title'>Contact Us</h1>
