@@ -12,7 +12,7 @@ const Nav: React.FC<NavProps> = ({className}) => {
                 <Link to="/">
                     <Logo size={40} className=''/>
                 </Link>
-                <ul className="flex space-x-4">
+                <ul className="flex space-x-10">
                     <li className='hover:text-advancedLightBlue'><Link to="/">Home</Link></li>
                     <li className='hover:text-advancedLightBlue'><Link to="/careers">Careers</Link></li>
                     <li className='hover:text-advancedLightBlue'><Link to="/about">About</Link></li>
