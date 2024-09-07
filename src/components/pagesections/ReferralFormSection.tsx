@@ -4,12 +4,16 @@ import emailjs from '@emailjs/browser'
 // interface FormSectionProps {}
 
 const ReferralFormSection:React.FC = () => {
-    const [isMedicareCovered, setIsMedicareCovered] = useState<string | null>(null)
+    const [isMedicareCovered, setIsMedicareCovered] = useState("yes")
 
-    const handleMedicareChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setIsMedicareCovered(event.target.value);
+    const handleMedicareChangeYes = () => {
+        setIsMedicareCovered("yes")
     }
-    
+
+    const handleMedicareChangeNo = () => {
+        setIsMedicareCovered("no")
+    }
+
     const sendEmail = () => {
         console.log('sending email')
     }
@@ -103,7 +107,7 @@ const ReferralFormSection:React.FC = () => {
                                         name="user_medicare_coverage" 
                                         value="yes" 
                                         className="mr-2"
-                                        onChange={handleMedicareChange}
+                                        onChange={handleMedicareChangeYes}
                                     />
                                     <label htmlFor="medicare_yes" className="mr-4">Yes</label>
                                     <input 
@@ -112,12 +116,12 @@ const ReferralFormSection:React.FC = () => {
                                             name="user_medicare_coverage" 
                                             value="no" 
                                             className="mr-2"
-                                            onChange={handleMedicareChange}
+                                            onChange={handleMedicareChangeNo}
                                         />
                                     <label htmlFor="medicare_no">No</label>
                                 </div>
                             </div>
-                            {isMedicareCovered === 'no' && (
+                            {isMedicareCovered === "no" && (
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700">If "No", who is the primary insurance carrier for the Patient?</label>
                                     <textarea 
