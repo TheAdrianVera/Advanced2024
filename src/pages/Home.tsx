@@ -3,6 +3,8 @@ import PageBanner from '../components/pagesections/PageBanner'
 import ReferralFormSection from '../components/pagesections/ReferralFormSection'
 import ContactSection from '../components/pagesections/ContactSection'
 import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
+import ServicesSection from '../components/pagesections/ServicesSection'
+import CoverageAreasSection from '../components/pagesections/CoverageAreasSection'
 
 const Home: React.FC = () => {
   return (
@@ -17,15 +19,12 @@ const Home: React.FC = () => {
         logoUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/ahsllc_logo.png'
 
       />
-      <div>
-        <h1>Home Page</h1>
-        <p>Welcome to the home page!</p>
-      </div>
+      <ServicesSection />
+      <CoverageAreasSection />
       <ReferralFormSection />
       <ContactSection />
       <FeedbackFormSection />
     </>
-
   )
 }
 
