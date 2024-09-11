@@ -9,6 +9,14 @@ const CoverageAreasSection: React.FC = () => {
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>Illinois Counties We Cover</h2>
                 </div>
             </div>
+            <div className='flex flex-col md:flex-row'>
+                <div className=''>
+                    MAP ITEMS
+                </div>
+                <div className=''>   
+                    MAP SECTION
+                </div>
+            </div>
         </div>
     )
 }
