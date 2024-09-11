@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <>
       <PageBanner 
         title='About Our Practice' 
-        subtitle='Learn more about high quality Home Healthcare we provide.'
+        subtitle='Learn more about the high quality Home Healthcare we provide.'
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
       <div>
