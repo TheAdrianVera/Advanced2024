@@ -13,7 +13,7 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  @apply text-4xl font-bold md:text-5xl;
 }
 
 

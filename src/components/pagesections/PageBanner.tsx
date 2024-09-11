@@ -30,9 +30,9 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                 </div>
             ) : (
                 <div className="relative">
-                    <h1 className="text-4xl font-bold mb-2 uppercase">{title}</h1>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-2 uppercase">{title}</h1>
                     {subtitle && (
-                        <p className="text-lg">{subtitle}</p>
+                        <p className="font-arial-narrow text-2xl md:text-3xl">{subtitle}</p>
                     )}
                 </div>
             )}
