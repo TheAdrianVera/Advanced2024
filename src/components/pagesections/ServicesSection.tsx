@@ -9,6 +9,20 @@ const ServicesSection: React.FC = () => {
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>A Look Into the Many Healthcare Services We Provide</h2>
                 </div>
             </div>
+            <div className='flex flex-col'>
+                <div className=''>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div className=''>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
     )
 }
