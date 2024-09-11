@@ -11,6 +11,18 @@ const CoverageAreasSection: React.FC = () => {
             </div>
             <div className='flex flex-col md:flex-row'>
                 <div className='w-[50%]'>
+                    {/* 
+                        TODO:
+                        - Fix ul and li styling
+                        - Add hover effect to li elements
+                        - Add hover functionality to map section
+                            - Changing the map to show the selected county
+                        - Add map section
+                        - Add map section hover effect -- if time allows
+                            - idea would be to have a tooltop when covering over a county
+                            - tooltip would show the county name
+                            - the corresponding li element would also be highlighted
+                    */}
                     <ul>
                         <li id="brown">
                             <h5>Brown</h5>
@@ -54,7 +66,7 @@ const CoverageAreasSection: React.FC = () => {
                     </ul>
                 </div>
                 <div className='w-[50%]'>   
-                    MAP SECTION
+                    <img className='h-[32rem]' src={`/src/assets/map/coverage_map.png`}></img>
                 </div>
             </div>
         </div>
