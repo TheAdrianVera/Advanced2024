@@ -1,5 +1,6 @@
 import React from 'react'
 import PageBanner from '../components/pagesections/PageBanner'
+import ContactSection from '../components/pagesections/ContactSection'
 
 const About: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const About: React.FC = () => {
         <h1>About Page</h1>
         <p>What's this all aboot.</p>
       </div>
+      <ContactSection />
     </>
 
   )
