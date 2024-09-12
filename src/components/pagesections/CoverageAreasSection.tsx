@@ -1,6 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const CoverageAreasSection: React.FC = () => {
+    const [currentCoverageId, setCurrentCoverageId] = useState('')
+
+    const handleMouseEnter = (id:string) => {
+        console.log(`Mouse Enter-${id.toLowerCase().replace(/\s+/g, '-')}`)
+        setCurrentCoverageId(`-${id.toLowerCase().replace(/\s+/g, '-')}`)
+    }
+
+    const handleMouseLeave = () => {
+        setCurrentCoverageId('')
+        console.log('Mouse Leave')
+    }
+    
+    const coverageLocations = [
+        "Brown",
+        "Cass",
+        "Christian",
+        "Logan",
+        "Macon",
+        "Macoupin",
+        "Mason",
+        "Menard",
+        "Montgomery",
+        "Morgan",
+        "Sangamon",
+        "Schuyler",
+        "Scott"
+    ]
+
     return (
         <div className='section bg-advancedNavyBlue text-white px-5 md:px-20 px-5 md:px-20'>
             <div className='flex flex-col items-center py-10'>
@@ -10,7 +38,31 @@ const CoverageAreasSection: React.FC = () => {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row'>
-                <div className='w-[50%]'>
+                <div className='w-[50%] flex flex-col justify-center items-center'>
+                <ul className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                        {coverageLocations.map((location, index) => (
+                            <li 
+                                key={index} 
+                                id={location} 
+                                className='p-3 bg-advancedLightBlue text-center text-black hover:text-white rounded-md hover:bg-advancedDarkBlue transition-colors duration-300'
+                                onMouseEnter={() => handleMouseEnter(location)}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                {location} County
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className='w-[50%] flex flex-col justify-center items-center'>   
+                    <img className='h-[32rem] w-auto' src={`/src/assets/map/coverage_map${currentCoverageId}.png`}></img>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default CoverageAreasSection
+
                     {/* 
                         TODO:
                         - Fix ul and li styling
@@ -23,54 +75,4 @@ const CoverageAreasSection: React.FC = () => {
                             - tooltip would show the county name
                             - the corresponding li element would also be highlighted
                     */}
-                    <ul>
-                        <li id="brown">
-                            <h5>Brown</h5>
-                        </li>
-                        <li id="cass">
-                            <h5>Cass</h5>
-                        </li>
-                        <li id="christian">
-                            <h5>Christian</h5>
-                        </li>
-                        <li id="logan">
-                            <h5>Logan</h5>
-                        </li>
-                        <li id="macon">
-                            <h5>Macon</h5>
-                        </li>
-                        <li id="macoupin">
-                            <h5>Macoupin</h5>
-                        </li>
-                        <li id="mason">
-                            <h5>Mason</h5>
-                        </li>
-                        <li id="menard">
-                            <h5>Menard</h5>
-                        </li>
-                        <li id="montgomery">
-                            <h5>Montgomery</h5>
-                        </li>
-                        <li id="morgan">
-                            <h5>Morgan</h5>
-                        </li>
-                        <li id="sangamon">
-                            <h5>Sangamon</h5>
-                        </li>
-                        <li id="schuyler">
-                            <h5>Schuyler</h5>
-                        </li>
-                        <li id="scott">
-                            <h5>Scott</h5>
-                        </li>
-                    </ul>
-                </div>
-                <div className='w-[50%]'>   
-                    <img className='h-[32rem]' src={`/src/assets/map/coverage_map.png`}></img>
-                </div>
-            </div>
-        </div>
-    )
-}
 
-export default CoverageAreasSection
