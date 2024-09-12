@@ -11,9 +11,10 @@ const Home: React.FC = () => {
     <>
       <PageBanner 
         title='Home'  
-        button={{ 
-          text: 'Learn More', 
-          link: ''}}
+        // button={{ 
+        //   text: 'Learn More', 
+        //   link: ''}}
+        subtitle='Known our Expertise, Chosen for our Care'
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
         logo={true}
         logoUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/ahsllc_logo.png'
