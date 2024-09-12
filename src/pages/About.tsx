@@ -1,6 +1,7 @@
 import React from 'react'
 import PageBanner from '../components/pagesections/PageBanner'
 import FocusSection from '../components/pagesections/FocusSection'
+import TeamSection from '../components/pagesections/TeamSection'
 import ContactSection from '../components/pagesections/ContactSection'
 
 const About: React.FC = () => {
@@ -172,6 +173,7 @@ const About: React.FC = () => {
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
       <FocusSection title={focusContent.title} description={focusContent.description} />
+      <TeamSection team={teamMembers}/>
       <ContactSection />
     </>
 
