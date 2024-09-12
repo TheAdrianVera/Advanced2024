@@ -3,6 +3,7 @@ import PageBanner from '../components/pagesections/PageBanner'
 import FocusSection from '../components/pagesections/FocusSection'
 import TeamSection from '../components/pagesections/TeamSection'
 import ContactSection from '../components/pagesections/ContactSection'
+import TestimonialsSection from '../components/pagesections/TestimonialsSection'
 
 const About: React.FC = () => {
 
@@ -161,7 +162,7 @@ const About: React.FC = () => {
     }
   ]
   
-  const testimonials = [
+  const testimonialList = [
     {
       name: 'Satisfied Patient',
       content: 'Everyone was so polite and courteous. If I didn’t understand something they would explain it to me. I really enjoyed all the help I had.'
@@ -204,8 +205,16 @@ const About: React.FC = () => {
         subtitle='Learn more about the high quality Home Healthcare we provide.'
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
-      <FocusSection title={focusContent.title} description={focusContent.description} />
-      <TeamSection team={teamMembers}/>
+      <FocusSection 
+        title={focusContent.title} 
+        description={focusContent.description}
+      />
+      <TeamSection 
+        team={teamMembers}
+      />
+      <TestimonialsSection 
+        testimonials={testimonialList}
+      />
       <ContactSection />
     </>
 
