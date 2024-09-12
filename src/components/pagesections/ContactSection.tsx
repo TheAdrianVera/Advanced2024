@@ -1,15 +1,21 @@
 import React from 'react'
 
-// interface ContactSectionProps {}
+interface ContactSectionProps {
+    whiteAlternate?: boolean
+}
 
-const ContactSection: React.FC = () => {
+const ContactSection: React.FC<ContactSectionProps> = ({whiteAlternate}) => {
+
     const apiKey = import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY || ''
+    const contactSectionColorStyle = whiteAlternate ? 'bg-white text-advancedNavyBlue' : 'bg-advancedNavyBlue text-white'
+    const sectionTitleStyle = whiteAlternate ? 'text-black section-title' : 'section-title'
 
+    
     return (
-        <div className='section bg-advancedNavyBlue text-white px-5 md:px-20'>
+        <div className={`section ${contactSectionColorStyle} px-5 md:px-20`}>
             <div className='flex flex-col'>
                 <div className='flex justify-center py-10'>
-                    <h1 className='section-title'>Contact Us</h1>
+                    <h1 className={`${sectionTitleStyle}`}>Contact Us</h1>
                 </div>
                 <div className='flex flex-col md:flex-row py-10'>
                     <iframe
