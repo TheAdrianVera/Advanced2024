@@ -5,13 +5,45 @@ import TeamSection from '../components/pagesections/TeamSection'
 import ContactSection from '../components/pagesections/ContactSection'
 
 const About: React.FC = () => {
+
+  const positionToNameExtension = (name: string, position: string) => {
+    switch (true) {
+      case position.includes('Administrator'):
+        return 'RN-Administrator'
+      case position.includes('Agency Supervisor'):
+        return 'RN-Agency-Supervisor'
+      case position.includes('Manager'):
+        return 'Manager'
+      case position.includes('Community Liaison'):
+        return 'Community-Liaison'
+      case position.includes('Physical Therapist Assistant'):
+        return 'PTA'
+      case name.includes('Jennifer Monroe'):
+        return 'LPN'
+      case position.includes('LPN / Quality Assurance'):
+        return 'LPN-QA+'
+      case position.includes('Physical Therapist'):
+        return 'PT'
+      case position.includes('Certified Occupational'):
+        return 'COTA'
+      case position.includes('MSW'):
+        return 'MSW'
+      case position.includes('Register Nurse'):
+        return 'RN+'
+      case position.includes('Quality Assurance'):
+        return 'QA'
+      case position.includes('Licensed Practical Nurse'):
+        return 'LPN+'
+
+    }
+  }
   
-
-
-  const nameToPngFileName = (name: string) => {
+  const nameToPngFileName = (name: string, position: string) => {
 
     const nameParts = name.split(' ')
-    const fileName = `${nameParts.join('-')}-QA`
+    const nameExtension = positionToNameExtension(name, position)
+    const fileName = `${nameParts.join('-')}-${nameExtension}`
+    
 
     return `https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/team-2022/${fileName}.jpg`
   }
@@ -19,113 +51,113 @@ const About: React.FC = () => {
   const teamMembers = [
     {
       name: 'Juanita H. Jones',
-      title: 'Administator, RN, WCC',
-      imgUrl: nameToPngFileName('Juanita H. Jones'),
+      title: 'Administrator, RN, WCC',
+      imgUrl: nameToPngFileName('Juanita Jones', 'Administrator, RN, WCC'),
     },
     {
       name: 'Angela Wilcoxen',
       title: 'Agency Supervisor, RN',
-      imgUrl: nameToPngFileName('Angela Wilcoxen'),
+      imgUrl: nameToPngFileName('Angela Wilcoxen', 'Agency Supervisor, RN'),
     },
     {
       name: 'Naomi Laboy',
       title: 'Manager',
-      imgUrl: nameToPngFileName('Naomi Laboy'),
+      imgUrl: nameToPngFileName('Naomi Laboy', 'Manager'),
     },
     {
       name: 'Susan Gerding',
       title: 'Community Liaison',
-      imgUrl: nameToPngFileName('Susan Gerding'),
+      imgUrl: nameToPngFileName('Susan Gerding', 'Community Liaison'),
     },
     {
       name: 'Christie Chevalier-Goleman',
       title: 'MSW, Liscensed Clinical Social Worker',
-      imgUrl: nameToPngFileName('Christie Chevalier-Goleman'),
+      imgUrl: nameToPngFileName('Christie Goleman', 'MSW, Liscensed Clinical Social Worker'),
     },
     {
       name: 'Ali Baker',
       title: 'Register Nurse',
-      imgUrl: nameToPngFileName('Ali Baker'),
+      imgUrl: nameToPngFileName('Ali Baker', 'Register Nurse'),
     },
     {
       name: 'Ruff Walden',
       title: 'Physical Therapist',
-      imgUrl: nameToPngFileName('Ruff Walden'),
+      imgUrl: nameToPngFileName('Ruffin Walden', 'Physical Therapist'),
     },
     {
       name: 'Sheila Nicholson',
       title: 'Physical Therapist',
-      imgUrl: nameToPngFileName('Sheila Nicholson'),
+      imgUrl: nameToPngFileName('Sheila Nicholson', 'Physical Therapist'),
     },
     {
       name: 'Lynn Melocoton',
       title: 'Physical Therapist',
-      imgUrl: nameToPngFileName('Lynn Melocoton'),
+      imgUrl: nameToPngFileName('Lynn Melocoton', 'Physical Therapist'),
     },
     {
       name: 'Kristin Hillman',
       title: 'Physical Therapist',
-      imgUrl: nameToPngFileName('Kristin Hillman'),
+      imgUrl: nameToPngFileName('Kristin Hillman', 'Physical Therapist'),
     },
     {
       name: 'Joseph Williams',
       title: 'Physical Therapist',
-      imgUrl: nameToPngFileName('Joseph Williams'),
+      imgUrl: nameToPngFileName('Joseph Williams', 'Physical Therapist'),
     },
     {
       name: 'Sue Ellen Kunz',
       title: 'Physical Therapist Assistant',
-      imgUrl: nameToPngFileName('Sue Ellen Kunz'),
+      imgUrl: nameToPngFileName('Sue Ellen Kunz', 'Physical Therapist Assistant'),
     },
     {
       name: 'Krista Summers',
       title: 'Physical Therapist Assistant',
-      imgUrl: nameToPngFileName('Krista Summers'),
+      imgUrl: nameToPngFileName('Krista Summers', 'Physical Therapist Assistant'),
     },
     {
       name: 'Meghan Burtle',
       title: 'Certified Occupational Therapist Assistant',
-      imgUrl: nameToPngFileName('Meghan Burtle'),
+      imgUrl: nameToPngFileName('Meghan Burtle', 'Certified Occupational Therapist Assistant'),
     },
     {
       name: 'Nicole Roos',
       title: 'Licensed Practical Nurse (LPN)',
-      imgUrl: nameToPngFileName('Nicole Roos'),
+      imgUrl: nameToPngFileName('Nicole Roos', 'Licensed Practical Nurse (LPN)'),
     },
     {
       name: 'Crystal Hampton',
       title: 'Licensed Practical Nurse (LPN)',
-      imgUrl: nameToPngFileName('Crystal Hampton'),
+      imgUrl: nameToPngFileName('Crystal Hampton', 'Licensed Practical Nurse (LPN)'),
     },
     {
       name: 'Jennifer Monroe',
       title: 'Licensed Practical Nurse (LPN)',
-      imgUrl: nameToPngFileName('Jennifer Monroe'),
+      imgUrl: nameToPngFileName('Jennifer Monroe', 'Licensed Practical Nurse (LPN)'),
     },
     {
-      name: 'Christina Tayor',
+      name: 'Christina Taylor',
       title: 'LPN / Quality Assurance',
-      imgUrl: nameToPngFileName('Christina Tayor'),
+      imgUrl: nameToPngFileName('Christina Taylor', 'LPN / Quality Assurance'),
     },
     {
-      name: 'Annette Castlebery',
+      name: 'Annette Castleberry',
       title: 'LPN / Quality Assurance',
-      imgUrl: nameToPngFileName('Annette Castlebery'),
+      imgUrl: nameToPngFileName('Annette Castleberry', 'LPN / Quality Assurance'),
     },
     {
       name: 'Melinda Schnake',
       title: 'Quality Assurance',
-      imgUrl: nameToPngFileName('Melinda Schnake'),
+      imgUrl: nameToPngFileName('Melinda Schnake', 'Quality Assurance'),
     },
     {
       name: 'Kristine Buss',
       title: 'Quality Assurance',
-      imgUrl: nameToPngFileName('Kristine Buss'),
+      imgUrl: nameToPngFileName('Kristine Buss', 'Quality Assurance'),
     },
     {
       name: 'Heather Hopper',
       title: 'Quality Assurance',
-      imgUrl: nameToPngFileName('Heather Hopper'),
+      imgUrl: nameToPngFileName('Heather Hopper', 'Quality Assurance'),
     }
   ]
   

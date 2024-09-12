@@ -8,7 +8,7 @@ interface FocusSectionProps {
 
 const FocusSection:React.FC<FocusSectionProps> = ({title, description}) => {
     return (
-        <div className='section bg-advancedNavyBlue text-white px-5 md:px-20'>
+        <div className='section bg-advancedNavyBlue text-white px-5 md:px-20 pb-20'>
             <div className='flex justify-center py-10'>
                 <h1 className='section-title'>{title}</h1>
             </div>
