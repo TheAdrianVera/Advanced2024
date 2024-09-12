@@ -21,7 +21,19 @@ const TeamSection: React.FC<TeamSectionProps> = ({team}) => {
                 </div>
             </div>
             <div className='flex flex-col'>
-
+                <div>
+                    {team.map((member, index) => (
+                        <div key={index} className='flex flex-col lg:flex-row pb-5'>
+                            <div className='w-full lg:w-1/3'>
+                                <img src={member.imgUrl} alt={member.name} className='w-full h-auto' />
+                            </div>
+                            <div className='w-full lg:w-2/3'>
+                                <h3 className='text-xl font-arial-narrow text-gray-800 mb-2'>{member.name}</h3>
+                                <p className='text-gray-700'>{member.title}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </div>
