@@ -45,13 +45,13 @@ const CoverageAreasSection: React.FC = () => {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row'>
-                <div className='w-[50%] flex flex-col justify-center items-center'>
-                <ul className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='w-[100%] md:w-[50%] flex flex-col justify-center items-center'>
+                    <ul className='grid grid-cols-2 gap-4'>
                         {coverageLocations.map((location, index) => (
                             <li 
                                 key={index} 
                                 id={location} 
-                                className='p-3 bg-advancedLightBlue text-center text-black hover:text-white rounded-md hover:bg-advancedDarkBlue transition-colors duration-300'
+                                className='p-3 bg-blue-500 text-center text-white hover:text-advancedLightBlue rounded-md hover:bg-advancedDarkBlue transition-colors duration-300'
                                 onMouseEnter={() => handleMouseEnter(location)}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -60,7 +60,7 @@ const CoverageAreasSection: React.FC = () => {
                         ))}
                     </ul>
                 </div>
-                <div className='w-[50%] flex flex-col justify-center items-center'>   
+                <div className='w-[50%] hidden md:flex flex-col justify-center items-center'>   
                     <img 
                         className={`h-[32rem] w-auto transition-opacity ${isFading ? 'fade-out' : ''}`} 
                         src={`/src/assets/map/coverage_map${currentCoverageId}.png`}
