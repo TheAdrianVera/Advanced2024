@@ -2,15 +2,22 @@ import React, { useState } from 'react'
 
 const CoverageAreasSection: React.FC = () => {
     const [currentCoverageId, setCurrentCoverageId] = useState('')
+    const [isFading, setIsFading] = useState(false)
 
-    const handleMouseEnter = (id:string) => {
-        console.log(`Mouse Enter-${id.toLowerCase().replace(/\s+/g, '-')}`)
-        setCurrentCoverageId(`-${id.toLowerCase().replace(/\s+/g, '-')}`)
+    const handleMouseEnter = (id: string) => {
+        setIsFading(true)
+        setTimeout(() => {
+            setCurrentCoverageId(`-${id.toLowerCase().replace(/\s+/g, '-')}`)
+            setIsFading(false)
+        }, 130) // Half of the transition duration
     }
 
     const handleMouseLeave = () => {
-        setCurrentCoverageId('')
-        console.log('Mouse Leave')
+        setIsFading(true)
+        setTimeout(() => {
+            setCurrentCoverageId('')
+            setIsFading(false)
+        }, 130) // Half of the transition duration
     }
     
     const coverageLocations = [
@@ -54,7 +61,11 @@ const CoverageAreasSection: React.FC = () => {
                     </ul>
                 </div>
                 <div className='w-[50%] flex flex-col justify-center items-center'>   
-                    <img className='h-[32rem] w-auto' src={`/src/assets/map/coverage_map${currentCoverageId}.png`}></img>
+                    <img 
+                        className={`h-[32rem] w-auto transition-opacity ${isFading ? 'fade-out' : ''}`} 
+                        src={`/src/assets/map/coverage_map${currentCoverageId}.png`}
+                        alt='Coverage Map'
+                    />
                 </div>
             </div>
         </div>
@@ -62,17 +73,4 @@ const CoverageAreasSection: React.FC = () => {
 }
 
 export default CoverageAreasSection
-
-                    {/* 
-                        TODO:
-                        - Fix ul and li styling
-                        - Add hover effect to li elements
-                        - Add hover functionality to map section
-                            - Changing the map to show the selected county
-                        - Add map section
-                        - Add map section hover effect -- if time allows
-                            - idea would be to have a tooltop when covering over a county
-                            - tooltip would show the county name
-                            - the corresponding li element would also be highlighted
-                    */}
 

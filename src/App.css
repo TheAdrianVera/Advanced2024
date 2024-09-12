@@ -16,6 +16,15 @@
   @apply text-4xl font-bold md:text-5xl;
 }
 
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.transition-opacity.fade-out {
+  opacity: 0;
+}
+
 
 /* #root {
   max-width: 1280px;
