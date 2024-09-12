@@ -1,5 +1,6 @@
 import React from 'react'
 import PageBanner from '../components/pagesections/PageBanner'
+import AboutSection from '../components/pagesections/AboutSection'
 import FocusSection from '../components/pagesections/FocusSection'
 import TeamSection from '../components/pagesections/TeamSection'
 import ContactSection from '../components/pagesections/ContactSection'
@@ -205,6 +206,7 @@ const About: React.FC = () => {
         subtitle='Learn more about the high quality Home Healthcare we provide.'
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
+      <AboutSection />
       <FocusSection 
         title={focusContent.title} 
         description={focusContent.description}
