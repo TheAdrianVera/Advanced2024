@@ -1,5 +1,6 @@
 import React from 'react'
 import PageBanner from '../components/pagesections/PageBanner'
+import FocusSection from '../components/pagesections/FocusSection'
 import ContactSection from '../components/pagesections/ContactSection'
 
 const About: React.FC = () => {
@@ -160,7 +161,7 @@ const About: React.FC = () => {
 
   const focusContent = {
     title: 'Our Focus',
-    content: `Advanced HealthCare Services' primary focus is to provide individuals and their families with safe and effective quality home health care services. Care will begin within 48 hours after the request is received. We can also arrange for rental and/or or purchases of wheelchairs, walkers, special beds, or any assistive devices which may be needed. Also upon request we can coordinate other services such as finding homemakers, companions or sitters.`
+    description: `Advanced Healthcare Services' primary focus is to provide individuals and their families with safe and effective quality home health care services. Care will begin within 48 hours after the request is received. We can also arrange for rental and/or or purchases of wheelchairs, walkers, special beds, or any assistive devices which may be needed. Also upon request we can coordinate other services such as finding homemakers, companions or sitters.`
   }
 
   return (
@@ -170,10 +171,7 @@ const About: React.FC = () => {
         subtitle='Learn more about the high quality Home Healthcare we provide.'
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
-      <div>
-        <h1>About Page</h1>
-        <p>What's this all aboot.</p>
-      </div>
+      <FocusSection title={focusContent.title} description={focusContent.description} />
       <ContactSection />
     </>
 
