@@ -27,6 +27,12 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
             {logo ? (
                 <div className="relative">
                     <img src={logoUrl} alt="logo" className="h-32 md:h-64 w-auto"/>
+                    <div className="flex flex-col justify-center items-center pt-5">
+                        {subtitle && (
+                            <p className="font-arial-narrow-italic text-2xl md:text-3xl">{subtitle}</p>
+                        )}
+                    </div>
+
                 </div>
             ) : (
                 <div className="relative">

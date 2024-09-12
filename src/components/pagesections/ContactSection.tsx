@@ -12,7 +12,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({whiteAlternate}) => {
 
     
     return (
-        <div className={`section ${contactSectionColorStyle} px-5 md:px-20`}>
+        <div id='contact' className={`section ${contactSectionColorStyle} px-5 md:px-20`}>
             <div className='flex flex-col'>
                 <div className='flex justify-center py-10'>
                     <h1 className={`${sectionTitleStyle}`}>Contact Us</h1>
