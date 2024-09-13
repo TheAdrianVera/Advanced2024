@@ -33,8 +33,36 @@ const AboutSection = () => {
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>Learn More About the High Quality Healthcare We Provide</h2>
                 </div>
             </div>
-            <div>
-
+            <div className="flex flex-col items-center">
+                <video controls poster={aboutData.videoPoster} className='w-full md:w-3/4 lg:w-2/3 rounded-lg shadow-lg'>
+                    <source src={aboutData.videoUrl} type='video/mp4' />
+                    Your browser does not support the video tag.
+                </video>
+                <div className='flex flex-row pt-20 w-full md:w-3/4 lg:w-2/3'>
+                    <div className='flex flex-col pb-5 mr-3'>
+                        <h2 className='text-xl font-arial-rounded-bold md:text-2xl text-gray-800 mb-6'>{aboutData.section1Title}</h2>
+                        <p className="mb-2 h-24 text-lg">{aboutData.section1Para1}</p>
+                        <p className='text-lg'>{aboutData.section1Para2}</p>
+                    </div>
+                    <div className='flex flex-col pb-5 ml-3'>
+                        <h2 className='text-xl font-arial-rounded-bold md:text-2xl text-gray-800 mb-6'>{aboutData.section2Title}</h2>
+                        <p className='mb-2 h-24 text-lg'>{aboutData.section2Para1}</p>
+                        <p className='text-lg'>{aboutData.section2Para2}</p>
+                    </div>
+                </div>
+            </div>
+            <div className='flex flex-col items-center'>
+                <h2 className='text-xl font-arial-rounded-bold md:text-2xl text-gray-800 mb-6'>{aboutData.section3Title}</h2>
+                <h3 className='text-lg font-arial-rounded-bold text-gray-800 mb-6'>{aboutData.section3SubTitle}</h3>
+                <div className='flex flex-col w-full md:w-3/4 lg:w-2/3'>
+                    {aboutData.section3Criteria.map((criteria, index) => (
+                        <div key={index} className='flex flex-col p-6 bg-gray-100 rounded-lg shadow-lg mb-6'>
+                            <p className='text-gray-700 text-lg'>{criteria.content1}</p>
+                            <p className='text-gray-700 text-lg'>{criteria.content2}</p>
+                            <p className='text-gray-700 text-lg'>{criteria.content3}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
