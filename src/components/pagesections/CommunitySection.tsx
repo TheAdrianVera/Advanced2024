@@ -1,4 +1,4 @@
-const CommunitySection = () => {
+const CommunitySection: React.FC = () => {
     return (
         <div>
             COMMUNITY SECTION

@@ -1,4 +1,4 @@
-const CommunityEventsSection = () => {
+const CommunityEventsSection:React.FC = () => {
     return (
         <div>
             EVENTS SECTION
