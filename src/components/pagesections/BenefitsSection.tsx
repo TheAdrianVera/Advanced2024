@@ -1,5 +1,4 @@
 import React from 'react'
-import ServiceBlock from '../pagecomponents/service-block'
 import BenefitBlock from '../pagecomponents/benefit-block'
 
 interface Benefit {
