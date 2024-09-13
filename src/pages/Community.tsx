@@ -1,5 +1,9 @@
 import React from 'react'
 import PageBanner from '../components/pagesections/PageBanner'
+import CommunitySection from '../components/pagesections/CommunitySection'
+import CommunityEventsSection from '../components/pagesections/CommunityEventsSection'
+import CommunityBiggestHeartSection from '../components/pagesections/CommunityBiggestHeartSection'
+import ContactSection from '../components/pagesections/ContactSection'
 
 const Community: React.FC = () => {
   return (
@@ -9,10 +13,10 @@ const Community: React.FC = () => {
         subtitle='Learn more about our amazing Advanced Community.'
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
-      <div>
-        <h1>Community Page</h1>
-        <p>We are one.</p>
-      </div>
+      <CommunitySection />
+      <CommunityEventsSection />
+      <CommunityBiggestHeartSection />
+      <ContactSection />
     </>
 
   )
