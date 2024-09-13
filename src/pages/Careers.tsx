@@ -2,6 +2,7 @@ import React from 'react'
 import PageBanner from '../components/pagesections/PageBanner'
 import BenefitsSection from '../components/pagesections/BenefitsSection'
 import ContactSection from '../components/pagesections/ContactSection'
+import CultureSection from '../components/pagesections/CultureSection'
 
 const benefitsData = [
   {
@@ -55,6 +56,7 @@ const Careers: React.FC = () => {
         subtitle='Join our Advanced team and make a difference.' 
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
       />
+      <CultureSection />
       <BenefitsSection benefitsData={benefitsData}/>
       <ContactSection />
     </>

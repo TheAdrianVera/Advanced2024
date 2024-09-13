@@ -13,7 +13,7 @@ interface BenefitsSectionProps {
 
 const BenefitsSection: React.FC<BenefitsSectionProps> = ({benefitsData}) => {
     return (
-        <div id='services' className='section px-5 md:px-20'>
+        <div id='benefits' className='section px-5 md:px-20'>
             <div className='flex flex-col items-center py-10'>
                 <div className='flex flex-col items-center'>
                     <h1 className='section-title mb-4'>Benefits</h1>
