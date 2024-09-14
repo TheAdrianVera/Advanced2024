@@ -63,8 +63,20 @@ const communityGallery = [
 
 const CommunitySection: React.FC = () => {
     return (
-        <div>
-            COMMUNITY SECTION
+        <div id='community' className='section px-5 md:px-20 bg-white pb-20'>
+            <div className='flex flex-col items-center py-10'>
+                <div className='flex flex-col items-center'>
+                    <h1 className='section-title mb-4'>Our Community</h1>
+                    <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>See some of the amazing faces that make our amazing Advanced Team!</h2>
+                </div>
+                <div className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4'>
+                    {communityGallery.map((image, index) => (
+                        <div key={index} className='mb-4 break-inside-avoid'>
+                            <img src={image.imgUrl} alt={image.alt} className='w-full h-auto rounded-lg shadow-md transition-transform transform hover:scale-105' />
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
