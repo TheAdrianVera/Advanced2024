@@ -1,5 +1,6 @@
 import React from "react"
-import { IoMdGitPullRequest } from "react-icons/io"
+import { FaFacebook } from "react-icons/fa"
+
 
 const biggestHeartAwards = [
     {
@@ -43,6 +44,23 @@ const CommunityBiggestHeartSection: React.FC = () => {
                     <h1 className='section-title mb-4'>Biggest Heart Award</h1>
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>Help Us Celebrate Biggest Heart Award Winners!</h2>
                 </div>
+            </div>
+            <div>
+                {biggestHeartAwards.map((award, index) => (
+                    <div key={index} className='flex flex-col items-center pb-10'>
+                        <h2 className='text-xl font-arial-narrow-rounded md:text-2xl mb-6'>{award.period} {award.year}</h2>
+                        <div className='flex flex-col items-center'>
+                            <img src={award.imgUrl} alt={award.imgAlt} className='w-3/4 md:w-1/2 lg:w-1/3 rounded-lg shadow-lg mb-6' />
+                            <h3 className='text-xl font-arial-rounded-bold text-gray-800 mb-6'>{award.name}</h3>
+                            <p className='text-lg text-gray-800 w-full md:w-[50%]'>{award.content1}</p>
+                            <p className='text-lg text-gray-800 w-full pt-5 md:w-[50%]'>{award.content2}</p>
+                            <a href={award.link} target='_blank' rel='noreferrer' className='flex flex-row items-center text-blue-500 hover:text-blue-700 mt-6'>
+                                <FaFacebook className='mr-2' />
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
