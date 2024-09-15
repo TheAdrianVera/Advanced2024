@@ -17,27 +17,30 @@ const ContactSection: React.FC<ContactSectionProps> = ({whiteAlternate}) => {
                 <div className='flex justify-center py-10'>
                     <h1 className={`${sectionTitleStyle}`}>Contact Us</h1>
                 </div>
-                <div className='flex flex-col md:flex-row py-10'>
-                    <iframe
-                        height="400px"
-                        loading="lazy"
-                        src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Advanced+Healthcare+Services+Springfield`}
-                        className='w-full md:w-1/2 md:mr-5'
-                    >
-                    </iframe>
-                    <div className='contact-info mt-10 md:mt-0'>
-                        <h2 className='mb-1 font-bold'>Advanced Healthcare Services LLC.</h2>
-                        <p className='pb-3'>3900 Pintail Drive, Suite A <br /> Springfield, IL 62711</p>
-                        <h2>Phone:</h2>
-                        <p className='pb-3'><a href='tel:+12177266956' className='text-blue-500'>(217) 726-6956</a></p>
-                        <h2>Fax:</h2>
-                        <p className='pb-3'><a href='tel:+12177267082' className='text-blue-500'>(217) 726-7082</a></p>
-                        <h2>Email:</h2>
-                        <p className='pb-3'><a href='mailto:info@ahsllc.org' className='text-blue-500'>info@ahsllc.org</a></p>
-                        <h2>Hours:</h2>
-                        <p>Monday - Friday: 8:00 AM to 4:30 PM</p>
-                        <p className='pb-3'>Saturday - Sunday: On Call</p>
+                <div className='flex flex-col items-center justify-center md:flex-row py-10'>
+                    <div className='flex flex-col md:flex-row items-center w-full md:w-3/4 lg:w-2/3'>
+                        <iframe
+                            height="400px"
+                            loading="lazy"
+                            src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=Advanced+Healthcare+Services+Springfield`}
+                            className='w-full md:w-1/2 md:mr-5'
+                        >
+                        </iframe>
+                        <div className='contact-info mt-10 md:mt-0'>
+                            <h2 className='mb-1 font-bold'>Advanced Healthcare Services LLC.</h2>
+                            <p className='pb-3'>3900 Pintail Drive, Suite A <br /> Springfield, IL 62711</p>
+                            <h2>Phone:</h2>
+                            <p className='pb-3'><a href='tel:+12177266956' className='text-blue-500'>(217) 726-6956</a></p>
+                            <h2>Fax:</h2>
+                            <p className='pb-3'><a href='tel:+12177267082' className='text-blue-500'>(217) 726-7082</a></p>
+                            <h2>Email:</h2>
+                            <p className='pb-3'><a href='mailto:info@ahsllc.org' className='text-blue-500'>info@ahsllc.org</a></p>
+                            <h2>Hours:</h2>
+                            <p>Monday - Friday: 8:00 AM to 4:30 PM</p>
+                            <p className='pb-3'>Saturday - Sunday: On Call</p>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
