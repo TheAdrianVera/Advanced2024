@@ -40,7 +40,7 @@ const ServiceBlock: React.FC<ServiceBlockProps> = ({title, content, iconLabel}) 
     }
 
     return (
-        <div className='flex flex-col w-[100%] md:w-[25% px-2 py-5 md:py-2'>
+        <div className='flex flex-col w-[100%] min-w-16 px-2 py-5 md:py-2'>
             <div className='flex flex-col items-center'>
                 <div className='pb-2'>{icon(iconLabel)}</div>
                 <div className='text-3xl lg:text-2xl font-arial-bold py-2'>{title}</div>
