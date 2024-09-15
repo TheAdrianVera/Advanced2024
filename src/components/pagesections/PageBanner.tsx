@@ -1,4 +1,5 @@
 import React from "react"
+import HomeScreenLogo from "../logos/HomeScreenLogo"
 
 interface PageBannerProps {
     title: string
@@ -26,13 +27,12 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
 
             {logo ? (
                 <div className="relative">
-                    <img src={logoUrl} alt="logo" className="h-32 md:h-64 w-auto"/>
+                    <HomeScreenLogo url={logoUrl} size={200} className="h-32 md:h-64 w-auto"/>
                     <div className="flex flex-col justify-center items-center pt-5">
                         {subtitle && (
                             <p className="font-arial-narrow-italic text-2xl md:text-3xl">{subtitle}</p>
                         )}
                     </div>
-
                 </div>
             ) : (
                 <div className="relative">
@@ -42,8 +42,6 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                     )}
                 </div>
             )}
-
-
 
             {button && (
                 <a href={button.link} className="relative bg-advancedNavyBlue text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600">
