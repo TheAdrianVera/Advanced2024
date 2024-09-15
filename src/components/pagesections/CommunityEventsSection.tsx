@@ -27,8 +27,8 @@ const CommunityEventsSection:React.FC = () => {
                 </div>
             </div>
             <div className='flex flex-col items-center'>
-                <h2 className='text-xl font-arial-narrow-rounded md:text-2xl mb-6'>2024 Community Easter Egg Hunt</h2>
-                <p className="text-muted text-lg">
+                <h2 className='text-xl font-arial-narrow-rounded md:text-2xl mb-6 underline'>2024 Community Easter Egg Hunt</h2>
+                <p className="text-muted text-lg text-center w-full md:w-3/4 lg:w-2/3">
                     Thanks to our friends from
                     <a 
                         className="text-blue-500 hover:text-blue-700 ml-1"
@@ -58,7 +58,7 @@ const CommunityEventsSection:React.FC = () => {
                 </p>
             </div>
             <div className='flex flex-col items-center mt-10 md:mt-10'>
-                <div className='columns-2 md:columns-4 gap-4'>
+                <div className='columns-2 md:columns-4 gap-4 '>
                     {easterEggHuntGallery.map((image, index) => (
                         <div key={index} className='mb-4'>
                             <img src={image.imgUrl} alt={image.alt} className='h-64 rounded-lg shadow-md transition-transform transform hover:scale-105' />

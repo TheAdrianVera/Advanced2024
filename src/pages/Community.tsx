@@ -16,7 +16,7 @@ const Community: React.FC = () => {
       <CommunitySection />
       <CommunityEventsSection />
       <CommunityBiggestHeartSection />
-      <ContactSection />
+      <ContactSection whiteAlternate={true}/>
     </>
 
   )
