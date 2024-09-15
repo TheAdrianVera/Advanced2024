@@ -1,15 +1,47 @@
-import React, { useState} from 'react'
+import React, { useState, useRef } from 'react'
 import { MdKeyboardArrowUp } from "react-icons/md"
 import emailjs from '@emailjs/browser'
 
 const FeedbackFormSection: React.FC = () => {
+        // Toggling Feedback Form
         const [isAnonFeedbackOpen, setIsAnonFeedbackOpen] = useState(false)
         const toggleAnonFeedbackSection = () => {
             setIsAnonFeedbackOpen(!isAnonFeedbackOpen)
         }
 
-        return (
+        // Feedback Form Ref
+        const form = useRef<HTMLFormElement>(null)
 
+        //Form Variables
+        const serviceId = import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID
+        const myPublicKey = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY
+        const templateId = import.meta.env.VITE_REACT_APP_EMAILJS_FEEBACKTEMPLATE_ID
+
+        //Declare EmailJS Service
+        emailjs.init({
+                publicKey: myPublicKey,
+                limitRate: {
+                    id: 'app',
+                    throttle: 1000
+                }
+            },
+        )
+
+            // Form Logic
+        const sendFeedbackEmail = (e: React.FormEvent) => {
+            e.preventDefault()
+            console.log('sending email ...')
+            if (form.current) {
+                emailjs.sendForm(serviceId, templateId, form.current, myPublicKey)
+                    .then((result) => {
+                        console.log("Success!!", result.text)
+                    }, (error) => {
+                        console.log("Failed :(", error.text)
+                    })
+            }
+        }
+
+        return (
             <div className="bg-advancedNavyBlue pb-10">
                 <div className='flex flex-col'>
                     <div className='flex justify-center'>
@@ -23,7 +55,8 @@ const FeedbackFormSection: React.FC = () => {
                     </div>
          
                     <div className={`flex py-10 transition-opacity duration-400 ${isAnonFeedbackOpen ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
-                        <form className="max-w-lg mx-auto w-full">
+                        {/* Feedback Form */}
+                        <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto w-full">
                             <fieldset className='mb-6'>
                                 <legend className="text-lg font-semibold mb-4 text-white">Feedback Information</legend>
                                 <div className='grid grid-cols-1 gap-4'>
@@ -60,7 +93,6 @@ const FeedbackFormSection: React.FC = () => {
 
                 </div>
             </div>
-
         )
 }
 
