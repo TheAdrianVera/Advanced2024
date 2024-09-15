@@ -44,8 +44,8 @@ const CoverageAreasSection: React.FC = () => {
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-200 mb-6'>Illinois Counties We Cover</h2>
                 </div>
             </div>
-            <div className='flex flex-col md:flex-row'>
-                <div className='w-[100%] md:w-[50%] flex flex-col justify-center items-center'>
+            <div className='md:grid md:grid-cols-2 lg:mx-10 xl:mx-40'>
+                <div className='w-[100%] md:w-auto flex flex-col justify-center items-center'>
                     <ul className='grid grid-cols-2 gap-4'>
                         {coverageLocations.map((location, index) => (
                             <li 
@@ -60,7 +60,7 @@ const CoverageAreasSection: React.FC = () => {
                         ))}
                     </ul>
                 </div>
-                <div className='w-[50%] hidden md:flex flex-col justify-center items-center'>   
+                <div className='w-auto hidden md:flex flex-col items-center'>   
                     <img 
                         className={`h-[32rem] w-auto transition-opacity ${isFading ? 'fade-out' : ''}`} 
                         src={`/src/assets/map/coverage_map${currentCoverageId}.png`}

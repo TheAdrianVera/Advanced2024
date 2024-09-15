@@ -22,7 +22,7 @@ const CultureSection: React.FC = () => {
                 <h1 className='section-title mb-4'>Our Culture</h1>
                 <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-200 mb-6'>Experience the vibrant culture at our company</h2>
             </div>
-            <div className='grid grid-cols-3 gap-6'>
+            <div className='grid grid-cols-3 gap-6 lg:mx-10 xl:mx-40'>
                 {culuturePhotoGalleryUrls.map((photo, index) => (
                     <div key={index} className='relative group'>
                         <img 
@@ -33,7 +33,7 @@ const CultureSection: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div className='mt-20 text-center mx-20 p-6 bg-blue-200 rounded-lg shadow-lg'>
+            <div className='mt-10 text-center lg:mx-10 xl:mx-40 p-6 bg-blue-200 rounded-lg shadow-lg'>
                 <p className='text-lg text-advancedDarkBlue font-arial-rounded'>
                     Our culture is built on collaboration, innovation, and a commitment to excellence. We believe in fostering a supportive and inclusive environment where everyone can thrive.
                 </p>
