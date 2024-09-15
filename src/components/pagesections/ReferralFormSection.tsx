@@ -68,7 +68,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_name" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                     required
                                 />
                             </div>
@@ -78,7 +78,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="email" 
                                     name="user_email" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                     required
                                 />
                             </div>
@@ -88,7 +88,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_phone" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                     required
                                 />
                             </div>
@@ -98,7 +98,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_address" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                     required
                                 />
                             </div>
@@ -108,7 +108,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_city" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                     required
                                 />
                             </div>
@@ -118,7 +118,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_physician" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                 />
                             </div>
                         </div>
@@ -132,7 +132,7 @@ const ReferralFormSection:React.FC = () => {
                                 <label className="block text-sm font-medium text-gray-700"> What type of care is needed?</label>
                                 <textarea 
                                     name="user_care_needed" 
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-auto px-3 py-1"
                                 />
                             </div>
                             {/* Covered By Medicare - Y/N */}
@@ -165,7 +165,7 @@ const ReferralFormSection:React.FC = () => {
                                     <label className="block text-sm font-medium text-gray-700">If "No", who is the primary insurance carrier for the Patient?</label>
                                     <textarea 
                                         name="user_medicare_message_ifnot" 
-                                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-auto py-1 px-3"
                                     />
                                 </div>
                             )}
@@ -181,7 +181,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_emergency_contact_name"
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                 />
                             </div>
                             {/* Emergency Contact Phone */}
@@ -190,7 +190,7 @@ const ReferralFormSection:React.FC = () => {
                                 <input 
                                     type="text" 
                                     name="user_emergency_contact_phone"
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                 />
                             </div>
                         </div>
