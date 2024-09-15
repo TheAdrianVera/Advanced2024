@@ -12,8 +12,8 @@ const FocusSection:React.FC<FocusSectionProps> = ({title, description}) => {
             <div className='flex justify-center py-10'>
                 <h1 className='section-title'>{title}</h1>
             </div>
-            <div className='flex flex-col sm:mx-10 md:mx-20 lg:mx-40'>
-                <p className='text-xl font-arial-italic'>{description}</p>
+            <div className='flex flex-col items-center justify-center'>
+                <p className='text-xl font-arial-italic w-full md:w-3/4 lg:w-2/3'>{description}</p>
             </div>
             
         </div>
