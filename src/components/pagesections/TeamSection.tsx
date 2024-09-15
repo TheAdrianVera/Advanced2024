@@ -20,7 +20,8 @@ const TeamSection: React.FC<TeamSectionProps> = ({team}) => {
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>Get to Know Our Amazing Team</h2>
                 </div>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:mx-10 xl:mx-40'>
+
                 {team.map((member, index) => (
                     <div key={index} className='flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105'>
                         <div className='w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden mb-4'>
@@ -30,6 +31,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({team}) => {
                         <p className='text-gray-700'>{member.title}</p>
                     </div>
                 ))}
+
             </div>
         </div>
     )
