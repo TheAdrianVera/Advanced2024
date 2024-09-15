@@ -32,7 +32,7 @@ const FeedbackFormSection: React.FC = () => {
                                         <input
                                             type="text"
                                             name="feedback_subject"
-                                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                         />
                                     </div>
                                     <div>
@@ -40,14 +40,14 @@ const FeedbackFormSection: React.FC = () => {
                                         <input
                                             type="date"
                                             name="feedback_date"
-                                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-8 px-3"
                                         />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium text-gray-200">Feedback Response</label>
                                         <textarea
                                             name="feedback_response"
-                                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-auto px-3 py-1"
                                         />
                                     </div>
                                 </div>
