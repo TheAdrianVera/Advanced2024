@@ -23,7 +23,7 @@ const FeedbackFormSection: React.FC = () => {
                     </div>
          
                     <div className={`flex py-10 transition-opacity duration-400 ${isAnonFeedbackOpen ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
-                        <form className="max-w-lg mx-auto">
+                        <form className="max-w-lg mx-auto w-full">
                             <fieldset className='mb-6'>
                                 <legend className="text-lg font-semibold mb-4 text-white">Feedback Information</legend>
                                 <div className='grid grid-cols-1 gap-4'>

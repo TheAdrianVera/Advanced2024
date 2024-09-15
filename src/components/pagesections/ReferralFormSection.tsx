@@ -61,7 +61,7 @@ const ReferralFormSection:React.FC = () => {
                     {/* Patient Information */}
                     <fieldset className="mb-6">
                         <legend className="text-lg font-semibold mb-4">Patient Information</legend>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                             {/* Patient Name - Requried */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Patient Name *</label>
