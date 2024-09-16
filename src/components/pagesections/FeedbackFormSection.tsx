@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 const FeedbackFormSection: React.FC = () => {
         
         const [isSubmitted, setIsSubmitted] = useState(false)
+        const [submissionFailed, setSubmissionFailed] = useState(false)
     
         // Toggling Feedback Form
         const [isAnonFeedbackOpen, setIsAnonFeedbackOpen] = useState(false)
@@ -41,6 +42,7 @@ const FeedbackFormSection: React.FC = () => {
                         setIsSubmitted(true)
                     }, (error) => {
                         console.log("Failed :(", error.text)
+                        setSubmissionFailed(true)
                     })
             }
         }
@@ -64,6 +66,11 @@ const FeedbackFormSection: React.FC = () => {
                             <div className='text-center'>
                                 <h2 className='text-2xl font-bold text-green-500 mb-4'>Thank you for your feedback!</h2>
                                 <p className='text-lg text-gray-300'>We appreciate your input and will get back to you soon.</p>
+                            </div>
+                        ) : submissionFailed ? (
+                            <div className='text-center'>
+                                <h2 className='text-2xl font-bold text-red-500 mb-4'>Oops, we had an error there!</h2>
+                                <p className='text-lg text-gray-300'>We're working on it right away. Please try again later.</p>
                             </div>
                         ) : (                
                         <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto w-full">
