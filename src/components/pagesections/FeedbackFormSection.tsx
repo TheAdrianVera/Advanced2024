@@ -3,6 +3,9 @@ import { MdKeyboardArrowUp } from "react-icons/md"
 import emailjs from '@emailjs/browser'
 
 const FeedbackFormSection: React.FC = () => {
+        
+        const [isSubmitted, setIsSubmitted] = useState(false)
+    
         // Toggling Feedback Form
         const [isAnonFeedbackOpen, setIsAnonFeedbackOpen] = useState(false)
         const toggleAnonFeedbackSection = () => {
@@ -35,6 +38,7 @@ const FeedbackFormSection: React.FC = () => {
                 emailjs.sendForm(serviceId, templateId, form.current, myPublicKey)
                     .then((result) => {
                         console.log("Success!!", result.text)
+                        setIsSubmitted(true)
                     }, (error) => {
                         console.log("Failed :(", error.text)
                     })
@@ -54,8 +58,15 @@ const FeedbackFormSection: React.FC = () => {
                         </div>
                     </div>
          
-                    <div className={`flex py-10 transition-opacity duration-400 ${isAnonFeedbackOpen ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
+                    <div className={`${isSubmitted ? 'flex-col justiify-center items-center' : ''} flex py-10 transition-opacity duration-400 ${isAnonFeedbackOpen ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
                         {/* Feedback Form */}
+                        {isSubmitted ? (
+                            <div className='text-center'>
+                                <h2 className='text-2xl font-bold text-green-500 mb-4'>Thank you for your feedback!</h2>
+                                <p className='text-lg text-gray-300'>We appreciate your input and will get back to you soon.</p>
+                            </div>
+                        ) : (
+                    
                         <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto w-full">
                             <fieldset className='mb-6'>
                                 <legend className="text-lg font-semibold mb-4 text-white">Feedback Information</legend>
@@ -89,6 +100,10 @@ const FeedbackFormSection: React.FC = () => {
                                 <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600">Submit</button>
                             </div>
                         </form>
+                        )}
+
+
+
                     </div>
 
                 </div>
