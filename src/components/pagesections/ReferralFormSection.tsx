@@ -48,8 +48,6 @@ const ReferralFormSection:React.FC = () => {
                     console.log("Failed :(", error.text)
                 })
         }
-
-
     }
 
     return (

@@ -65,8 +65,7 @@ const FeedbackFormSection: React.FC = () => {
                                 <h2 className='text-2xl font-bold text-green-500 mb-4'>Thank you for your feedback!</h2>
                                 <p className='text-lg text-gray-300'>We appreciate your input and will get back to you soon.</p>
                             </div>
-                        ) : (
-                    
+                        ) : (                
                         <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto w-full">
                             <fieldset className='mb-6'>
                                 <legend className="text-lg font-semibold mb-4 text-white">Feedback Information</legend>
