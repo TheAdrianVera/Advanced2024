@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser'
 // interface FormSectionProps {}
 
 const ReferralFormSection:React.FC = () => {
+    const [isSubmitted, setIsSubmitted] = useState(false)
+    
     // Referral Form Ref
     const form = useRef<HTMLFormElement>(null)
 
@@ -41,6 +43,7 @@ const ReferralFormSection:React.FC = () => {
             emailjs.sendForm(serviceId, templateId, form.current, myPublicKey)
                 .then((result) => {
                     console.log("Success!!", result.text)
+                    setIsSubmitted(true)
                 }, (error) => {
                     console.log("Failed :(", error.text)
                 })
@@ -57,6 +60,12 @@ const ReferralFormSection:React.FC = () => {
                     <h1 className='section-title mb-10'>Referral Form</h1>
                 </div>
                 {/* Referral Form */}
+                {isSubmitted ? (
+                    <div className='text-center'>
+                        <h2 className='text-2xl font-bold text-green-500 mb-4'>Thank you for your feedback!</h2>
+                        <p className='text-lg text-gray-700'>We appreciate your input and will get back to you soon.</p>
+                    </div>
+                ) : (
                 <form ref={form} onSubmit={sendEmail} className="max-w-lg mx-auto">
                     {/* Patient Information */}
                     <fieldset className="mb-6">
@@ -200,6 +209,7 @@ const ReferralFormSection:React.FC = () => {
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600">Submit</button>
                     </div>
                 </form>
+                )}
             </div>
         </div>
     )
