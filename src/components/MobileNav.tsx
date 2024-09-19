@@ -37,25 +37,36 @@ const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
             </Link>
             <TiThMenu className='hover:text-advancedLightBlue' size={32} onClick={toggleMenu}/>
             {isMenuOpen && (
-                <ul className="absolute top-16 left-0 w-full bg-advancedDarkBlue text-white flex flex-col items-center space-y-4 py-4">
-                    {[
-                        { path: '/', label: 'Home' },
-                        { path: '/about', label: 'About' },
-                        { path: '/careers', label: 'Careers' },
-                        { path: '/community', label: 'Community' },
-                        { path: '/services', label: 'Services' },
-                        { path: '/contact', label: 'Contact' }
-                    ].map((item) => (
-                        <li
-                            key={item.path}
-                            className={`hover:text-advancedLightBlue ${selected === item.path ? 'text-blue-500' : ''}`}
-                        >
-                            <Link to={item.path} onClick={() => handleMenuItemClick(item.path)}>
-                                {item.label}
-                            </Link>
+                <div className="fixed inset-0 bg-advancedBlue flex flex-col items-center justify-center z-50">
+                    <button className="hover:text-rose-500 absolute top-5 right-5 text-white text-5xl"onClick={toggleMenu}>&times;</button>
+                    <ul className="flex flex-col space-y-4 text-white text-2xl">
+                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
+                            <TiHome className="mr-2"/>
+                            <Link to="/" onClick={toggleMenu}>Home</Link>
                         </li>
-                    ))}
-                </ul>
+                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
+                            <PiBooksFill className="mr-2"/>
+                            <Link to="/about" onClick={toggleMenu}>About</Link>
+                        </li>
+                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
+                            <FaNotesMedical className="mr-2"/>
+                            <Link to="/careers" onClick={toggleMenu}>Careers</Link>
+                        </li>
+                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
+                            <MdGroups className="mr-2"/>
+                            <Link to="/community" onClick={toggleMenu}>Community</Link>
+                        </li>
+                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
+                            <FaHandHoldingMedical className="mr-2"/>
+                            <Link to="/services" onClick={toggleMenu}>Services</Link>
+                        </li>
+                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
+                            <MdContactPage className="mr-2"/>
+                            <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+                        </li>
+                    </ul>
+                </div>
+
             )}
         </div>
     )
