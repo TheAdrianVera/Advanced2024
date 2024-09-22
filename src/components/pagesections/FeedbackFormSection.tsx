@@ -8,7 +8,8 @@ const FeedbackFormSection: React.FC = () => {
         const [submissionFailed, setSubmissionFailed] = useState(false)
     
         // Toggling Feedback Form
-        const [isAnonFeedbackOpen, setIsAnonFeedbackOpen] = useState(false)
+        const [isAnonFeedbackOpen, setIsAnonFeedbackOpen] = useState(false) 
+        
         const toggleAnonFeedbackSection = () => {
             setIsAnonFeedbackOpen(!isAnonFeedbackOpen)
         }
@@ -53,7 +54,7 @@ const FeedbackFormSection: React.FC = () => {
                     <div className='flex justify-center'>
                         <div 
                             className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 flex flex-row'
-                            onClick={() => setIsAnonFeedbackOpen(!isAnonFeedbackOpen)}
+                            onClick={() => toggleAnonFeedbackSection()}
                         >
                             <span>Anonymous Feedback Form</span>
                             <MdKeyboardArrowUp className={`inline text-2xl ml-2 transform transition-transform duration-300 ${isAnonFeedbackOpen ? 'rotate-180' : ''}`} />
