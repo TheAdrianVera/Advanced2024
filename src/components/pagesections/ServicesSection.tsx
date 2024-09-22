@@ -1,6 +1,5 @@
 import React from 'react'
 import ServiceBlock from '../pagecomponents/service-block'
-import { IconBase } from 'react-icons'
 
 const servicesData = [
     {

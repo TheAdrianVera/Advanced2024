@@ -27,7 +27,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
 
     const handleMenuItemClick = (path: string) => {
         setSelected(path)
-        setIsMenuOpen(false) // Close the menu after selecting an item
+        setIsMenuOpen(!selected) // Close the menu after selecting an item
     }
 
     return (
