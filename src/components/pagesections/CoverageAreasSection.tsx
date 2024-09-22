@@ -63,7 +63,7 @@ const CoverageAreasSection: React.FC = () => {
                 <div className='w-auto hidden md:flex flex-col items-center'>   
                     <img 
                         className={`h-[32rem] w-auto transition-opacity ${isFading ? 'fade-out' : ''}`} 
-                        src={`/src/assets/map/coverage_map${currentCoverageId}.png`}
+                        src={`/map/coverage_map${currentCoverageId}.png`}
                         alt='Coverage Map'
                     />
                 </div>
