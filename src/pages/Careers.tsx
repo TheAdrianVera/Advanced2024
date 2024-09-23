@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import PageBanner from '../components/pagesections/PageBanner'
 import BenefitsSection from '../components/pagesections/BenefitsSection'
 import ContactSection from '../components/pagesections/ContactSection'
@@ -51,6 +52,16 @@ const Careers: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Careers | Advanced Healthcare Services, LLC.</title>
+        <meta name='description' content='We are hiring! Learn about careers at Advanced Healthcare Services LLC.' />
+        <meta name='author' content='Advanced Healthcare Services LLC.' />
+        <meta name='keywords' content='Skilled Care, Skilled Health Care, Springfield, Illinois, Home Health, Home, Assisted Living, Long Term Care, Nurses, Physical Therapist' />
+        <meta property='og:title' content='Careers | Advanced Healthcare Services LLC.' />
+        <meta property='og:description' content='We are hiring! Learn about careers at Advanced Healthcare Services LLC.' />
+        <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
+        <meta property='og:url' content='https://ahsllc.org/careers' />
+      </Helmet>
       <PageBanner 
         title='Careers at Advanced' 
         subtitle='Join our Advanced team and make a difference.' 
