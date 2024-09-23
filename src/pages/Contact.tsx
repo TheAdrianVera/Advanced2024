@@ -8,6 +8,16 @@ import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 const Contact: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Contact | Advanced Healthcare Services, LLC.</title>
+        <meta name='description' content='Contact Advanced Healthcare Services LLC.' />
+        <meta name='author' content='Advanced Healthcare Services LLC.' />
+        <meta name='keywords' content='Skilled Care, Skilled Health Care, Springfield, Illinois, Home Health, Home, Assisted Living, Long Term Care, Nurses, Physical Therapist' />
+        <meta property='og:title' content='Contact | Advanced Healthcare Services LLC.' />
+        <meta property='og:description' content='Contact Advanced Healthcare Services LLC.' />
+        <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
+        <meta property='og:url' content='https://ahsllc.org/contact' />
+      </Helmet>
       <PageBanner 
         title='Contact Our Team' 
         subtitle='Let’s work together—contact us today.' 

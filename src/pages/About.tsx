@@ -203,11 +203,11 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Us | Advanced Healthcare Services, LLC.</title>
+        <title>About | Advanced Healthcare Services, LLC.</title>
         <meta name='description' content='Learn more about Advanced Healthcare Services LLC. in Springfield, IL' />
         <meta name='author' content='Advanced Healthcare Services LLC.' />
         <meta name='keywords' content='Skilled Care, Skilled Health Care, Springfield, Illinois, Home Health, Home, Assisted Living, Long Term Care, Nurses, Physical Therapist' />
-        <meta property='og:title' content='About Us | Advanced Healthcare Services LLC.' />
+        <meta property='og:title' content='About | Advanced Healthcare Services LLC.' />
         <meta property='og:description' content='Learn more about Advanced Healthcare Services LLC. in Springfield, IL' />
         <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
         <meta property='og:url' content='https://ahsllc.org/about' />

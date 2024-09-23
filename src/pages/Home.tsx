@@ -10,6 +10,16 @@ import CoverageAreasSection from '../components/pagesections/CoverageAreasSectio
 const Home: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Home | Advanced Healthcare Services, LLC.</title>
+        <meta name='description' content='Advanced Health Care Services LLC. proudly provides skilled health care services to our patients in private homes, assisted living, and long term care facilities around Springfield, Illinois.' />
+        <meta name='author' content='Advanced Healthcare Services LLC.' />
+        <meta name='keywords' content='Skilled Care, Skilled Health Care, Springfield, Illinois, Home Health, Home, Assisted Living, Long Term Care, Nurses, Physical Therapist' />
+        <meta property='og:title' content='Home | Advanced Healthcare Services LLC.' />
+        <meta property='og:description' content='Advanced Health Care Services LLC. proudly provides skilled health care services to our patients in private homes, assisted living, and long term care facilities around Springfield, Illinois.' />
+        <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
+        <meta property='og:url' content='https://ahsllc.org' />
+      </Helmet>
       <PageBanner 
         title='Home'  
         button={{ 
