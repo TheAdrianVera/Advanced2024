@@ -70,7 +70,7 @@ const Careers: React.FC = () => {
         title='Careers at Advanced' 
         subtitle='Join our Advanced team and make a difference.' 
         backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
-        button={{ 
+        careerButton={{ 
           text: 'Open Positions', 
           link: 'https://ahsllc.applicantstack.com/x/openings'}}
       />
