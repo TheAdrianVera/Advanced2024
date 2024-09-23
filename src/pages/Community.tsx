@@ -1,5 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import ReactGA from 'react-ga4'
+
+// Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
 import CommunitySection from '../components/pagesections/CommunitySection'
 import CommunityEventsSection from '../components/pagesections/CommunityEventsSection'
@@ -7,6 +10,8 @@ import CommunityBiggestHeartSection from '../components/pagesections/CommunityBi
 import ContactSection from '../components/pagesections/ContactSection'
 
 const Community: React.FC = () => {
+  ReactGA.send({ hitType: 'pageview', page: '/community', title: 'Community' })
+  
   return (
     <>
       <Helmet>

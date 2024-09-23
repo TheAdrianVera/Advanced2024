@@ -1,11 +1,16 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import ReactGA from 'react-ga4'
+
+// Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
 import ServicesSection from '../components/pagesections/ServicesSection'
 import ContactSection from '../components/pagesections/ContactSection'
 import CoverageAreasSection from '../components/pagesections/CoverageAreasSection'
 
 const Services: React.FC = () => {
+  ReactGA.send({ hitType: 'pageview', page: '/services', title: 'Services' })
+
   return (
     <>
       <Helmet>

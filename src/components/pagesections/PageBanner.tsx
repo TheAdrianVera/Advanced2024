@@ -1,4 +1,5 @@
 import React from "react"
+import ReactGA from "react-ga4"
 import HomeScreenLogo from "../logos/HomeScreenLogo"
 
 interface PageBannerProps {
@@ -8,13 +9,24 @@ interface PageBannerProps {
         text: string
         link: string
     }
+    careerButton?: {
+        text: string
+        link: string
+    }
     backgroundUrl?: string
     logo?: boolean
     logoUrl?: string
 }
 
-const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgroundUrl, logo, logoUrl }) => {
-    const backgroundStyle = backgroundUrl ? { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {};
+const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgroundUrl, logo, logoUrl, careerButton }) => {
+    const backgroundStyle = backgroundUrl ? { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}
+    const handleClick = (label: string) => {
+        ReactGA.event({
+            category: 'Button',
+            action: 'Click',
+            label: label
+        })
+    }
 
     return (
         <div
@@ -41,6 +53,17 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                         <p className="font-arial-narrow text-2xl md:text-3xl">{subtitle}</p>
                     )}
                 </div>
+            )}
+
+            {careerButton && (
+                <a 
+                    href={careerButton.link} 
+                    className="relative bg-advancedNavyBlue text-white font-arial-rounded text-lg px-8 py-4 mt-5 rounded-md hover:bg-blue-600"
+                    target="_blank"
+                    onClick={() => handleClick("Career Open Positions")}
+                >
+                    {careerButton.text}
+                </a>
             )}
 
             {button && (
