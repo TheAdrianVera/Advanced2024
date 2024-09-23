@@ -8,8 +8,16 @@ import Careers from './pages/Careers'
 import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
+import ReactGA from 'react-ga4'
+import { useEffect } from 'react'
+
+const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
 
 function App() {
+
+  useEffect(()=>{
+    ReactGA.initialize(trackingId)
+  }, [])
 
   return (
     <div className="flex flex-col min-h-screen">

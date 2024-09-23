@@ -1,5 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import ReactGA from 'react-ga4'
+
+// Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
 import BenefitsSection from '../components/pagesections/BenefitsSection'
 import ContactSection from '../components/pagesections/ContactSection'
@@ -49,6 +52,7 @@ const benefitsData = [
 ]
 
 const Careers: React.FC = () => {
+  ReactGA.send({ hitType: 'pageview', page: '/careers', title: 'Career' })
 
   return (
     <>

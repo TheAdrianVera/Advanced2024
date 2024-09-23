@@ -1,6 +1,9 @@
 import React from 'react'
-import PageBanner from '../components/pagesections/PageBanner'
 import { Helmet } from 'react-helmet'
+import ReactGA from 'react-ga4'
+
+// Component Imports
+import PageBanner from '../components/pagesections/PageBanner'
 import AboutSection from '../components/pagesections/AboutSection'
 import FocusSection from '../components/pagesections/FocusSection'
 import TeamSection from '../components/pagesections/TeamSection'
@@ -8,6 +11,7 @@ import ContactSection from '../components/pagesections/ContactSection'
 import TestimonialsSection from '../components/pagesections/TestimonialsSection'
 
 const About: React.FC = () => {
+  ReactGA.send({ hitType: 'pageview', page: '/about', title: 'About' })
 
   const positionToNameExtension = (name: string, position: string) => {
     switch (true) {

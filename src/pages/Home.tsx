@@ -1,5 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import ReactGA from 'react-ga4'
+
+// Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
 import ReferralFormSection from '../components/pagesections/ReferralFormSection'
 import ContactSection from '../components/pagesections/ContactSection'
@@ -8,6 +11,8 @@ import ServicesSection from '../components/pagesections/ServicesSection'
 import CoverageAreasSection from '../components/pagesections/CoverageAreasSection'
 
 const Home: React.FC = () => {
+  ReactGA.send({ hitType: 'pageview', page: '/home', title: 'Home' })
+
   return (
     <>
       <Helmet>
