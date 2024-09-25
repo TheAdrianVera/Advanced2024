@@ -42,15 +42,15 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                     <HomeScreenLogo url={logoUrl} size={200} className="h-32 md:h-64 w-auto"/>
                     <div className="flex flex-col justify-center items-center pt-5">
                         {subtitle && (
-                            <p className="font-arial-narrow-italic text-2xl md:text-3xl">{subtitle}</p>
+                            <p className="font-arial-narrow-italic text-lg sm:text-2xl md:text-3xl">{subtitle}</p>
                         )}
                     </div>
                 </div>
             ) : (
                 <div className="relative">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-2 uppercase">{title}</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-2 uppercase">{title}</h1>
                     {subtitle && (
-                        <p className="font-arial-narrow text-2xl md:text-3xl">{subtitle}</p>
+                        <p className="font-arial-narrow text-xl mt-5 md:mt-10 md:text-3xl">{subtitle}</p>
                     )}
                 </div>
             )}
