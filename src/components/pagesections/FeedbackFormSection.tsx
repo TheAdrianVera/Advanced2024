@@ -6,8 +6,6 @@ const FeedbackFormSection: React.FC = () => {
         
         const [isSubmitted, setIsSubmitted] = useState(false)
         const [submissionFailed, setSubmissionFailed] = useState(false)
-    
-        // Toggling Feedback Form
         const [isAnonFeedbackOpen, setIsAnonFeedbackOpen] = useState(false) 
         
         const toggleAnonFeedbackSection = () => {
@@ -51,7 +49,7 @@ const FeedbackFormSection: React.FC = () => {
         return (
             <div className="bg-advancedNavyBlue pb-10">
                 <div className='flex flex-col'>
-                    <div className='flex justify-center'>
+                    <div className='flex flex-row justify-center'>
                         <div 
                             className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 flex flex-row'
                             onClick={() => toggleAnonFeedbackSection()}
@@ -74,7 +72,7 @@ const FeedbackFormSection: React.FC = () => {
                                 <p className='text-lg text-gray-300'>We're working on it right away. Please try again later.</p>
                             </div>
                         ) : (                
-                        <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto w-full">
+                        <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto md:w-full">
                             <fieldset className='mb-6'>
                                 <legend className="text-lg font-semibold mb-4 text-white">Feedback Information</legend>
                                 <div className='grid grid-cols-1 gap-4'>
