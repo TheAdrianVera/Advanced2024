@@ -35,12 +35,13 @@ function App() {
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='*' element={<Home />} />
+            <Route path='/index.html' element={<Navigate to="/" />} />
             <Route path='/careers.html' element={<Navigate to="/careers" />} />
             <Route path='/about.html' element={<Navigate to="/about" />} />
             <Route path='/services.html' element={<Navigate to="/services" />} />
             <Route path='/community.html' element={<Navigate to="/community" />} />
             <Route path='/contact.html' element={<Navigate to="/contact" />} />
+            <Route path='*' element={<Navigate to="/" />} />
           </Routes>
       </main>
       <Footer />
