@@ -68,7 +68,7 @@ const About: React.FC = () => {
     },
     {
       name: 'Naomi Laboy',
-      title: 'Manager',
+      title: 'Director of Operations',
       imgUrl: nameToPngFileName('Naomi Laboy', 'Manager'),
     },
     {
