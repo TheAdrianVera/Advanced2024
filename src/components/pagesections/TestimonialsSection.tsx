@@ -18,7 +18,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({testimonials})
                     <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-800 mb-6'>Hear From Our Clients About Our Service</h2>
                 </div>
             </div>
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-6 lg:mx-10 xl:mx-40'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:mx-10 xl:mx-40'>
                 {testimonials.map((testimonial, index) => (
                     <div
                         key={index}
