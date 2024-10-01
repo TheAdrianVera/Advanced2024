@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 
 // Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
@@ -12,7 +13,17 @@ import TestimonialsSection from '../components/pagesections/TestimonialsSection'
 import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const About: React.FC = () => {
-  ReactGA.send({ hitType: 'pageview', page: '/about', title: 'About' })
+  useEffect(()=>{
+    ReactPixel.pageView()
+    ReactPixel.track('ViewContent', {
+      page: 'About',
+      content_ids: ['/about'],
+      content_type: 'page'
+    })
+    ReactGA.send({ hitType: 'pageview', page: '/about', title: 'About' })
+  }, [])
+  
+  
 
   const positionToNameExtension = (name: string, position: string) => {
     switch (true) {

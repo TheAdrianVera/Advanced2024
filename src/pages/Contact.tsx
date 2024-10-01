@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 
 // Component Imports
 import ContactSection from '../components/pagesections/ContactSection'
@@ -9,7 +10,18 @@ import ReferralFormSection from '../components/pagesections/ReferralFormSection'
 import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const Contact: React.FC = () => {
-  ReactGA.send({ hitType: 'pageview', page: '/contact', title: 'Contact' })
+  useEffect(()=>{
+    ReactPixel.pageView()
+    ReactPixel.track('ViewContent', {
+      page: 'Contact',
+      content_ids: ['/contact'],
+      content_type: 'page'
+    })
+
+    ReactGA.send({ hitType: 'pageview', page: '/contact', title: 'Contact' })
+  }, [])
+
+  
 
   return (
     <>

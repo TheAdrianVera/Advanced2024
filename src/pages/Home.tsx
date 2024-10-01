@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 
 // Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
@@ -11,7 +12,18 @@ import ServicesSection from '../components/pagesections/ServicesSection'
 import CoverageAreasSection from '../components/pagesections/CoverageAreasSection'
 
 const Home: React.FC = () => {
-  ReactGA.send({ hitType: 'pageview', page: '/home', title: 'Home' })
+  useEffect(()=>{
+    ReactPixel.track('ViewContent', {
+      page: 'Home',
+      content_ids: ['/home'],
+      content_type: 'page'
+    })
+
+    ReactGA.send({ hitType: 'pageview', page: '/home', title: 'Home' })
+  }, [])
+
+
+  
 
   return (
     <>
