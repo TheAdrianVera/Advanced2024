@@ -45,7 +45,7 @@ const BenefitBlock: React.FC<BenefitBlockProps> = ({title, content, iconLabel}) 
         <div className='flex flex-col w-[100%] md:w-[25% px-2 py-5 md:py-2'>
             <div className='flex flex-col items-center'>
                 <div className='pb-2'>{icon(iconLabel)}</div>
-                <div className='text-3xl lg:text-2xl font-arial-bold py-2 text-center'>{title}</div>
+                <div className='text-3xl md:text-2xl font-arial-bold py-2 text-center'>{title}</div>
             </div>
             <div className='flex flex-col items-center'>
                 <div className='font-arial-narrow text-xl pt-3 w-[90%] lg:w-[100%]'>{content}</div>
