@@ -41,12 +41,12 @@ const AboutSection = () => {
                 <div className='flex flex-row pt-20 w-full md:w-3/4 lg:w-2/3'>
                     <div className='flex flex-col pb-5 mr-3'>
                         <h2 className='text-xl font-arial-rounded-bold md:text-2xl text-gray-800 mb-6'>{aboutData.section1Title}</h2>
-                        <p className="mb-2 h-48 lg:h-32 text-lg">{aboutData.section1Para1}</p>
+                        <p className="mb-2 sm:h-48 lg:h-32 text-lg">{aboutData.section1Para1}</p>
                         <p className='text-lg'>{aboutData.section1Para2}</p>
                     </div>
                     <div className='flex flex-col pb-5 ml-3'>
                         <h2 className='text-xl font-arial-rounded-bold md:text-2xl text-gray-800 mb-6'>{aboutData.section2Title}</h2>
-                        <p className='mb-2 h-48 lg:h-32 text-lg'>{aboutData.section2Para1}</p>
+                        <p className='mb-2 sm:h-48 lg:h-32 text-lg'>{aboutData.section2Para1}</p>
                         <p className='text-lg'>{aboutData.section2Para2}</p>
                     </div>
                 </div>
