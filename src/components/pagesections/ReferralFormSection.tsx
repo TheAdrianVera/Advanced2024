@@ -57,7 +57,7 @@ const ReferralFormSection:React.FC = () => {
             <div className='flex flex-col items-center py-10'>
                 {/* Form Header */}
                 <div>
-                    <h1 className='section-title mb-10'>Referral Form</h1>
+                    <h1 className='section-title mb-10 text-center'>Referral Form</h1>
                 </div>
                 {/* Referral Form */}
                 {isSubmitted ? (

@@ -22,7 +22,7 @@ const CultureSection: React.FC = () => {
                 <h1 className='section-title mb-4'>Our Culture</h1>
                 <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-200 mb-6'>Experience the vibrant culture at our company</h2>
             </div>
-            <div className='grid grid-cols-3 gap-6 lg:mx-10 xl:mx-40'>
+            <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-6 lg:mx-10 xl:mx-40'>
                 {culuturePhotoGalleryUrls.map((photo, index) => (
                     <div key={index} className='relative group'>
                         <img 

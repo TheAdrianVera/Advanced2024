@@ -67,7 +67,7 @@ const CommunitySection: React.FC = () => {
             <div className='flex flex-col items-center py-10'>
                 <div className='flex flex-col items-center'>
                     <h1 className='section-title mb-4'>Our Community</h1>
-                    <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-200 mb-6'>See some of the amazing faces that make our amazing Advanced Team!</h2>
+                    <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-200 mb-6 text-center'>See some of the amazing faces that make our amazing Advanced Team!</h2>
                 </div>
                 <div className='columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 w-full md:w-3/4 lg:w-2/3'>
                     {communityGallery.map((image, index) => (

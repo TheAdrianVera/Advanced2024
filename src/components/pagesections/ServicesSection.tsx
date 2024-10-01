@@ -54,7 +54,7 @@ const ServicesSection: React.FC = () => {
                 </div>
             </div>
             <div className='flex flex-col items-center pb-20' >
-                <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
                     {servicesData.map((service, index) => (
                         index < 4 ? (
                             <ServiceBlock
@@ -66,7 +66,7 @@ const ServicesSection: React.FC = () => {
                         ) : null
                     ))}
                 </div>
-                <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
                     {servicesData.map((service, index) => (
                         index > 3 ? (
                             <ServiceBlock

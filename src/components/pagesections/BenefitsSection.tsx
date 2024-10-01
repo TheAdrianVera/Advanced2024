@@ -21,7 +21,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({benefitsData}) => {
                 </div>
             </div>
             <div className='flex flex-col items-center pb-20'>
-                <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
                     {benefitsData.map((benefit, index) => (
                         index < 4 ? (
                             <BenefitBlock 
@@ -33,7 +33,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({benefitsData}) => {
                         ) : null
                     ))}
                 </div>
-                <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 pb-5 w-full md:w-3/4 lg:w-2/3'>
                     {benefitsData.map((benefit, index) => (
                         index > 3 ? (
                             <BenefitBlock 
