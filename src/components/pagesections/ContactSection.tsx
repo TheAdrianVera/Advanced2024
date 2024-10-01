@@ -1,5 +1,11 @@
 import React from 'react'
 
+import { FaLinkedin } from "react-icons/fa"
+import { FaFacebook } from "react-icons/fa"
+import { SiIndeed } from "react-icons/si"
+
+
+
 interface ContactSectionProps {
     whiteAlternate?: boolean
 }
@@ -38,6 +44,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({whiteAlternate}) => {
                             <h2>Hours:</h2>
                             <p>Monday - Friday: 8:00 AM to 4:30 PM</p>
                             <p className='pb-3'>Saturday - Sunday: On Call</p>
+                            <div className='flex'>
+                                <a href='https://www.linkedin.com/company/advanced-healthcare-services-llc/posts/?feedView=all' target='_blank' rel='noreferrer' className='mr-3'>
+                                    <FaLinkedin size={24} className='hover:text-blue-300' />
+                                </a>
+                                <a href='https://www.facebook.com/AHSLLC.ORG' target='_blank' rel='noreferrer' className='mr-3'>
+                                    <FaFacebook size={24} className='hover:text-blue-300' />
+                                </a>
+                                <a href='https://www.indeed.com/cmp/Advanced-Healthcare-Services-LLC/jobs' target='_blank' rel='noreferrer'>
+                                    <SiIndeed size={24} className='hover:text-blue-300' />
+                                </a>
+                            </div>
                         </div>
                     </div>
 

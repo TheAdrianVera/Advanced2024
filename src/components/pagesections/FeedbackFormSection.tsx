@@ -2,7 +2,11 @@ import React, { useState, useRef } from 'react'
 import { MdKeyboardArrowUp } from "react-icons/md"
 import emailjs from '@emailjs/browser'
 
-const FeedbackFormSection: React.FC = () => {
+interface FeedbacklFormSectionProps {
+    whiteAlternate?: boolean
+}
+
+const FeedbackFormSection: React.FC<FeedbacklFormSectionProps> = ({whiteAlternate}) => {
         
         const [isSubmitted, setIsSubmitted] = useState(false)
         const [submissionFailed, setSubmissionFailed] = useState(false)
@@ -30,10 +34,10 @@ const FeedbackFormSection: React.FC = () => {
             },
         )
 
-            // Form Logic
+        // Form Logic
         const sendFeedbackEmail = (e: React.FormEvent) => {
             e.preventDefault()
-            console.log('sending email ...')
+            //console.log('sending email ...')
             if (form.current) {
                 emailjs.sendForm(serviceId, templateId, form.current, myPublicKey)
                     .then((result) => {
@@ -46,12 +50,17 @@ const FeedbackFormSection: React.FC = () => {
             }
         }
 
+        const bgStyle = whiteAlternate ? 'bg-white' : 'bg-advancedNavyBlue'
+        const buttonStyle = whiteAlternate ? 'bg-advancedNavyBlue text-white hover:bg-blue-600' : 'bg-blue-500 text-white hover:bg-blue-600'
+        const formLegendStyle = whiteAlternate ? 'text-black' : 'text-white'
+        const formInputStyle = whiteAlternate ? 'text-gray-800' : 'text-gray-200'
+
         return (
-            <div className="bg-advancedNavyBlue pb-10">
+            <div className={`${bgStyle} pb-10`}>
                 <div className='flex flex-col'>
                     <div className='flex flex-row justify-center'>
                         <div 
-                            className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 flex flex-row'
+                            className={`${buttonStyle} px-4 py-2 rounded-md cursor-pointer flex flex-row`}
                             onClick={() => toggleAnonFeedbackSection()}
                         >
                             <span>Anonymous Feedback Form</span>
@@ -74,10 +83,10 @@ const FeedbackFormSection: React.FC = () => {
                         ) : (                
                         <form ref={form} onSubmit={sendFeedbackEmail} className="max-w-lg mx-auto md:w-full">
                             <fieldset className='mb-6'>
-                                <legend className="text-lg font-semibold mb-4 text-white">Feedback Information</legend>
+                                <legend className={`${formLegendStyle} text-lg font-semibold mb-4`}>Feedback Information</legend>
                                 <div className='grid grid-cols-1 gap-4'>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-200">Feedback Subject</label>
+                                        <label className={`block text-sm font-medium ${formInputStyle}`}>Feedback Subject</label>
                                         <input
                                             type="text"
                                             name="feedback_subject"
@@ -85,7 +94,7 @@ const FeedbackFormSection: React.FC = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-200">Feedback Date</label>
+                                        <label className={`block text-sm font-medium ${formInputStyle}`}>Feedback Date</label>
                                         <input
                                             type="date"
                                             name="feedback_date"
@@ -93,7 +102,7 @@ const FeedbackFormSection: React.FC = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-200">Feedback Response</label>
+                                        <label className={`block text-sm font-medium ${formInputStyle}`}>Feedback Response</label>
                                         <textarea
                                             name="feedback_response"
                                             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm h-auto px-3 py-1"
@@ -102,7 +111,7 @@ const FeedbackFormSection: React.FC = () => {
                                 </div>
                             </fieldset>
                             <div className="text-center">
-                                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600">Submit</button>
+                                <button type="submit" className={`${buttonStyle} px-4 py-2 rounded-md cursor-pointer`}>Submit</button>
                             </div>
                         </form>
                         )}

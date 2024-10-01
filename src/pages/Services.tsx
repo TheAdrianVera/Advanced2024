@@ -7,6 +7,7 @@ import PageBanner from '../components/pagesections/PageBanner'
 import ServicesSection from '../components/pagesections/ServicesSection'
 import ContactSection from '../components/pagesections/ContactSection'
 import CoverageAreasSection from '../components/pagesections/CoverageAreasSection'
+import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const Services: React.FC = () => {
   ReactGA.send({ hitType: 'pageview', page: '/services', title: 'Services' })
@@ -30,9 +31,8 @@ const Services: React.FC = () => {
       />
       <ServicesSection />
       <CoverageAreasSection />
-      <ContactSection 
-        whiteAlternate={true}
-      />
+      <ContactSection whiteAlternate={true}/>
+      <FeedbackFormSection whiteAlternate={true}/>
     </>
 
   )
