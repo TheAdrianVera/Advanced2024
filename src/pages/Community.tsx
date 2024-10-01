@@ -8,6 +8,7 @@ import CommunitySection from '../components/pagesections/CommunitySection'
 import CommunityEventsSection from '../components/pagesections/CommunityEventsSection'
 import CommunityBiggestHeartSection from '../components/pagesections/CommunityBiggestHeartSection'
 import ContactSection from '../components/pagesections/ContactSection'
+import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const Community: React.FC = () => {
   ReactGA.send({ hitType: 'pageview', page: '/community', title: 'Community' })
@@ -33,6 +34,7 @@ const Community: React.FC = () => {
       <CommunityEventsSection />
       <CommunityBiggestHeartSection />
       <ContactSection whiteAlternate={true}/>
+      <FeedbackFormSection whiteAlternate={true}/>
     </>
 
   )

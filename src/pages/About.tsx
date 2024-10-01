@@ -9,6 +9,7 @@ import FocusSection from '../components/pagesections/FocusSection'
 import TeamSection from '../components/pagesections/TeamSection'
 import ContactSection from '../components/pagesections/ContactSection'
 import TestimonialsSection from '../components/pagesections/TestimonialsSection'
+import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const About: React.FC = () => {
   ReactGA.send({ hitType: 'pageview', page: '/about', title: 'About' })
@@ -233,6 +234,7 @@ const About: React.FC = () => {
         testimonials={testimonialList}
       />
       <ContactSection />
+      <FeedbackFormSection />
     </>
 
   )

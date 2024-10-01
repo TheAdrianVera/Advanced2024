@@ -7,6 +7,7 @@ import PageBanner from '../components/pagesections/PageBanner'
 import BenefitsSection from '../components/pagesections/BenefitsSection'
 import ContactSection from '../components/pagesections/ContactSection'
 import CultureSection from '../components/pagesections/CultureSection'
+import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const benefitsData = [
   {
@@ -77,6 +78,7 @@ const Careers: React.FC = () => {
       <CultureSection />
       <BenefitsSection benefitsData={benefitsData}/>
       <ContactSection />
+      <FeedbackFormSection />
     </>
 
   )
