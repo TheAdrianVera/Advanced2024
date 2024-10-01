@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 
 // Component Imports
 import PageBanner from '../components/pagesections/PageBanner'
@@ -11,7 +12,17 @@ import ContactSection from '../components/pagesections/ContactSection'
 import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 
 const Community: React.FC = () => {
-  ReactGA.send({ hitType: 'pageview', page: '/community', title: 'Community' })
+  useEffect(()=>{
+    ReactPixel.pageView()
+    ReactPixel.track('ViewContent', {
+      page: 'Community',
+      content_ids: ['/community'],
+      content_type: 'page'
+    })
+
+    ReactGA.send({ hitType: 'pageview', page: '/community', title: 'Community' })
+  }, [])
+
   
   return (
     <>

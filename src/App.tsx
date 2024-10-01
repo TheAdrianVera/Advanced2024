@@ -1,6 +1,7 @@
 import { Navigate, Routes, Route} from 'react-router-dom'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 import './App.css'
 
 // Component Imports
@@ -17,11 +18,14 @@ import Contact from './pages/Contact'
 
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
+const pixelId = import.meta.env.VITE_REACT_APP_PIXEL_ID
 
 function App() {
 
   useEffect(()=>{
     ReactGA.initialize(trackingId)
+    ReactPixel.init(pixelId)
+    ReactPixel.pageView()
   }, [])
 
   return (

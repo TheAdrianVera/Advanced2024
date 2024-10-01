@@ -1,5 +1,6 @@
-import React from "react"
-import ReactGA from "react-ga4"
+import React from 'react'
+import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 import HomeScreenLogo from "../logos/HomeScreenLogo"
 
 interface PageBannerProps {
@@ -25,6 +26,13 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
             category: 'Button',
             action: 'Click',
             label: label
+        })
+
+        ReactPixel.track('ViewContent', {
+            content_name: label,
+            content_category: 'Career Button',
+            content_type: 'Button',
+            content_ids: [label]
         })
     }
 
