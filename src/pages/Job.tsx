@@ -1,19 +1,18 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { jobs } from '../data/jobs'
 
 interface JobProps {
-  title: string
-  content: string
+  href: string
+  text: string
 }
 
 
-const Job: React.FC<JobProps> = ({title, content}) => {
+const Job: React.FC<JobProps> = ({href, text}) => {
 
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{content}</p>
+      <h1>{href}</h1>
+      <p>{text}</p>
     </div>
   )
 }
