@@ -24,7 +24,7 @@ const aboutData = {
     videoPoster: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/home-video-ph.png',
 }
 
-const AboutSection = () => {
+const AboutSection: React.FC = () => {
     return (
         <div id='aboutSection' className='section px-5 md:px-20 bg-white pb-20'>
             <div className='flex flex-col items-center py-10'>

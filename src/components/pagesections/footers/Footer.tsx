@@ -2,7 +2,7 @@ import { FaLinkedin, FaFacebook } from "react-icons/fa"
 import { SiIndeed } from "react-icons/si"
 import { Link } from "react-router-dom"
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className="bg-advancedDarkBlue text-white py-4">
             <div className="container mx-auto flex justify-center">

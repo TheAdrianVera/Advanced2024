@@ -1,7 +1,7 @@
 import Nav from '../navigation/Nav'
 import MobileNav from '../navigation/MobileNav'
 
-const Header = () => {
+const Header : React.FC = () => {
     return (
         <header className="header-nav sticky top-0 bg-advancedDarkBlue text-white h-20 flex items-center">
             <Nav className="hidden md:block"/>
