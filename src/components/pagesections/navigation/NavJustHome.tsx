@@ -15,7 +15,11 @@ const NavJustHome: React.FC<NavJustHomeProps> = ({className}) => {
 
     return (
         <nav className={`${className} hidden md:flex flex-row items-center justify-between w-[100%] px-20`}>
-            <Link to="/" onClick={() => handleMenuItemClick('/')}>
+            <Link 
+                to="/" 
+                onClick={() => handleMenuItemClick('/')}
+                className={selected === '/' ? 'selected-class' : ''}    
+            >
                 <Logo size={40} className='' />
             </Link>
         </nav>
