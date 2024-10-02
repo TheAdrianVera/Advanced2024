@@ -1,12 +1,13 @@
-import { Navigate, Routes, Route} from 'react-router-dom'
-import { useEffect } from 'react'
+import { Navigate, Routes, Route, useLocation} from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import ReactGA from 'react-ga4'
 import ReactPixel from 'react-facebook-pixel'
 import './App.css'
 
 // Component Imports
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/pagesections/headers/Header'
+import Footer from './components/pagesections/footers/Footer'
+import GenericHeaderNoNav from './components/pagesections/headers/GenericHeaderNoNav'
 
 // Page Imports
 import Home from './pages/Home'
@@ -15,22 +16,37 @@ import Careers from './pages/Careers'
 import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
-
+import Privacy from './pages/Privacy'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
 const pixelId = import.meta.env.VITE_REACT_APP_PIXEL_ID
 
 function App() {
+  const location = useLocation()
+  const [acceptCookies, setAcceptCookies] = useState(true)
 
   useEffect(()=>{
-    ReactGA.initialize(trackingId)
-    ReactPixel.init(pixelId)
-    ReactPixel.pageView()
-  }, [])
+    if (acceptCookies) {
+      ReactGA.initialize(trackingId)
+      ReactPixel.init(pixelId)
+      ReactPixel.pageView()
+    }
+  }, [acceptCookies])
+
+  const updateCookiesCallback = () => {
+    setAcceptCookies((prevValue)=> !prevValue)
+  }
+
+  const renderHeader = () => {
+    if (location.pathname === '/privacy') {
+      return <GenericHeaderNoNav />
+    }
+    return <Header />
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      {renderHeader()}
       <main className="flex-grow">
           <Routes>
             <Route path='/' element={<Home />} />
@@ -39,6 +55,7 @@ function App() {
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/privacy' element={<Privacy updateCookieAcceptance={updateCookiesCallback} />} />
             <Route path='/index.html' element={<Navigate to="/" />} />
             <Route path='/careers.html' element={<Navigate to="/careers" />} />
             <Route path='/about.html' element={<Navigate to="/about" />} />

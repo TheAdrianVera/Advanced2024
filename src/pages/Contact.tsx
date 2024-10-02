@@ -5,7 +5,7 @@ import ReactPixel from 'react-facebook-pixel'
 
 // Component Imports
 import ContactSection from '../components/pagesections/ContactSection'
-import PageBanner from '../components/pagesections/PageBanner'
+import PageBanner from '../components/pagesections/banners/PageBanner'
 import ReferralFormSection from '../components/pagesections/ReferralFormSection'
 import FeedbackFormSection from '../components/pagesections/FeedbackFormSection'
 

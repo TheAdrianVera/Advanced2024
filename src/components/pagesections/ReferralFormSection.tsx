@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 
 // interface FormSectionProps {}
 
-const ReferralFormSection:React.FC = () => {
+const ReferralFormSection: React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [submissionFailed, setSubmissionFailed] = useState(false)
 

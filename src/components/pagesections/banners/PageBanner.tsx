@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactGA from 'react-ga4'
 import ReactPixel from 'react-facebook-pixel'
-import HomeScreenLogo from "../logos/HomeScreenLogo"
+import HomeScreenLogo from "../../logos/HomeScreenLogo"
 
 interface PageBannerProps {
     title: string

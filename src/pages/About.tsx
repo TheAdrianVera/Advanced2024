@@ -4,7 +4,7 @@ import ReactGA from 'react-ga4'
 import ReactPixel from 'react-facebook-pixel'
 
 // Component Imports
-import PageBanner from '../components/pagesections/PageBanner'
+import PageBanner from '../components/pagesections/banners/PageBanner'
 import AboutSection from '../components/pagesections/AboutSection'
 import FocusSection from '../components/pagesections/FocusSection'
 import TeamSection from '../components/pagesections/TeamSection'

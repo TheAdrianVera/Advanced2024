@@ -1,14 +1,14 @@
-import { FaLinkedin } from "react-icons/fa"
-import { FaFacebook } from "react-icons/fa"
+import { FaLinkedin, FaFacebook } from "react-icons/fa"
 import { SiIndeed } from "react-icons/si"
+import { Link } from "react-router-dom"
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className="bg-advancedDarkBlue text-white py-4">
             <div className="container mx-auto flex justify-center">
                 <div className="flex flex-col md:flex-row">
                     <p className="text-sm mr-2">
-                        &copy; {new Date().getFullYear()} Advanced Healthcare LLC. All rights reserved. 
+                        &copy; {new Date().getFullYear()} Advanced Healthcare Services, LLC. 
                     </p>
                     <div className="flex flex-row items-center text-sm mr-3">
                         Social Links: 
@@ -22,6 +22,7 @@ const Footer = () => {
                             <SiIndeed size={16} className='hover:text-blue-300' />
                         </a>
                     </div>
+                    <Link to="/privacy" className="text-sm mr-2 hover:text-blue-300">Privacy.</Link>
                     <p className="text-sm">
                         Web Dev:
                         <a href="https://www.adriangvera.com" target="_blank" className="text-white hover:text-blue-300 underline ml-1">adriangvera.com</a>
