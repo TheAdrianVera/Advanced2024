@@ -1,5 +1,5 @@
 import { Navigate, Routes, Route, useLocation} from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ReactGA from 'react-ga4'
 import ReactPixel from 'react-facebook-pixel'
 import './App.css'
@@ -23,12 +23,17 @@ const pixelId = import.meta.env.VITE_REACT_APP_PIXEL_ID
 
 function App() {
   const location = useLocation()
+  const [acceptCookies, setAcceptCookies] = useState(true)
 
   useEffect(()=>{
     ReactGA.initialize(trackingId)
     ReactPixel.init(pixelId)
     ReactPixel.pageView()
   }, [])
+
+  const updateCookiesCallback = () => {
+    setAcceptCookies((prevValue)=> !prevValue)
+  }
 
   const renderHeader = () => {
     if (location.pathname === '/privacy') {
@@ -48,7 +53,7 @@ function App() {
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/privacy' element={<Privacy />} />
+            <Route path='/privacy' element={<Privacy updateCookieAcceptance={updateCookiesCallback} />} />
             <Route path='/index.html' element={<Navigate to="/" />} />
             <Route path='/careers.html' element={<Navigate to="/careers" />} />
             <Route path='/about.html' element={<Navigate to="/about" />} />

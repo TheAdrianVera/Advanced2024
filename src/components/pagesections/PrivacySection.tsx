@@ -1,13 +1,20 @@
 import React, {useState} from 'react'
 import Cookies from 'js-cookie'
 
-const PrivacySection: React.FC = () => {
+interface PrivacySectionProps {
+    toggleAcceptance: () => void
+}
+
+const PrivacySection: React.FC<PrivacySectionProps> = ({ toggleAcceptance }) => {
     const [consent, setConsent] = useState(Cookies.get('cookie-consent') === 'accepted');
 
     const handleToggle = () => {
         const newConsent = !consent;
         setConsent(newConsent);
         Cookies.set('cookie-consent', newConsent ? 'accepted' : 'declined', { expires: 365 });
+        if (toggleAcceptance) {
+            toggleAcceptance();
+        }
     };
 
     return (

@@ -4,7 +4,11 @@ import { Helmet } from 'react-helmet'
 import PageBanner from '../components/pagesections/banners/PageBanner'
 import PrivacySection from '../components/pagesections/PrivacySection'
 
-const Privacy: React.FC = () => {
+interface PrivacyProps {
+    updateCookieAcceptance: () => void
+}
+
+const Privacy: React.FC<PrivacyProps> = ({updateCookieAcceptance}) => {
 
     return (
         <>
@@ -22,7 +26,9 @@ const Privacy: React.FC = () => {
                 title={'Privacy'}
                 backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
             />
-            <PrivacySection />
+            <PrivacySection 
+                toggleAcceptance={updateCookieAcceptance}
+            />
         </>
     )
 }
