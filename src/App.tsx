@@ -80,8 +80,7 @@ function App() {
                     state={job.state} 
                     stateAbbrev={job.stateAbbrev}
                     url={job.url} 
-                    text={job.text} 
-                    other={job.other}
+                    text={job.text}
                     path={job.path}
                     />
                 } />

@@ -66,6 +66,19 @@ function extractCityFromPath(path) {
     return "Springfield Area"
 }
 
+function extractTypeFromPath(path) {
+    if (path.includes("full-time")) {
+        return "Full Time"
+    } else if (path.includes("part-time")) {
+        return "Part Time"
+    } else if (path.includes("8-hour")) {
+        return "8 Hour Shifts"
+    } else if (path.includes("weekends")) {
+        return "Weekends"
+    }
+    return "Full Time (TBD)"
+}
+
 
 // Scrape Jobs from URL
 async function scrapeJobs() {
@@ -81,15 +94,13 @@ async function scrapeJobs() {
             const text = linkElement.text()
             const path = createJobPath(text)
             const position = extractPositionAndOther(text).position
-            const type = ''
+            const type = extractTypeFromPath(path)
             const city = extractCityFromPath(path)
             const stateAbbrev = 'IL'
             const state = 'Illinois'
-            const acronym = extractAcroynm(path)
-            const other = extractPositionAndOther(text).other
-            
+            const acronym = extractAcroynm(path)    
 
-            jobs.push({ position, acronym, type, city, state, url, text, stateAbbrev, other, path })
+            jobs.push({ position, acronym, type, city, state, url, text, stateAbbrev, path })
         })
 
         const filePath = path.join(__dirname, '../data/jobs.ts')

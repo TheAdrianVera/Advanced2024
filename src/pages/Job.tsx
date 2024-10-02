@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom'
 
 interface JobProps {
   position: string
-  path: string
-  other: string  
+  path: string 
   type: string
   city: string
   state: string
@@ -15,7 +14,7 @@ interface JobProps {
 }
 
 
-const Job: React.FC<JobProps> = ({position, path, other, acronym, type, city, state, url, text, stateAbbrev}) => {
+const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev}) => {
 
   return (
     <div>
