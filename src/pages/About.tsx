@@ -69,6 +69,11 @@ const About: React.FC = () => {
 
   const teamMembers = [
     {
+      name: 'Naomi Laboy',
+      title: 'Director of Operations',
+      imgUrl: nameToPngFileName('Naomi Laboy', 'Manager'),
+    },
+    {
       name: 'Juanita H. Jones',
       title: 'Administrator, RN, WCC',
       imgUrl: nameToPngFileName('Juanita Jones', 'Administrator, RN, WCC'),
@@ -77,11 +82,6 @@ const About: React.FC = () => {
       name: 'Angela Wilcoxen',
       title: 'Agency Supervisor, RN',
       imgUrl: nameToPngFileName('Angela Wilcoxen', 'Agency Supervisor, RN'),
-    },
-    {
-      name: 'Naomi Laboy',
-      title: 'Director of Operations',
-      imgUrl: nameToPngFileName('Naomi Laboy', 'Manager'),
     },
     {
       name: 'Susan Gerding',
