@@ -5,7 +5,7 @@ import ReactPixel from 'react-facebook-pixel'
 import './App.css'
 
 // Component Imports
-import Header from './components/Header'
+import Header from './components/pagesections/headers/Header'
 import Footer from './components/pagesections/footers/Footer'
 
 // Page Imports

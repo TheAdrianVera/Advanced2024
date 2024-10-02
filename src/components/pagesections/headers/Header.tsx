@@ -1,5 +1,5 @@
-import Nav from './Nav'
-import MobileNav from './MobileNav'
+import Nav from '../../Nav'
+import MobileNav from '../../MobileNav'
 
 const Header = () => {
     return (
