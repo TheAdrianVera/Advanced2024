@@ -55,6 +55,18 @@ function extractAcroynm(path) {
     return null
 }
 
+function extractCityFromPath(path) {
+    const pattern = /-(\w+)-il$/
+    const match = path.match(pattern)
+    if (match) {
+        let city = match[1].replace(/-/g, ' ') // Replace dashes with spaces if needed
+        city = city.charAt(0).toUpperCase() + city.slice(1) // Capitalize the first character
+        return city
+    }
+    return "Springfield Area"
+}
+
+
 // Scrape Jobs from URL
 async function scrapeJobs() {
     try {
@@ -70,7 +82,7 @@ async function scrapeJobs() {
             const path = createJobPath(text)
             const position = extractPositionAndOther(text).position
             const type = ''
-            const city = 'Chicago'
+            const city = extractCityFromPath(path)
             const stateAbbrev = 'IL'
             const state = 'Illinois'
             const acronym = extractAcroynm(path)
