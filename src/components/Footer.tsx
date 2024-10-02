@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container mx-auto flex justify-center">
                 <div className="flex flex-col md:flex-row">
                     <p className="text-sm mr-2">
-                        &copy; {new Date().getFullYear()} Advanced Healthcare LLC. All rights reserved. 
+                        &copy; {new Date().getFullYear()} Advanced Healthcare Services, LLC. 
                     </p>
                     <div className="flex flex-row items-center text-sm mr-3">
                         Social Links: 
@@ -22,6 +22,7 @@ const Footer = () => {
                             <SiIndeed size={16} className='hover:text-blue-300' />
                         </a>
                     </div>
+                    <a href= "" className="text-sm mr-2 hover:text-blue-300">Privacy.</a>
                     <p className="text-sm">
                         Web Dev:
                         <a href="https://www.adriangvera.com" target="_blank" className="text-white hover:text-blue-300 underline ml-1">adriangvera.com</a>
