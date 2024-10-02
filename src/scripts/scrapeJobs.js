@@ -4,10 +4,39 @@ import path from 'path'
 import fs from 'fs'
 import { fileURLToPath } from 'url'
 
+// URL to scrape
 const url = 'https://ahsllc.applicantstack.com/x/openings'
+
+// Get Current Directory Name
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+// Helper Functions
+
+function extractPositionAndOther(text){
+    const delimiters = ['-','(']
+    for (const delimiter of delimiters) {
+        const index = text.indexOf(delimiter)
+        if (index !== -1) {
+            const position = text.substring(0, index).trim()
+            const other = text.substring(index).trim()
+            return { position: position, other: other }
+        }
+    }
+    return { position: text.trim(), other: '' }
+}  
+
+function createJobPath(text) {
+    // Remove -, (, ), and commas
+    let cleanedText = text.replace(/[-(),]/g, '')
+    // Replace multiple spaces with a single dash
+    cleanedText = cleanedText.replace(/\s+/g, '-')
+    // Convert to lowercase
+    cleanedText = cleanedText.toLowerCase()
+    return cleanedText
+}
+
+// Scrape Jobs from URL
 async function scrapeJobs() {
     try {
         const { data } = await axios.get(url)
@@ -17,9 +46,18 @@ async function scrapeJobs() {
 
         rows.each((index, element) => {
             const linkElement = $(element).find('td:first-child a')
-            const href = linkElement.attr('href')
+            const url = linkElement.attr('href')
             const text = linkElement.text()
-            jobs.push({ href, text })
+            const position = extractPositionAndOther(text).position
+            const type = 'Full Time'
+            const city = 'Chicago'
+            const stateAbbrev = 'IL'
+            const state = 'Illinois'
+            const acronym = ''
+            const other = extractPositionAndOther(text).other
+            const path = createJobPath(text)
+
+            jobs.push({ position, acronym, type, city, state, url, text, stateAbbrev, other, path })
         })
 
         const filePath = path.join(__dirname, '../data/jobs.ts')

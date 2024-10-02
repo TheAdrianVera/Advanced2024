@@ -51,24 +51,43 @@ function App() {
       {renderHeader()}
       <main className="flex-grow">
           <Routes>
+            {/* Routes for Main Pages */}
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
-            {jobs.map(job => (
-              <Route key={job.href} path={`/careers/openings/${job.href}`} element={<Job href={job.href} text={job.text}/>} />
-            ))}
             <Route path='/careers' element={<Careers />} />
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy updateCookieAcceptance={updateCookiesCallback} />} />
+            {/* Redirects for .html urls */}
             <Route path='/index.html' element={<Navigate to="/" />} />
             <Route path='/careers.html' element={<Navigate to="/careers" />} />
             <Route path='/about.html' element={<Navigate to="/about" />} />
             <Route path='/services.html' element={<Navigate to="/services" />} />
             <Route path='/community.html' element={<Navigate to="/community" />} />
             <Route path='/contact.html' element={<Navigate to="/contact" />} />
+            {/* Career Job Routes */}
+            {jobs.map(job => (
+              <Route 
+                key={job.position} 
+                path={`/careers/openings/${job.path}`} 
+                element={
+                  <Job 
+                    position={job.position} 
+                    acronym={job.acronym} 
+                    type={job.type} 
+                    city={job.city} 
+                    state={job.state} 
+                    stateAbbrev={job.stateAbbrev}
+                    url={job.url} 
+                    text={job.text} 
+                    other={job.other}
+                    path={job.path}
+                    />
+                } />
+            ))}
+            {/* All Routes */}
             <Route path='*' element={<Navigate to="/" />} />
-
           </Routes>
       </main>
       <Footer />
