@@ -7,6 +7,7 @@ import './App.css'
 // Component Imports
 import Header from './components/pagesections/headers/Header'
 import Footer from './components/pagesections/footers/Footer'
+import GenericHeaderNoNav from './components/pagesections/headers/GenericHeaderNoNav'
 
 // Page Imports
 import Home from './pages/Home'
@@ -15,12 +16,13 @@ import Careers from './pages/Careers'
 import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
-
+import Privacy from './pages/Privacy'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
 const pixelId = import.meta.env.VITE_REACT_APP_PIXEL_ID
 
 function App() {
+  const location = useLocation()
 
   useEffect(()=>{
     ReactGA.initialize(trackingId)
@@ -28,9 +30,16 @@ function App() {
     ReactPixel.pageView()
   }, [])
 
+  const renderHeader = () => {
+    if (location.pathname === '/privacy') {
+      return <GenericHeaderNoNav />
+    }
+    return <Header />
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      {renderHeader()}
       <main className="flex-grow">
           <Routes>
             <Route path='/' element={<Home />} />
@@ -39,6 +48,7 @@ function App() {
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/privacy' element={<Privacy />} />
             <Route path='/index.html' element={<Navigate to="/" />} />
             <Route path='/careers.html' element={<Navigate to="/careers" />} />
             <Route path='/about.html' element={<Navigate to="/about" />} />
