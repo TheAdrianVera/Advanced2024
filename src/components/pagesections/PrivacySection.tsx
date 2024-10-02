@@ -6,7 +6,7 @@ interface PrivacySectionProps {
 }
 
 const PrivacySection: React.FC<PrivacySectionProps> = ({ toggleAcceptance }) => {
-    const [consent, setConsent] = useState(Cookies.get('cookie-consent') === 'declined');
+    const [consent, setConsent] = useState(Cookies.get('cookie-consent') !== 'declined');
 
     const handleToggle = () => {
         const newConsent = !consent;
