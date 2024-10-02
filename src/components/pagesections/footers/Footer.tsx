@@ -1,6 +1,6 @@
-import { FaLinkedin } from "react-icons/fa"
-import { FaFacebook } from "react-icons/fa"
+import { FaLinkedin, FaFacebook } from "react-icons/fa"
 import { SiIndeed } from "react-icons/si"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -22,7 +22,7 @@ const Footer = () => {
                             <SiIndeed size={16} className='hover:text-blue-300' />
                         </a>
                     </div>
-                    <a href= "" className="text-sm mr-2 hover:text-blue-300">Privacy.</a>
+                    <Link to="/privacy" className="text-sm mr-2 hover:text-blue-300">Privacy.</Link>
                     <p className="text-sm">
                         Web Dev:
                         <a href="https://www.adriangvera.com" target="_blank" className="text-white hover:text-blue-300 underline ml-1">adriangvera.com</a>
