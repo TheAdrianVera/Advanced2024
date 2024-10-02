@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 
 import PageBanner from '../components/pagesections/banners/PageBanner'
-
+import PrivacySection from '../components/pagesections/PrivacySection'
 
 const Privacy: React.FC = () => {
 
@@ -18,7 +18,11 @@ const Privacy: React.FC = () => {
                 <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
                 <meta property='og:url' content='https://ahsllc.org/privacy' />
             </Helmet>
-            <PageBanner title={'Privacy'}/>
+            <PageBanner 
+                title={'Privacy'}
+                backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
+            />
+            <PrivacySection />
         </>
     )
 }
