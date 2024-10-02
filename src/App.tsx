@@ -54,7 +54,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             {jobs.map(job => (
-              <Route key={job.path} path={`/careers/openings/${job.path}`} element={<Job />} />
+              <Route key={job.path} path={`/careers/openings/${job.path}`} element={<Job title={job.title} content={job.content}/>} />
             ))}
             <Route path='/careers' element={<Careers />} />
             <Route path='/services' element={<Services />} />

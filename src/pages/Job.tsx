@@ -2,18 +2,18 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { jobs } from '../data/jobs'
 
-const Job: React.FC = () => {
-  const { jobPath } = useParams<{ jobPath: string }>()
-  const job = jobs.find(j => j.path === jobPath)
+interface JobProps {
+  title: string
+  content: string
+}
 
-  if (!job) {
-    return <div>Job not found</div>
-  }
+
+const Job: React.FC<JobProps> = ({title, content}) => {
 
   return (
     <div>
-      <h1>{job.title}</h1>
-      <p>{job.content}</p>
+      <h1>{title}</h1>
+      <p>{content}</p>
     </div>
   )
 }

@@ -1,17 +1,17 @@
 export const jobs = [
     {
-        path: '',
-        title: '',
-        content: ''
+        path: '1',
+        title: '1',
+        content: 'uno'
     },
     {
-        path: '',
-        title: '',
-        content: ''
+        path: '2',
+        title: '2',
+        content: 'dos'
     },
     {
-        path: '',
-        title: '',
-        content: ''
+        path: '3',
+        title: '3',
+        content: 'tres'
     }
 ]
