@@ -26,10 +26,12 @@ function App() {
   const [acceptCookies, setAcceptCookies] = useState(true)
 
   useEffect(()=>{
-    ReactGA.initialize(trackingId)
-    ReactPixel.init(pixelId)
-    ReactPixel.pageView()
-  }, [])
+    if (acceptCookies) {
+      ReactGA.initialize(trackingId)
+      ReactPixel.init(pixelId)
+      ReactPixel.pageView()
+    }
+  }, [acceptCookies])
 
   const updateCookiesCallback = () => {
     setAcceptCookies((prevValue)=> !prevValue)

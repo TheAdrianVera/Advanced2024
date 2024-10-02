@@ -1,5 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Helmet } from 'react-helmet'
+import ReactGA from 'react-ga4'
+import ReactPixel from 'react-facebook-pixel'
 
 import PageBanner from '../components/pagesections/banners/PageBanner'
 import PrivacySection from '../components/pagesections/PrivacySection'
@@ -9,6 +11,15 @@ interface PrivacyProps {
 }
 
 const Privacy: React.FC<PrivacyProps> = ({updateCookieAcceptance}) => {
+    useEffect(()=>{
+        ReactPixel.track('ViewContent', {
+          page: 'Privacy',
+          content_ids: ['/privacy'],
+          content_type: 'page'
+        })
+    
+        ReactGA.send({ hitType: 'pageview', page: '/privacy', title: 'Privacy' })
+      }, [])
 
     return (
         <>
