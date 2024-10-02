@@ -17,6 +17,8 @@ import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
+import Job from './pages/Job'
+import { jobs } from './data/jobs'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
 const pixelId = import.meta.env.VITE_REACT_APP_PIXEL_ID
@@ -51,6 +53,9 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
+            {jobs.map(job => (
+              <Route key={job.path} path={`/careers/openings/${job.path}`} element={<Job />} />
+            ))}
             <Route path='/careers' element={<Careers />} />
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
@@ -63,6 +68,7 @@ function App() {
             <Route path='/community.html' element={<Navigate to="/community" />} />
             <Route path='/contact.html' element={<Navigate to="/contact" />} />
             <Route path='*' element={<Navigate to="/" />} />
+
           </Routes>
       </main>
       <Footer />
