@@ -6,7 +6,7 @@ import './App.css'
 
 // Component Imports
 import Header from './components/Header'
-import Footer from './components/Footer'
+import Footer from './components/pagesections/footers/Footer'
 
 // Page Imports
 import Home from './pages/Home'
