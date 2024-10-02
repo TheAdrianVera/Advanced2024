@@ -11,7 +11,7 @@ interface JobProps {
   url: string
   text: string
   stateAbbrev: string
-  acronym: string
+  acronym: string | null
 }
 
 

@@ -1,8 +1,8 @@
 export const jobs = [
   {
-    "position": "Full Time Licensed Practical Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "position": "Licensed Practical Nurse",
+    "acronym": "LPN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1ff7pc",
@@ -12,9 +12,9 @@ export const jobs = [
     "path": "full-time-licensed-practical-nurse-lpn-chatham-il"
   },
   {
-    "position": "Full Time Licensed Vocational Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "position": "Licensed Vocational Nurse",
+    "acronym": "LVN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1u0v18",
@@ -25,8 +25,8 @@ export const jobs = [
   },
   {
     "position": "Home Health Licensed Vocational Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "LVN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1jrr51",
@@ -37,8 +37,8 @@ export const jobs = [
   },
   {
     "position": "Home Health LPN",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "LPN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1r2j6k",
@@ -49,8 +49,8 @@ export const jobs = [
   },
   {
     "position": "Home Health LPN",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "LPN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1c7jvd",
@@ -61,8 +61,8 @@ export const jobs = [
   },
   {
     "position": "Home Health Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": null,
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1apajw",
@@ -73,8 +73,8 @@ export const jobs = [
   },
   {
     "position": "Home Health RN",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "RN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1fk4xk",
@@ -85,8 +85,8 @@ export const jobs = [
   },
   {
     "position": "Home Health RN",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "RN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1hl7zn",
@@ -97,8 +97,8 @@ export const jobs = [
   },
   {
     "position": "Home Health RN",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "RN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1xyd2i",
@@ -108,9 +108,9 @@ export const jobs = [
     "path": "home-health-rn-weekends-chatham-il"
   },
   {
-    "position": "Part Time Licensed Practical Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "position": "Licensed Practical Nurse",
+    "acronym": "LPN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1f12js",
@@ -120,9 +120,9 @@ export const jobs = [
     "path": "part-time-licensed-practical-nurse-lpn-rochester-il"
   },
   {
-    "position": "Part Time Licensed Vocational Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "position": "Licensed Vocational Nurse",
+    "acronym": "LVN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza114vrn",
@@ -133,8 +133,8 @@ export const jobs = [
   },
   {
     "position": "PRN Licensed Practical Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "PRN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1lp81l",
@@ -145,8 +145,8 @@ export const jobs = [
   },
   {
     "position": "Registered Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": null,
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1ukhjs",
@@ -157,8 +157,8 @@ export const jobs = [
   },
   {
     "position": "Registered Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": null,
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1gxolw",
@@ -169,8 +169,8 @@ export const jobs = [
   },
   {
     "position": "Registered Nurse",
-    "acronym": "",
-    "type": "Full Time",
+    "acronym": "PRN",
+    "type": "",
     "city": "Chicago",
     "state": "Illinois",
     "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1cd1i6",

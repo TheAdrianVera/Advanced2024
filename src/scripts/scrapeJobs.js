@@ -12,13 +12,22 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Helper Functions
+function cleanPosition(position) {
+    if (position.startsWith("Full Time ")) {
+        return position.substring("Full Time ".length).trim()
+    } else if (position.startsWith("Part Time ")) {
+        return position.substring("Part Time ".length).trim()
+    }
+    return position.trim()
+}
 
 function extractPositionAndOther(text){
     const delimiters = ['-','(']
     for (const delimiter of delimiters) {
         const index = text.indexOf(delimiter)
         if (index !== -1) {
-            const position = text.substring(0, index).trim()
+            let position = text.substring(0, index).trim()
+            position = cleanPosition(position)
             const other = text.substring(index).trim()
             return { position: position, other: other }
         }
@@ -36,6 +45,16 @@ function createJobPath(text) {
     return cleanedText
 }
 
+function extractAcroynm(path) {
+    const segments = path.split('-')
+    for (const segment of segments) {
+        if ((segment.length === 2 || segment.length === 3) && segment.toLowerCase() !== 'il') {
+            return segment.toUpperCase()
+        }
+    }
+    return null
+}
+
 // Scrape Jobs from URL
 async function scrapeJobs() {
     try {
@@ -48,14 +67,15 @@ async function scrapeJobs() {
             const linkElement = $(element).find('td:first-child a')
             const url = linkElement.attr('href')
             const text = linkElement.text()
+            const path = createJobPath(text)
             const position = extractPositionAndOther(text).position
-            const type = 'Full Time'
+            const type = ''
             const city = 'Chicago'
             const stateAbbrev = 'IL'
             const state = 'Illinois'
-            const acronym = ''
+            const acronym = extractAcroynm(path)
             const other = extractPositionAndOther(text).other
-            const path = createJobPath(text)
+            
 
             jobs.push({ position, acronym, type, city, state, url, text, stateAbbrev, other, path })
         })
