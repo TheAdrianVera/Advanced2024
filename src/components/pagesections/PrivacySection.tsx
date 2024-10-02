@@ -20,7 +20,8 @@ const PrivacySection: React.FC = () => {
             </div>
             <div className='flex flex-col items-center pb-20'>
                 <p className='text-center text-gray-700 mb-6'>
-                    We value your privacy and do not share your information with third parties. However, if you prefer not to share your data, you have the control to opt out.
+                    We value your privacy and do not share your information with third parties.<br className='hidden md:block'/> 
+                    However, if you prefer not to share your data, you have the control to opt out.
                 </p>
                 <div className='flex items-center'>
                     <span className='mr-2 text-gray-700'>Opt-In to Data Sharing:</span>
