@@ -11,15 +11,15 @@ interface JobProps {
   text: string
   stateAbbrev: string
   acronym: string | null
+  listingDescriptionHtml: string
 }
 
 
-const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev}) => {
+const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev, listingDescriptionHtml}) => {
 
   return (
-    <div>
-      <h1>{url}</h1>
-      <p>{text}</p>
+    <div className='section text-center'>
+      <div className='flex flex-col justify-center items-center' dangerouslySetInnerHTML={{ __html: listingDescriptionHtml }} />
     </div>
   )
 }

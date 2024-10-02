@@ -82,6 +82,7 @@ function App() {
                     url={job.url} 
                     text={job.text}
                     path={job.path}
+                    listingDescriptionHtml={job.listingDescriptionHtml}
                     />
                 } />
             ))}

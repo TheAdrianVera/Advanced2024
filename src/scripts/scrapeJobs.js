@@ -88,9 +88,9 @@ async function scrapeJobs() {
         const rows = $('#ascontent tbody tr')
         const jobs = []
 
-        rows.each((index, element) => {
+        for (const element of rows) {
             const linkElement = $(element).find('td:first-child a')
-            const url = linkElement.attr('href')
+            const jobUrl = linkElement.attr('href')
             const text = linkElement.text()
             const path = createJobPath(text)
             const position = extractPositionAndOther(text).position
@@ -98,10 +98,15 @@ async function scrapeJobs() {
             const city = extractCityFromPath(path)
             const stateAbbrev = 'IL'
             const state = 'Illinois'
-            const acronym = extractAcroynm(path)    
+            const acronym = extractAcroynm(path)
 
-            jobs.push({ position, acronym, type, city, state, url, text, stateAbbrev, path })
-        })
+            // Fetch job detail page
+            const jobDetailResponse = await axios.get(jobUrl)
+            const jobDetailPage = cheerio.load(jobDetailResponse.data)
+            const listingDescriptionHtml = jobDetailPage('.listing_description').html()
+
+            jobs.push({ position, acronym, type, city, state, url: jobUrl, text, stateAbbrev, path, listingDescriptionHtml })
+        }
 
         const filePath = path.join(__dirname, '../data/jobs.ts')
         const fileContent = `export const jobs = ${JSON.stringify(jobs, null, 2)}`
