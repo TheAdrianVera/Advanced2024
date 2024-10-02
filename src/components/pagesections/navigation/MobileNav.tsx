@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Logo from './logos/Logo'
+import Logo from '../../logos/Logo'
 import { TiThMenu } from "react-icons/ti"
 import { Link, useLocation } from 'react-router-dom'
 import { TiHome } from "react-icons/ti"

@@ -1,4 +1,4 @@
-import { Navigate, Routes, Route} from 'react-router-dom'
+import { Navigate, Routes, Route, useLocation} from 'react-router-dom'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga4'
 import ReactPixel from 'react-facebook-pixel'
