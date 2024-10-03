@@ -9,6 +9,7 @@ import Header from './components/pagesections/headers/Header'
 import Footer from './components/pagesections/footers/Footer'
 import GenericHeaderNoNav from './components/pagesections/headers/GenericHeaderNoNav'
 import GenericHeaderOneItem from './components/pagesections/headers/GenericHeaderOneItem.tsx'
+import ScrollToTop from './ScrollToTop.tsx'
 
 // Page Imports
 import Home from './pages/Home'
@@ -19,6 +20,8 @@ import Community from './pages/Community'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Job from './pages/Job'
+
+// Data Imports
 import { jobs } from './data/jobs.ts'
 import { benefitsData } from './data/benefits.ts'
 
@@ -52,53 +55,57 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {renderHeader()}
-      <main className="flex-grow">
-          <Routes>
-            {/* Routes for Main Pages */}
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/careers' element={<Careers openings={jobs} benefitsData={benefitsData}/>} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/community' element={<Community />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/privacy' element={<Privacy updateCookieAcceptance={updateCookiesCallback} />} />
-            {/* Redirects for .html urls */}
-            <Route path='/index.html' element={<Navigate to="/" />} />
-            <Route path='/careers.html' element={<Navigate to="/careers" />} />
-            <Route path='/about.html' element={<Navigate to="/about" />} />
-            <Route path='/services.html' element={<Navigate to="/services" />} />
-            <Route path='/community.html' element={<Navigate to="/community" />} />
-            <Route path='/contact.html' element={<Navigate to="/contact" />} />
-            {/* Career Job Routes */}
-            {jobs.map(job => (
-              <Route 
-                key={job.position} 
-                path={`/careers/openings/${job.path}`} 
-                element={
-                  <Job 
-                    position={job.position} 
-                    acronym={job.acronym} 
-                    type={job.type} 
-                    city={job.city} 
-                    state={job.state} 
-                    stateAbbrev={job.stateAbbrev}
-                    url={job.url} 
-                    text={job.text}
-                    path={job.path}
-                    listingDescriptionHtml={job.listingDescriptionHtml}
-                    applyButtonsHtml={job.applyButtonsHtml || ''}
-                    department={job.department}
-                    />
-                } />
-            ))}
-            {/* All Routes */}
-            <Route path='*' element={<Navigate to="/" />} />
-          </Routes>
-      </main>
-      <Footer />
-    </div>
+    <>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
+        {renderHeader()}
+        <main className="flex-grow">
+            <Routes>
+              {/* Routes for Main Pages */}
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/careers' element={<Careers openings={jobs} benefitsData={benefitsData}/>} />
+              <Route path='/services' element={<Services />} />
+              <Route path='/community' element={<Community />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/privacy' element={<Privacy updateCookieAcceptance={updateCookiesCallback} />} />
+              {/* Redirects for .html urls */}
+              <Route path='/index.html' element={<Navigate to="/" />} />
+              <Route path='/careers.html' element={<Navigate to="/careers" />} />
+              <Route path='/about.html' element={<Navigate to="/about" />} />
+              <Route path='/services.html' element={<Navigate to="/services" />} />
+              <Route path='/community.html' element={<Navigate to="/community" />} />
+              <Route path='/contact.html' element={<Navigate to="/contact" />} />
+              {/* Career Job Routes */}
+              {jobs.map(job => (
+                <Route 
+                  key={job.position} 
+                  path={`/careers/openings/${job.path}`} 
+                  element={
+                    <Job 
+                      position={job.position} 
+                      acronym={job.acronym} 
+                      type={job.type} 
+                      city={job.city} 
+                      state={job.state} 
+                      stateAbbrev={job.stateAbbrev}
+                      url={job.url} 
+                      text={job.text}
+                      path={job.path}
+                      listingDescriptionHtml={job.listingDescriptionHtml}
+                      applyButtonsHtml={job.applyButtonsHtml || ''}
+                      department={job.department}
+                      />
+                  } />
+              ))}
+              {/* All Routes */}
+              <Route path='*' element={<Navigate to="/" />} />
+            </Routes>
+        </main>
+        <Footer />
+      </div>
+    </>
+
   )
 }
 
