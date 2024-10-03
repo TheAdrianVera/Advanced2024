@@ -19,6 +19,7 @@ import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Job from './pages/Job'
 import { jobs } from './data/jobs.ts'
+import { benefitsData } from './data/benefits.ts'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
 const pixelId = import.meta.env.VITE_REACT_APP_PIXEL_ID
@@ -40,7 +41,7 @@ function App() {
   }
 
   const renderHeader = () => {
-    if (location.pathname === '/privacy') {
+    if (location.pathname === '/privacy' || location.pathname.includes('/careers/openings/')) {
       return <GenericHeaderNoNav />
     }
     return <Header />
@@ -54,7 +55,7 @@ function App() {
             {/* Routes for Main Pages */}
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
-            <Route path='/careers' element={<Careers />} />
+            <Route path='/careers' element={<Careers openings={jobs} benefitsData={benefitsData}/>} />
             <Route path='/services' element={<Services />} />
             <Route path='/community' element={<Community />} />
             <Route path='/contact' element={<Contact />} />
