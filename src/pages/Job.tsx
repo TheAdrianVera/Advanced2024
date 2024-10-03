@@ -19,7 +19,7 @@ interface JobProps {
 }
 
 
-const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev, department, listingDescriptionHtml, applyButtonsHtml}) => {
+const Job: React.FC<JobProps> = ({position, listingDescriptionHtml, applyButtonsHtml}) => {
 
   return (
     <>
