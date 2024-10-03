@@ -23,7 +23,7 @@ const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, ur
   return (
     <>
       <PageBanner title={position} backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'/>
-      <div className='section text-center'>
+      <div className='job section text-center'>
         <div className='flex flex-col justify-center items-center' dangerouslySetInnerHTML={{ __html: listingDescriptionHtml }} />
       </div>
     </>
