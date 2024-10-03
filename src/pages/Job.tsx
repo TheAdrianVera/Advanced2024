@@ -12,10 +12,11 @@ interface JobProps {
   stateAbbrev: string
   acronym: string | null
   listingDescriptionHtml: string
+  department: string
 }
 
 
-const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev, listingDescriptionHtml}) => {
+const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev, department, listingDescriptionHtml}) => {
 
   return (
     <div className='section text-center'>

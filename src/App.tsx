@@ -84,6 +84,7 @@ function App() {
                     text={job.text}
                     path={job.path}
                     listingDescriptionHtml={job.listingDescriptionHtml}
+                    department={job.department}
                     />
                 } />
             ))}

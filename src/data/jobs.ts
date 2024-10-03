@@ -1,6 +1,7 @@
 export const jobs = [
   {
     "position": "Licensed Practical Nurse",
+    "department": "Client Care",
     "acronym": "LPN",
     "type": "Full Time",
     "city": "Chatham",
@@ -13,6 +14,7 @@ export const jobs = [
   },
   {
     "position": "Licensed Vocational Nurse",
+    "department": "Client Care",
     "acronym": "LVN",
     "type": "Full Time",
     "city": "Springfield",
@@ -25,6 +27,7 @@ export const jobs = [
   },
   {
     "position": "Home Health Licensed Vocational Nurse",
+    "department": "Client Care",
     "acronym": "LVN",
     "type": "Full Time (TBD)",
     "city": "Chatham",
@@ -37,6 +40,7 @@ export const jobs = [
   },
   {
     "position": "Home Health LPN",
+    "department": "Client Care",
     "acronym": "LPN",
     "type": "Full Time (TBD)",
     "city": "Chatham",
@@ -49,6 +53,7 @@ export const jobs = [
   },
   {
     "position": "Home Health LPN",
+    "department": "Client Care",
     "acronym": "LPN",
     "type": "8 Hour Shifts",
     "city": "Rochester",
@@ -61,6 +66,7 @@ export const jobs = [
   },
   {
     "position": "Home Health Nurse",
+    "department": "Client Care",
     "acronym": null,
     "type": "Full Time (TBD)",
     "city": "Rochester",
@@ -73,6 +79,7 @@ export const jobs = [
   },
   {
     "position": "Home Health RN",
+    "department": "Client Care",
     "acronym": "RN",
     "type": "Full Time (TBD)",
     "city": "Springfield Area",
@@ -85,6 +92,7 @@ export const jobs = [
   },
   {
     "position": "Home Health RN",
+    "department": "Client Care",
     "acronym": "RN",
     "type": "8 Hour Shifts",
     "city": "Springfield",
@@ -97,6 +105,7 @@ export const jobs = [
   },
   {
     "position": "Home Health RN",
+    "department": "Client Care",
     "acronym": "RN",
     "type": "Weekends",
     "city": "Chatham",
@@ -109,6 +118,7 @@ export const jobs = [
   },
   {
     "position": "Licensed Practical Nurse",
+    "department": "Client Care",
     "acronym": "LPN",
     "type": "Part Time",
     "city": "Rochester",
@@ -121,6 +131,7 @@ export const jobs = [
   },
   {
     "position": "Licensed Vocational Nurse",
+    "department": "Client Care",
     "acronym": "LVN",
     "type": "Part Time",
     "city": "Rochester",
@@ -133,6 +144,7 @@ export const jobs = [
   },
   {
     "position": "PRN Licensed Practical Nurse",
+    "department": "Client Care",
     "acronym": "PRN",
     "type": "Full Time (TBD)",
     "city": "Springfield",
@@ -145,6 +157,7 @@ export const jobs = [
   },
   {
     "position": "Registered Nurse",
+    "department": "Client Care",
     "acronym": null,
     "type": "Full Time",
     "city": "Springfield",
@@ -157,6 +170,7 @@ export const jobs = [
   },
   {
     "position": "Registered Nurse",
+    "department": "Client Care",
     "acronym": null,
     "type": "Part Time",
     "city": "Chatham",
@@ -169,6 +183,7 @@ export const jobs = [
   },
   {
     "position": "Registered Nurse",
+    "department": "Client Care",
     "acronym": "PRN",
     "type": "Full Time (TBD)",
     "city": "Rochester",
