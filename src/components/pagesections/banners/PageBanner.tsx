@@ -21,7 +21,23 @@ interface PageBannerProps {
 
 const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgroundUrl, logo, logoUrl, careerButton }) => {
     const backgroundStyle = backgroundUrl ? { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}
+    
     const handleClick = (label: string) => {
+        ReactGA.event({
+            category: 'Button',
+            action: 'Click',
+            label: label
+        })
+
+        ReactPixel.track('ViewContent', {
+            content_name: label,
+            content_category: 'Home Button',
+            content_type: 'Button',
+            content_ids: [label]
+        })
+    }
+
+    const handleCareerClick = (label: string) => {
         ReactGA.event({
             category: 'Button',
             action: 'Click',
@@ -67,7 +83,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                 <a 
                     href={careerButton.link} 
                     className="relative bg-advancedNavyBlue text-white font-arial-rounded text-lg px-8 py-4 mt-5 rounded-md hover:bg-blue-600"
-                    onClick={() => handleClick("Career Open Positions")}
+                    onClick={() => handleCareerClick("Career Open Positions")}
                 >
                     {careerButton.text}
                 </a>
