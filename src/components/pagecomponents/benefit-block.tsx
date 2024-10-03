@@ -8,8 +8,6 @@ import { FaCar } from "react-icons/fa"
 import { FaUserGroup } from "react-icons/fa6"
 import { FaRegIdBadge } from "react-icons/fa";
 
-
-
 interface BenefitBlockProps {
     title: string
     content: string

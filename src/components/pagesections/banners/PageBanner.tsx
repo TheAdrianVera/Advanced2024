@@ -67,7 +67,6 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
                 <a 
                     href={careerButton.link} 
                     className="relative bg-advancedNavyBlue text-white font-arial-rounded text-lg px-8 py-4 mt-5 rounded-md hover:bg-blue-600"
-                    target="_blank"
                     onClick={() => handleClick("Career Open Positions")}
                 >
                     {careerButton.text}
@@ -75,7 +74,11 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
             )}
 
             {button && (
-                <a href={button.link} className="relative bg-advancedNavyBlue text-white font-arial-rounded text-lg px-8 py-4 mt-5 rounded-md hover:bg-blue-600">
+                <a 
+                    href={button.link} 
+                    className="relative bg-advancedNavyBlue text-white font-arial-rounded text-lg px-8 py-4 mt-5 rounded-md hover:bg-blue-600"
+                    onClick={() => handleClick("Learn More")}
+                >
                     {button.text}
                 </a>
             )}
