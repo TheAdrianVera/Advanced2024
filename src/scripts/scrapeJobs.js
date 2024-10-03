@@ -105,8 +105,9 @@ async function scrapeJobs() {
             const jobDetailResponse = await axios.get(jobUrl)
             const jobDetailPage = cheerio.load(jobDetailResponse.data)
             const listingDescriptionHtml = jobDetailPage('.listing_description').html()
+            const applyButtonsHtml = jobDetailPage('.buttons').html()
 
-            jobs.push({ position, department, acronym, type, city, state, url: jobUrl, text, stateAbbrev, path, listingDescriptionHtml })
+            jobs.push({ position, department, acronym, type, city, state, url: jobUrl, text, stateAbbrev, path, listingDescriptionHtml, applyButtonsHtml })
         }
 
         const filePath = path.join(__dirname, '../data/jobs.ts')
