@@ -8,6 +8,7 @@ import './App.css'
 import Header from './components/pagesections/headers/Header'
 import Footer from './components/pagesections/footers/Footer'
 import GenericHeaderNoNav from './components/pagesections/headers/GenericHeaderNoNav'
+import GenericHeaderOneItem from './components/pagesections/headers/GenericHeaderOneItem.tsx'
 
 // Page Imports
 import Home from './pages/Home'
@@ -41,8 +42,11 @@ function App() {
   }
 
   const renderHeader = () => {
-    if (location.pathname === '/privacy' || location.pathname.includes('/careers/openings/')) {
+    if (location.pathname === '/privacy') {
       return <GenericHeaderNoNav />
+    }
+    if (location.pathname.includes('/careers/openings/')){
+      return <GenericHeaderOneItem />
     }
     return <Header />
   }

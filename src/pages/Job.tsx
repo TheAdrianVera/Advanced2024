@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
+import PageBanner from '../components/pagesections/banners/PageBanner'
+
 interface JobProps {
   position: string
   path: string 
@@ -19,9 +21,13 @@ interface JobProps {
 const Job: React.FC<JobProps> = ({position, path, acronym, type, city, state, url, text, stateAbbrev, department, listingDescriptionHtml}) => {
 
   return (
-    <div className='section text-center'>
-      <div className='flex flex-col justify-center items-center' dangerouslySetInnerHTML={{ __html: listingDescriptionHtml }} />
-    </div>
+    <>
+      <PageBanner title={position} backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'/>
+      <div className='section text-center'>
+        <div className='flex flex-col justify-center items-center' dangerouslySetInnerHTML={{ __html: listingDescriptionHtml }} />
+      </div>
+    </>
+
   )
 }
 
