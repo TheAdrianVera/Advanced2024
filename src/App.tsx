@@ -22,7 +22,7 @@ import Privacy from './pages/Privacy'
 import Job from './pages/Job'
 
 // Data Imports
-import { jobs } from './data/jobs.ts'
+import { jobs, newJobs } from './data/jobs.ts'
 import { benefitsData } from './data/benefits.ts'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
@@ -64,7 +64,7 @@ function App() {
               {/* Routes for Main Pages */}
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
-              <Route path='/careers' element={<Careers openings={jobs} benefitsData={benefitsData}/>} />
+              <Route path='/careers' element={<Careers openings={newJobs} benefitsData={benefitsData}/>} />
               <Route path='/services' element={<Services />} />
               <Route path='/community' element={<Community />} />
               <Route path='/contact' element={<Contact />} />

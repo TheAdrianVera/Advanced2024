@@ -213,7 +213,7 @@ export const jobs = [
 
 export const newJobs = [
   {
-    "position": "Registerd Nurse",
+    "position": "Registered Nurse",
     "department": "Client Care",
     "acronym": "RN",
     "type": "Full Time",
