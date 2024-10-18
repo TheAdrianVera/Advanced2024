@@ -213,6 +213,7 @@ export const jobs = [
 
 export const newJobs = [
   {
+    "id": 4048499469,
     "position": "Registered Nurse",
     "department": "Client Care",
     "acronym": "RN",
@@ -232,6 +233,7 @@ export const newJobs = [
     ],
   },
   {
+    "id": 4048492869,
     "position": "Licensed Practical Nurse",
     "department": "Client Care",
     "acronym": "LPN",
@@ -250,13 +252,13 @@ export const newJobs = [
     ]
   },
   {
+    "id": 4052183286,
     "position": "Occupational Therapist",
     "department": "Client Care",
     "acronym": "OT",
     "type": "Full Time",
     "city": "Springfield",
     "state": "Illinois",
-    "url": "https://ahsllc.applicantstack.com/x/detail/a2ieza1hl7zn",
     "text": "Home Health - Occupational Therapist",
     "stateAbbrev": "IL",
     "path": "occupational-therapist",
@@ -276,6 +278,7 @@ export const newJobs = [
     ]
   },
   {
+    "id": 4052190006,
     "position": "Certified Occupational Therapist Assistant",
     "department": "Client Care",
     "acronym": "COTA",

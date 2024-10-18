@@ -83,6 +83,7 @@ function App() {
                   path={`/careers/openings/${job.path}`} 
                   element={
                     <Position
+                      id={job.id}
                       position={job.position}
                       description={job.description}
                       department={job.department}

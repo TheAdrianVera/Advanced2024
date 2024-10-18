@@ -5,6 +5,7 @@ import PageBanner from '../components/pagesections/banners/PageBanner'
 import {companyInfo} from '../data/jobs.ts'
 
 interface PositionProps {
+    id: number
     position: string
     department: string
     description?: string
@@ -20,7 +21,7 @@ interface PositionProps {
     lifting?: string[]
 }
 
-const Position: React.FC<PositionProps> = ({position, department, description, acroynm, qualifitions, linkedInUrl, responsibilities, lifting}) => {
+const Position: React.FC<PositionProps> = ({id, position, department, description, acroynm, qualifitions, linkedInUrl, responsibilities, lifting}) => {
     const company = companyInfo[0]
 
     return (
@@ -95,10 +96,9 @@ const Position: React.FC<PositionProps> = ({position, department, description, a
                     </ul>
                 </div>
                 <div className='flex flex-col justify-center items-center mt-10'>
-                    {/* <a href="https://ahsllc.applicantstack.com/x/apply/a2ieza1r2j6k\" className="equal-width-button\">Apply</a>
-                    <div className="refer-friend-spacer\">&nbsp;</div> */}
-                    <div className="mt-10px">
-                        <a href={linkedInUrl} target="_blank" className="equal-width-button\">Apply on LinkedIn</a></div>
+                    <div className="mt-10 flex flex-col">
+                        <a href="" className="mb-5">Apply - {id}</a>
+                        <a href={linkedInUrl} target="_blank">Apply on LinkedIn</a></div>
                     </div>
                 </div>
         </>
