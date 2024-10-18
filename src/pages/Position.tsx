@@ -1,7 +1,6 @@
 import React from 'react'
-
 import PageBanner from '../components/pagesections/banners/PageBanner'
-
+import { Link } from 'react-router-dom'
 import {companyInfo} from '../data/jobs.ts'
 
 interface PositionProps {
@@ -21,7 +20,7 @@ interface PositionProps {
     lifting?: string[]
 }
 
-const Position: React.FC<PositionProps> = ({id, position, department, description, acroynm, qualifitions, linkedInUrl, responsibilities, lifting}) => {
+const Position: React.FC<PositionProps> = ({id, position, department, description, acroynm, qualifitions, linkedInUrl, responsibilities, lifting, path}) => {
     const company = companyInfo[0]
 
     return (
@@ -97,7 +96,7 @@ const Position: React.FC<PositionProps> = ({id, position, department, descriptio
                 </div>
                 <div className='flex flex-col justify-center items-center mt-10'>
                     <div className="mt-10 flex flex-col">
-                        <a href="" className="mb-5">Apply - {id}</a>
+                        <Link to={`/careers/openings/${path}/apply/${id}`} className="mb-5">Apply</Link>
                         <a href={linkedInUrl} target="_blank">Apply on LinkedIn</a></div>
                     </div>
                 </div>

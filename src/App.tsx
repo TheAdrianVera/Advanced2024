@@ -20,6 +20,7 @@ import Community from './pages/Community'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Position from './pages/Position'
+import Apply from './pages/Apply'
 
 // Data Imports
 import { newJobs } from './data/jobs.ts'
@@ -106,7 +107,7 @@ function App() {
                   key={job.id}
                   path={`/careers/openings/${job.path}/apply/${job.id}`}
                   element={
-                    <></>
+                    <Apply />
                   } 
                 />
               ))}
