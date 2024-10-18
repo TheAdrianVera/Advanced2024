@@ -88,6 +88,7 @@ function App() {
                       department={job.department}
                       acroynm={job.acronym}
                       path={job.path}
+                      linkedInUrl={job.linkedInUrl}
                       type={job.type}
                       city={job.city}
                       state={job.state}
