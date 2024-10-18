@@ -107,7 +107,10 @@ function App() {
                   key={job.id}
                   path={`/careers/openings/${job.path}/apply/${job.id}`}
                   element={
-                    <Apply />
+                    <Apply 
+                      id={job.id}
+                      position={job.position}
+                    />
                   } 
                 />
               ))}

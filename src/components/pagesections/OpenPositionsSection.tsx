@@ -19,7 +19,7 @@ const OpenPositionsSection: React.FC<OpenPositionsSectionProps> = ({jobs}) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {jobs.map((job, index) => (
                             (job.type === 'Full Time' || job.type === 'Full Time (TBD)') && (
-                                <OpenPositionBlock job={job} index={index}/>
+                                <OpenPositionBlock job={job} index={index} key={index}/>
                             )
                         ))}
                     </div>
