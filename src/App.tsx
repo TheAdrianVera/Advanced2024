@@ -19,10 +19,10 @@ import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
-import Job from './pages/Job'
+import Position from './pages/Position'
 
 // Data Imports
-import { jobs, newJobs } from './data/jobs.ts'
+import { newJobs } from './data/jobs.ts'
 import { benefitsData } from './data/benefits.ts'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
@@ -77,25 +77,25 @@ function App() {
               <Route path='/community.html' element={<Navigate to="/community" />} />
               <Route path='/contact.html' element={<Navigate to="/contact" />} />
               {/* Career Job Routes */}
-              {jobs.map(job => (
+              {newJobs.map(job => (
                 <Route 
                   key={job.position} 
                   path={`/careers/openings/${job.path}`} 
                   element={
-                    <Job 
-                      position={job.position} 
-                      acronym={job.acronym} 
-                      type={job.type} 
-                      city={job.city} 
-                      state={job.state} 
-                      stateAbbrev={job.stateAbbrev}
-                      url={job.url} 
-                      text={job.text}
-                      path={job.path}
-                      listingDescriptionHtml={job.listingDescriptionHtml}
-                      applyButtonsHtml={job.applyButtonsHtml || ''}
+                    <Position
+                      position={job.position}
+                      description={job.description}
                       department={job.department}
-                      />
+                      acroynm={job.acronym}
+                      path={job.path}
+                      type={job.type}
+                      city={job.city}
+                      state={job.state}
+                      text={job.text}
+                      qualifitions={job.qualifications}
+                      responsibilities={job.responsibilities}
+                      lifting={job.lifting}
+                    />
                   } />
               ))}
               {/* All Routes */}

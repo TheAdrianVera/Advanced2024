@@ -222,6 +222,7 @@ export const newJobs = [
     "text": "Home Health - Registered Nurse",
     "stateAbbrev": "IL",
     "path": "registered-nurse",
+    "linkedInUrl": "",
     "qualifications": [
       "Graduate of an approved school of professional nursing and currently licensed in the state(s) in which practicing.",
       "Two (2) years’ nursing experience, preferred.",
@@ -240,6 +241,7 @@ export const newJobs = [
     "text": "Home Health - Licensed Practical Nurse",
     "stateAbbrev": "IL",
     "path": "licensed-practical-nurse",
+    "linkedInUrl": "",
     "qualifications": [
       "Licensed as a Practical Nurse in the State of IL",
       "Six months of Home Health or geriatric nursing desirable",
@@ -258,6 +260,7 @@ export const newJobs = [
     "text": "Home Health - Occupational Therapist",
     "stateAbbrev": "IL",
     "path": "occupational-therapist",
+    "linkedInUrl": "",
     "description": "This is a full-time on-site role for an Occupational Therapist at Advanced HealthCare Services, LLC a home health agency located servicing Central Illinois. The Occupational Therapist will be responsible for providing occupational therapy services to patients, developing treatment plans, conducting therapy sessions, and collaborating with other healthcare professionals to ensure optimal patient care.",
     "qualifications": [
       "Illinois Occupational Therapy License",
@@ -282,6 +285,7 @@ export const newJobs = [
     "text": "Home Health - Certified Occupational Therapist Assistant",
     "stateAbbrev": "IL",
     "path": "certified-occupational-therapist-assistant",
+    "linkedInUrl": "",
     "description": `A Certified Occupational Therapy Assistant (COTA) administers occupational therapy to patients on an intermittent basis in their place of residence. This is performed in accordance with physician orders and plan of care under the direction and supervision of the Occupational Therapist and Director of Clinical Services/Nursing Supervisor.`,
     "qualifications": [
       "A person who is a graduate and meets the requirements for certification as an Occupational Therapy Assistant from a program accredited by the Accreditation Council for Occupational Therapy Education of the American Occupational Therapy Association (AOTO).",
@@ -290,7 +294,7 @@ export const newJobs = [
       "Is licensed or otherwise regulated, if applicable, as an Occupational Therapy Assistant by the State in which practicing, unless licensure does not apply.",
       "Two (2) years’ experience, preferred."
     ],
-    "lifting-requirements": [
+    "lifting": [
       "Ability to perform the following tasks if necessary:",
       "Ability to participate in physical activity.",
       "Ability to work for extended period of time while standing and being involved in physical activity.",

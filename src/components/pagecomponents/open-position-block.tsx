@@ -9,7 +9,7 @@ interface OpenPositionBlockProps {
 const OpenPositionBlock: React.FC<OpenPositionBlockProps> = ({job, index}) => {
 
     return (
-        <Link to={`/careers`} key={index} className="group flex flex-col items-center bg-advancedDarkBlue text-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-advancedBlue hover:shadow-xl">
+        <Link to={`/careers/openings/${job.path}`} key={index} className="group flex flex-col items-center bg-advancedDarkBlue text-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-advancedBlue hover:shadow-xl">
             <h3 className="text-xl md:text-2xl font-arial-rounded text-center mb-2">
                 {job.position}
             </h3>
