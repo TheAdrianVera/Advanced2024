@@ -76,7 +76,7 @@ function App() {
               <Route path='/services.html' element={<Navigate to="/services" />} />
               <Route path='/community.html' element={<Navigate to="/community" />} />
               <Route path='/contact.html' element={<Navigate to="/contact" />} />
-              {/* Career Job Routes */}
+              {/* Open Position Routes */}
               {newJobs.map(job => (
                 <Route 
                   key={job.position} 
@@ -100,6 +100,17 @@ function App() {
                     />
                   } />
               ))}
+              {/* Apply to Open Position Routes */}
+              {newJobs.map(job => (
+                <Route
+                  key={job.id}
+                  path={`/careers/openings/${job.path}/apply/${job.id}`}
+                  element={
+                    <></>
+                  } 
+                />
+              ))}
+
               {/* All Routes */}
               <Route path='*' element={<Navigate to="/" />} />
             </Routes>
