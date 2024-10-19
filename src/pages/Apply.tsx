@@ -7,7 +7,7 @@ interface ApplyProps {
     position: string
 }
 
-const Apply: React.FC<ApplyProps> = ({id, position}) => {
+const Apply: React.FC<ApplyProps> = ({position}) => {
     
     return (
         <>
