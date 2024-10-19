@@ -1,7 +1,11 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-const ApplySection: React.FC = () => {
+interface ApplySectionProps {
+    position: string
+}
+
+const ApplySection: React.FC<ApplySectionProps> = ({position}) => {
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [submissionFailed, setSubmissionFailed] = useState(false)
     const [resumeError, setResumeError] = useState('')
@@ -121,6 +125,9 @@ const ApplySection: React.FC = () => {
                             />
                             {coverLetterError && <p className='text-red-500 text-xs italic'>{coverLetterError}</p>}
                         </div>
+                        <div>
+                            <input type='hidden' name='position' value={position} />
+                        </div>
                         <div className='flex items-center justify-between'>
                             <button
                                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
@@ -129,6 +136,7 @@ const ApplySection: React.FC = () => {
                                 Submit
                             </button>
                         </div>
+
                     </form>
                 )}
             </div>
