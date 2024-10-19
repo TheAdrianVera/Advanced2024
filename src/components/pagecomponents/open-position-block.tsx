@@ -16,7 +16,7 @@ const OpenPositionBlock: React.FC<OpenPositionBlockProps> = ({job, index}) => {
             <p className="text-lg md:text-xl font-arial text-center mb-3">
                 Type:
                 <span className='ml-1 text-blue-300 group-hover:text-advancedNavyBlue'>
-                    {job.type === 'Full Time (TBD)' ? 'Full Time' : job.type}
+                    {job.type}
                 </span>
             </p>
             <p className="text-lg md:text-xl font-arial text-center mb-3">
@@ -26,7 +26,7 @@ const OpenPositionBlock: React.FC<OpenPositionBlockProps> = ({job, index}) => {
             <p className="text-lg md:text-xl font-arial text-center mb-2">
                 Location:
                 <span className='ml-1 text-blue-300 group-hover:text-advancedNavyBlue'>
-                    {job.city === 'Springfield Area' ? `Springfield, ${job.state}` : `${job.city}, ${job.state}`}
+                    {job.city}, {job.state}
                 </span>
             </p>
         </Link>

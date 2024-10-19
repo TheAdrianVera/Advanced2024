@@ -19,10 +19,11 @@ import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
-import Job from './pages/Job'
+import Position from './pages/Position'
+import Apply from './pages/Apply'
 
 // Data Imports
-import { jobs } from './data/jobs.ts'
+import { newJobs } from './data/jobs.ts'
 import { benefitsData } from './data/benefits.ts'
 
 const trackingId = import.meta.env.VITE_REACT_APP_GA_MEARSUREMENT_ID
@@ -64,7 +65,7 @@ function App() {
               {/* Routes for Main Pages */}
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
-              <Route path='/careers' element={<Careers openings={jobs} benefitsData={benefitsData}/>} />
+              <Route path='/careers' element={<Careers openings={newJobs} benefitsData={benefitsData}/>} />
               <Route path='/services' element={<Services />} />
               <Route path='/community' element={<Community />} />
               <Route path='/contact' element={<Contact />} />
@@ -76,28 +77,44 @@ function App() {
               <Route path='/services.html' element={<Navigate to="/services" />} />
               <Route path='/community.html' element={<Navigate to="/community" />} />
               <Route path='/contact.html' element={<Navigate to="/contact" />} />
-              {/* Career Job Routes */}
-              {jobs.map(job => (
+              {/* Open Position Routes */}
+              {newJobs.map(job => (
                 <Route 
                   key={job.position} 
                   path={`/careers/openings/${job.path}`} 
                   element={
-                    <Job 
-                      position={job.position} 
-                      acronym={job.acronym} 
-                      type={job.type} 
-                      city={job.city} 
-                      state={job.state} 
-                      stateAbbrev={job.stateAbbrev}
-                      url={job.url} 
-                      text={job.text}
-                      path={job.path}
-                      listingDescriptionHtml={job.listingDescriptionHtml}
-                      applyButtonsHtml={job.applyButtonsHtml || ''}
+                    <Position
+                      id={job.id}
+                      position={job.position}
+                      description={job.description}
                       department={job.department}
-                      />
+                      acroynm={job.acronym}
+                      path={job.path}
+                      linkedInUrl={job.linkedInUrl}
+                      type={job.type}
+                      city={job.city}
+                      state={job.state}
+                      text={job.text}
+                      qualifitions={job.qualifications}
+                      responsibilities={job.responsibilities}
+                      lifting={job.lifting}
+                    />
                   } />
               ))}
+              {/* Apply to Open Position Routes */}
+              {newJobs.map(job => (
+                <Route
+                  key={job.id}
+                  path={`/careers/openings/${job.path}/apply/${job.id}`}
+                  element={
+                    <Apply 
+                      id={job.id}
+                      position={job.position}
+                    />
+                  } 
+                />
+              ))}
+
               {/* All Routes */}
               <Route path='*' element={<Navigate to="/" />} />
             </Routes>

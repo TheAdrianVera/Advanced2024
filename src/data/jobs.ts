@@ -210,3 +210,131 @@ export const jobs = [
     "applyButtonsHtml": "<a href=\"https://ahsllc.applicantstack.com/x/apply/a2ieza1cd1i6\" class=\"equal-width-button\">Apply</a><div class=\"refer-friend-spacer\">&nbsp;</div><div style=\"margin-top:10px\"><a href=\"https://ahsllc.applicantstack.com/x/refer/a2ieza1cd1i6\" class=\"equal-width-button\">Refer to a Friend</a></div>"
   }
 ]
+
+export const newJobs = [
+  {
+    "id": 4048499469,
+    "position": "Registered Nurse",
+    "department": "Client Care",
+    "acronym": "RN",
+    "type": "Full Time",
+    "city": "Springfield",
+    "state": "Illinois",
+    "text": "Home Health - Registered Nurse",
+    "stateAbbrev": "IL",
+    "path": "registered-nurse",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4048499469",
+    "qualifications": [
+      "Graduate of an approved school of professional nursing and currently licensed in the state(s) in which practicing.",
+      "Two (2) years’ nursing experience, preferred.",
+      "Acceptance of philosophy and goals of this Agency.",
+      "Ability to exercise initiative and independent judgment.",
+      "OASIS experience preferred but not required"
+    ],
+  },
+  {
+    "id": 4048492869,
+    "position": "Licensed Practical Nurse",
+    "department": "Client Care",
+    "acronym": "LPN",
+    "type": "Full Time",
+    "city": "Springfield",
+    "state": "Illinois",
+    "text": "Home Health - Licensed Practical Nurse",
+    "stateAbbrev": "IL",
+    "path": "licensed-practical-nurse",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4048492869",
+    "qualifications": [
+      "Licensed as a Practical Nurse in the State of IL",
+      "Six months of Home Health or geriatric nursing desirable",
+      "Valid drivers license and good driving record",
+      "Hard working & self starter"
+    ]
+  },
+  {
+    "id": 4052183286,
+    "position": "Occupational Therapist",
+    "department": "Client Care",
+    "acronym": "OT",
+    "type": "Full Time",
+    "city": "Springfield",
+    "state": "Illinois",
+    "text": "Home Health - Occupational Therapist",
+    "stateAbbrev": "IL",
+    "path": "occupational-therapist",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4052183286",
+    "description": "This is a full-time on-site role for an Occupational Therapist at Advanced HealthCare Services, LLC a home health agency located servicing Central Illinois. The Occupational Therapist will be responsible for providing occupational therapy services to patients, developing treatment plans, conducting therapy sessions, and collaborating with other healthcare professionals to ensure optimal patient care.",
+    "qualifications": [
+      "Illinois Occupational Therapy License",
+      "Ability to build rapport with patients",
+      "Excellent written and verbal communication skills",
+      "Positive and patient demeanor",
+    ],
+    "responsibilities": [
+      "Develop therapy and treatment plans for OT orders.",
+      "Establish treatment goals and milestones with patients",
+      "Document and store treatment plans and progress reports",
+      "Update patient progress to relevant parties",
+    ]
+  },
+  {
+    "id": 4052190006,
+    "position": "Certified Occupational Therapist Assistant",
+    "department": "Client Care",
+    "acronym": "COTA",
+    "type": "Full Time",
+    "city": "Springfield",
+    "state": "Illinois",
+    "text": "Home Health - Certified Occupational Therapist Assistant",
+    "stateAbbrev": "IL",
+    "path": "certified-occupational-therapist-assistant",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4052190006",
+    "description": `A Certified Occupational Therapy Assistant (COTA) administers occupational therapy to patients on an intermittent basis in their place of residence. This is performed in accordance with physician orders and plan of care under the direction and supervision of the Occupational Therapist and Director of Clinical Services/Nursing Supervisor.`,
+    "qualifications": [
+      "A person who is a graduate and meets the requirements for certification as an Occupational Therapy Assistant from a program accredited by the Accreditation Council for Occupational Therapy Education of the American Occupational Therapy Association (AOTO).",
+      "Certification is maintained by the National Board for Certification in Occupational Therapy, Inc.",
+      "Currently certified in the state(s) in which practicing.",
+      "Is licensed or otherwise regulated, if applicable, as an Occupational Therapy Assistant by the State in which practicing, unless licensure does not apply.",
+      "Two (2) years’ experience, preferred."
+    ],
+    "lifting": [
+      "Ability to perform the following tasks if necessary:",
+      "Ability to participate in physical activity.",
+      "Ability to work for extended period of time while standing and being involved in physical activity.",
+      "Moderate lifting.",
+      "Ability to do extensive bending, lifting and standing on a regular basis."
+    ],
+  }
+]
+
+export const companyInfo = [
+  {
+    "intro": [
+      "Are you looking for a new role that will allow you to give back to your community?",
+      "Advanced Healthcare Services is looking for caring, compassionate individuals to join our growing team. Our office in Springfield provides Home Health services to the local area including Springfield, Decatur, Jacksonville, Chatham, Rochester, Auburn, and many more.",
+      "We have Weekend, Full-Time, Part-Time, and PRN positions available."
+    ],
+    "description": "Advanced Healthcare Services, LLC is a home healthcare agency servicing Central Illinois. We are looking to add another Occupational Therapist to our team. We offer very competitive compensation & paid mileage. Please send us a message for an application or email your resume to us. We are looking for an experienced, motivated, self-starter and must work well as part of a team. We are certified and licensed by Medicare and the Illinois Department of Public Health. Our staff is highly trained, licensed and certified to provide quality care.",
+    "benefits": [
+      "Dental Insurance",
+      "Flexible Schedule",
+      "Flexible Spending Account",
+      "Health Insurance",
+      "Life Insurance",
+      "Paid Time Off",
+      "Vision insurance",
+      "Multiple shift options (10 hour, 8 hour, Weekends)",
+      "Retirement Savings Account"
+    ],
+    "offerings": [
+      "Flexible Schedule.",
+      "No case management. You focus on patients while someone else takes care of the plan.",
+      "High quality of care. Take the time you need to take care of your patients.",
+      "Privately owned company.",
+      "Medical Social Worker on staff."
+    ],
+    "industry": "Home Health Care"
+  }
+]
+
+
