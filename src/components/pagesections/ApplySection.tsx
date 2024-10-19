@@ -4,28 +4,48 @@ import emailjs from '@emailjs/browser'
 const ApplySection: React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [submissionFailed, setSubmissionFailed] = useState(false)
+    const [resumeError, setResumeError] = useState('')
+    const [coverLetterError, setCoverLetterError] = useState('')
 
     // Referral Form Ref
     const form = useRef<HTMLFormElement>(null)
 
     // Form Variables
     const serviceId = import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID
-    const templateId = import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID
     const myPublicKey = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY
+    const templateId = import.meta.env.VITE_REACT_APP_EMAILJS_APPLICATION_ID
+
+    // Declare EmailJS Service
+    emailjs.init({
+            publicKey: myPublicKey,
+            limitRate: {
+                id: 'app',
+                throttle: 1000
+            }
+        },
+    )
+
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>, setError: React.Dispatch<React.SetStateAction<string>>) => {
+        const file = event.target.files?.[0]
+        if (file && file.size > 500 * 1024) { // 500 KB size limit
+            setError('File size should not exceed 500 KB')
+        } else {
+            setError('')
+        }
+    }
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
+        console.log('submitting form ...')
         if (form.current) {
-            const formData = new FormData(form.current)
-            const name = formData.get('user_name')
-            const email = formData.get('user_email')
-            const resume = formData.get('user_resume') as File
-
-            console.log('Name:', name)
-            console.log('Email:', email)
-            console.log('Resume File Name:', resume.name)
-
-            setIsSubmitted(true)
+            emailjs.sendForm(serviceId, templateId, form.current, myPublicKey)
+                .then((result) => {
+                    console.log("Success!!", result.text)
+                    setIsSubmitted(true)
+                }, (error) => {
+                    console.log("Failed :(", error.text)
+                    setSubmissionFailed(true)
+                })
         }
     }
 
@@ -83,7 +103,9 @@ const ApplySection: React.FC = () => {
                                 name='user_resume'
                                 accept='.pdf,.doc,.docx'
                                 required
+                                onChange={(e) => handleFileChange(e, setResumeError)}
                             />
+                            {resumeError && <p className='text-red-500 text-xs italic'>{resumeError}</p>}
                         </div>
                         <div className='mb-4'>
                             <label className='block text-gray-700 text-sm font-bold mb-2' htmlFor='cover_letter'>
@@ -95,7 +117,9 @@ const ApplySection: React.FC = () => {
                                 type='file'
                                 name='user_cover_letter'
                                 accept='.pdf,.doc,.docx'
+                                onChange={(e) => handleFileChange(e, setCoverLetterError)}
                             />
+                            {coverLetterError && <p className='text-red-500 text-xs italic'>{coverLetterError}</p>}
                         </div>
                         <div className='flex items-center justify-between'>
                             <button
