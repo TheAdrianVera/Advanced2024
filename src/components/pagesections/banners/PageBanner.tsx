@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactGA from 'react-ga4'
+import { useMediaQuery } from 'react-responsive'
 import ReactPixel from 'react-facebook-pixel'
 import HomeScreenLogo from "../../logos/HomeScreenLogo"
 
@@ -20,8 +21,14 @@ interface PageBannerProps {
 }
 
 const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgroundUrl, logo, logoUrl, careerButton }) => {
+    const isMediumOrLarger = useMediaQuery({ query: '(min-width: 1080px)' });
+
     const backgroundStyle = backgroundUrl ? { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}
-    const companyPhotoBackgroundStyle = { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover' }
+    const companyPhotoBackgroundStyle = {
+        backgroundImage: `url(${backgroundUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: isMediumOrLarger ? 'center -155px' : 'center'
+    }
     const companyPhotoUrl = 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png'
     const style = backgroundUrl === companyPhotoUrl ? companyPhotoBackgroundStyle : backgroundStyle;
 
