@@ -1,5 +1,9 @@
 const communityGallery = [
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png',
+        alt: 'Advanced Company Photo 2024',
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career8.png',
         alt: 'Advanced Team Members Posing for a Picture',
     },
@@ -20,6 +24,10 @@ const communityGallery = [
         alt: 'Advanced Healthcare Community Members Posing in Fall Attire',
     },
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/sangamon-county-+triad.jpg',
+        alt: 'Sangamon County Triad Meeting',
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/fb_ad_photo.JPG',
         alt: 'Advanced Healthcare Team Member taking Vidalsigns of a Patient',
     },
@@ -28,8 +36,16 @@ const communityGallery = [
         alt: 'Advanced Team Members Posing at a Advanced Healthcare Table',
     },
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/senior-celebration-steering-commitee.jpg',
+        alt: 'Senior Celebration Steering Commitee'
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career3.jpg',
         alt: 'Advanced Team Member Posing with Advanced Dog',
+    },
+    {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/presenting-1.jpg',
+        alt: 'Presnting at a Meeting',
     },
     {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/careers7.jpg',
@@ -52,12 +68,28 @@ const communityGallery = [
         alt: 'Advanced Team Member Posing at Event',
     },
     {
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career4.jpg',
-        alt: 'Advanced Holiday Greeting Card',
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/presenting-2.jpg',
+        alt: 'Presenting at a Meeting',
     },
     {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/community8.jpg',
         alt: 'Advanced Team Members having a Meeting',
+    },
+    {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/kinds-daughter-fundraiser.jpg',
+        alt: 'Kinds Daughter Fundraiser',
+    },
+    {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/nurse-week-23.png',
+        alt: 'Nurse Week 2023'
+    },
+    {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/man-and-dog.jpg',
+        alt: 'Patient Petting Advanced Dog'
+    },
+    {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career4.jpg',
+        alt: 'Advanced Holiday Greeting Card',
     }
 ]
 

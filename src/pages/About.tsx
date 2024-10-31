@@ -182,6 +182,10 @@ const About: React.FC = () => {
   
   const testimonialList = [
     {
+      name: 'A.W. & Family',
+      content: 'Dear Advanced Healthcare services, your help was so special. You brightened Mamma‘s days and shared my burdens and fears. You were a ray of sunshine. Thank you so much for your ministry. Everyone was extra helpful and kind.'
+    },
+    {
       name: 'Satisfied Patient',
       content: 'Everyone was so polite and courteous. If I didn’t understand something they would explain it to me. I really enjoyed all the help I had.'
     },
@@ -231,7 +235,7 @@ const About: React.FC = () => {
       <PageBanner 
         title='About Our Practice' 
         subtitle='Learn more about the high quality Home Healthcare we provide.'
-        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
+        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png'
       />
       <AboutSection />
       <FocusSection 
