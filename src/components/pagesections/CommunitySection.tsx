@@ -1,5 +1,9 @@
 const communityGallery = [
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png',
+        alt: 'Advanced Company Photo 2024',
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career8.png',
         alt: 'Advanced Team Members Posing for a Picture',
     },
