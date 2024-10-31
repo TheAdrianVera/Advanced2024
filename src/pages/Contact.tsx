@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
       <PageBanner 
         title='Contact Our Team' 
         subtitle='Let’s work together—contact us today.' 
-        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
+        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png'
       />
       <ReferralFormSection />
       <ContactSection />

@@ -21,7 +21,10 @@ interface PageBannerProps {
 
 const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgroundUrl, logo, logoUrl, careerButton }) => {
     const backgroundStyle = backgroundUrl ? { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}
-    
+    const companyPhotoBackgroundStyle = { backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover' }
+    const companyPhotoUrl = 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png'
+    const style = backgroundUrl === companyPhotoUrl ? companyPhotoBackgroundStyle : backgroundStyle;
+
     const handleClick = (label: string) => {
         ReactGA.event({
             category: 'Button',
@@ -55,7 +58,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
     return (
         <div
             className={`relative text-white py-8 px-4 h-[30rem] flex flex-col items-center justify-center ${backgroundUrl ? '' : 'bg-advancedBlue'}`}
-            style={backgroundStyle}
+            style={style}
         >
             {backgroundUrl && (
                 <div className="absolute inset-0 bg-advancedLightBlue opacity-50"></div>
