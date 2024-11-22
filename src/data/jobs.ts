@@ -277,34 +277,34 @@ export const newJobs = [
       "Update patient progress to relevant parties",
     ]
   },
-  // {
-  //   "id": 4052190006,
-  //   "position": "Certified Occupational Therapist Assistant",
-  //   "department": "Client Care",
-  //   "acronym": "COTA",
-  //   "type": "Full Time",
-  //   "city": "Springfield",
-  //   "state": "Illinois",
-  //   "text": "Home Health - Certified Occupational Therapist Assistant",
-  //   "stateAbbrev": "IL",
-  //   "path": "certified-occupational-therapist-assistant",
-  //   "linkedInUrl": "https://www.linkedin.com/jobs/view/4052190006",
-  //   "description": `A Certified Occupational Therapy Assistant (COTA) administers occupational therapy to patients on an intermittent basis in their place of residence. This is performed in accordance with physician orders and plan of care under the direction and supervision of the Occupational Therapist and Director of Clinical Services/Nursing Supervisor.`,
-  //   "qualifications": [
-  //     "A person who is a graduate and meets the requirements for certification as an Occupational Therapy Assistant from a program accredited by the Accreditation Council for Occupational Therapy Education of the American Occupational Therapy Association (AOTO).",
-  //     "Certification is maintained by the National Board for Certification in Occupational Therapy, Inc.",
-  //     "Currently certified in the state(s) in which practicing.",
-  //     "Is licensed or otherwise regulated, if applicable, as an Occupational Therapy Assistant by the State in which practicing, unless licensure does not apply.",
-  //     "Two (2) years’ experience, preferred."
-  //   ],
-  //   "lifting": [
-  //     "Ability to perform the following tasks if necessary:",
-  //     "Ability to participate in physical activity.",
-  //     "Ability to work for extended period of time while standing and being involved in physical activity.",
-  //     "Moderate lifting.",
-  //     "Ability to do extensive bending, lifting and standing on a regular basis."
-  //   ],
-  // }
+  {
+    "id": 4052190006,
+    "position": "Certified Occupational Therapist Assistant",
+    "department": "Client Care",
+    "acronym": "COTA",
+    "type": "Full Time",
+    "city": "Springfield",
+    "state": "Illinois",
+    "text": "Home Health - Certified Occupational Therapist Assistant",
+    "stateAbbrev": "IL",
+    "path": "certified-occupational-therapist-assistant",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4052190006",
+    "description": `A Certified Occupational Therapy Assistant (COTA) administers occupational therapy to patients on an intermittent basis in their place of residence. This is performed in accordance with physician orders and plan of care under the direction and supervision of the Occupational Therapist and Director of Clinical Services/Nursing Supervisor.`,
+    "qualifications": [
+      "A person who is a graduate and meets the requirements for certification as an Occupational Therapy Assistant from a program accredited by the Accreditation Council for Occupational Therapy Education of the American Occupational Therapy Association (AOTO).",
+      "Certification is maintained by the National Board for Certification in Occupational Therapy, Inc.",
+      "Currently certified in the state(s) in which practicing.",
+      "Is licensed or otherwise regulated, if applicable, as an Occupational Therapy Assistant by the State in which practicing, unless licensure does not apply.",
+      "Two (2) years’ experience, preferred."
+    ],
+    "lifting": [
+      "Ability to perform the following tasks if necessary:",
+      "Ability to participate in physical activity.",
+      "Ability to work for extended period of time while standing and being involved in physical activity.",
+      "Moderate lifting.",
+      "Ability to do extensive bending, lifting and standing on a regular basis."
+    ],
+  }
 ]
 
 export const companyInfo = [
