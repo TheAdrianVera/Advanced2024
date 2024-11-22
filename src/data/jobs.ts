@@ -213,7 +213,7 @@ export const jobs = [
 
 export const newJobs = [
   {
-    "id": 4048499469,
+    "id": 4075829012,
     "position": "Registered Nurse",
     "department": "Client Care",
     "acronym": "RN",
@@ -223,7 +223,7 @@ export const newJobs = [
     "text": "Home Health - Registered Nurse",
     "stateAbbrev": "IL",
     "path": "registered-nurse",
-    "linkedInUrl": "https://www.linkedin.com/jobs/view/4048499469",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4075829012",
     "qualifications": [
       "Graduate of an approved school of professional nursing and currently licensed in the state(s) in which practicing.",
       "Two (2) years’ nursing experience, preferred.",
@@ -232,27 +232,27 @@ export const newJobs = [
       "OASIS experience preferred but not required"
     ],
   },
+  // {
+  //   "id": 4048492869,
+  //   "position": "Licensed Practical Nurse",
+  //   "department": "Client Care",
+  //   "acronym": "LPN",
+  //   "type": "Full Time",
+  //   "city": "Springfield",
+  //   "state": "Illinois",
+  //   "text": "Home Health - Licensed Practical Nurse",
+  //   "stateAbbrev": "IL",
+  //   "path": "licensed-practical-nurse",
+  //   "linkedInUrl": "https://www.linkedin.com/jobs/view/4048492869",
+  //   "qualifications": [
+  //     "Licensed as a Practical Nurse in the State of IL",
+  //     "Six months of Home Health or geriatric nursing desirable",
+  //     "Valid drivers license and good driving record",
+  //     "Hard working & self starter"
+  //   ]
+  // },
   {
-    "id": 4048492869,
-    "position": "Licensed Practical Nurse",
-    "department": "Client Care",
-    "acronym": "LPN",
-    "type": "Full Time",
-    "city": "Springfield",
-    "state": "Illinois",
-    "text": "Home Health - Licensed Practical Nurse",
-    "stateAbbrev": "IL",
-    "path": "licensed-practical-nurse",
-    "linkedInUrl": "https://www.linkedin.com/jobs/view/4048492869",
-    "qualifications": [
-      "Licensed as a Practical Nurse in the State of IL",
-      "Six months of Home Health or geriatric nursing desirable",
-      "Valid drivers license and good driving record",
-      "Hard working & self starter"
-    ]
-  },
-  {
-    "id": 4052183286,
+    "id": 4080561564,
     "position": "Occupational Therapist",
     "department": "Client Care",
     "acronym": "OT",
@@ -262,7 +262,7 @@ export const newJobs = [
     "text": "Home Health - Occupational Therapist",
     "stateAbbrev": "IL",
     "path": "occupational-therapist",
-    "linkedInUrl": "https://www.linkedin.com/jobs/view/4052183286",
+    "linkedInUrl": "https://www.linkedin.com/jobs/view/4080561564",
     "description": "This is a full-time on-site role for an Occupational Therapist at Advanced HealthCare Services, LLC a home health agency located servicing Central Illinois. The Occupational Therapist will be responsible for providing occupational therapy services to patients, developing treatment plans, conducting therapy sessions, and collaborating with other healthcare professionals to ensure optimal patient care.",
     "qualifications": [
       "Illinois Occupational Therapy License",
