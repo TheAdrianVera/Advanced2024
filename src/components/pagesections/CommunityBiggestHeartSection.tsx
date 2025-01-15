@@ -70,7 +70,7 @@ const CommunityBiggestHeartSection: React.FC = () => {
                     <div key={index} className='flex flex-col items-center pb-10'>
                     <h2 className='text-xl md:text-2xl mb-6 underline'>{award.period} {award.year}</h2>
                     <div className='flex flex-col md:flex-row items-center w-full md:w-3/4 lg:w-2/3'>
-                        <div className="w-full flex flex-row justify-end md:w-1/2 lg:w-1/3 mb-6 md:mb-0 md:mr-6 ">
+                        <div className="w-full flex flex-row justify-center md:justify-end md:w-1/2 lg:w-1/3 mb-6 md:mb-0 md:mr-6 ">
                             <img src={award.imgUrl} alt={award.imgAlt} className='max-h-64 rounded-lg shadow-lg' />
                         </div>
                         <div className="w-full md:w-1/2 lg:w-2/3 text-center md:text-left">
