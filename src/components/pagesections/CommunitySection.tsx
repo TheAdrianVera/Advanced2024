@@ -1,4 +1,5 @@
 const communityGallery = [
+    // First Column
     {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png',
         alt: 'Advanced Company Photo 2024',
@@ -16,6 +17,10 @@ const communityGallery = [
         alt: 'Advanced Healthcare Mobile (side view)',
     },
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/holiday2024/holidaytree-2.jpeg',
+        alt: 'Advanced Holiday Party Celebration Staff Posing',
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career9.jpg',
         alt: 'Advanced Team Members Posing in front of Advanced Healthcare Poster',
     },
@@ -23,6 +28,7 @@ const communityGallery = [
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/community1.jpeg',
         alt: 'Advanced Healthcare Community Members Posing in Fall Attire',
     },
+    // Second Column
     {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/sangamon-county-+triad.jpg',
         alt: 'Sangamon County Triad Meeting',
@@ -40,9 +46,14 @@ const communityGallery = [
         alt: 'Senior Celebration Steering Commitee'
     },
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/holiday2024/biggestheartwinter24.jpeg',
+        alt: 'Biggest Heart Award Winner Winter 2024',
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career3.jpg',
         alt: 'Advanced Team Member Posing with Advanced Dog',
     },
+    // Third Column
     {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/presenting-1.jpg',
         alt: 'Presnting at a Meeting',
@@ -60,6 +71,10 @@ const communityGallery = [
         alt: 'Advanced Team Posing with Medical Hats on',
     },
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/holiday2024/holidaytree-1.jpeg',
+        alt: '2024 Holiday Party'
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/community4.jpeg',
         alt: 'Advanced Team at Advanced Healthcare Table in Pirate Attire for Halloween',
     },
@@ -67,9 +82,10 @@ const communityGallery = [
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career2.jpg',
         alt: 'Advanced Team Member Posing at Event',
     },
+    // Forth Column
     {
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/presenting-2.jpg',
-        alt: 'Presenting at a Meeting',
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/holiday2024/communitypresentation.jpeg',
+        alt: 'Community Presentation',
     },
     {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/community8.jpg',
@@ -88,9 +104,14 @@ const communityGallery = [
         alt: 'Patient Petting Advanced Dog'
     },
     {
+        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/holiday2024/holiday-1.jpeg',
+        alt: 'Staff at Holiday Party',
+    },
+    {
         imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/career4.jpg',
         alt: 'Advanced Holiday Greeting Card',
-    }
+    },
+
 ]
 
 const CommunitySection: React.FC = () => {
