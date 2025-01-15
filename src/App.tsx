@@ -19,8 +19,6 @@ import Services from './pages/Services'
 import Community from './pages/Community'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
-import Position from './pages/Position'
-import Apply from './pages/Apply'
 
 // Data Imports
 import { newJobs } from './data/jobs.ts'
@@ -78,7 +76,7 @@ function App() {
               <Route path='/community.html' element={<Navigate to="/community" />} />
               <Route path='/contact.html' element={<Navigate to="/contact" />} />
               {/* Open Position Routes */}
-              {newJobs.map(job => (
+              {/* {newJobs.map(job => (
                 <Route 
                   key={job.position} 
                   path={`/careers/openings/${job.path}`} 
@@ -100,9 +98,9 @@ function App() {
                       lifting={job.lifting}
                     />
                   } />
-              ))}
+              ))} */}
               {/* Apply to Open Position Routes */}
-              {newJobs.map(job => (
+              {/* {newJobs.map(job => (
                 <Route
                   key={job.id}
                   path={`/careers/openings/${job.path}/apply/${job.id}`}
@@ -112,7 +110,7 @@ function App() {
                     />
                   } 
                 />
-              ))}
+              ))} */}
 
               {/* All Routes */}
               <Route path='*' element={<Navigate to="/" />} />
