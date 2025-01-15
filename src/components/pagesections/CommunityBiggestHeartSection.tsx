@@ -70,16 +70,15 @@ const CommunityBiggestHeartSection: React.FC = () => {
                     <div key={index} className='flex flex-col items-center pb-10'>
                     <h2 className='text-xl md:text-2xl mb-6 underline'>{award.period} {award.year}</h2>
                     <div className='flex flex-col md:flex-row items-center w-full md:w-3/4 lg:w-2/3'>
-                        <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0 md:mr-6">
-                            <img src={award.imgUrl} alt={award.imgAlt} className='rounded-lg shadow-lg' />
+                        <div className="w-full flex flex-row justify-end md:w-1/2 lg:w-1/3 mb-6 md:mb-0 md:mr-6 ">
+                            <img src={award.imgUrl} alt={award.imgAlt} className='max-h-64 rounded-lg shadow-lg' />
                         </div>
                         <div className="w-full md:w-1/2 lg:w-2/3 text-center md:text-left">
                             <h3 className='text-xl font-bold text-gray-200 mb-6'>{award.name}</h3>
                             <p className='text-lg text-gray-200 mb-5'>{award.content1}</p>
                             <p className='text-lg text-gray-200 mb-5'>{award.content2}</p>
                             <a href={award.link} target='_blank' rel='noreferrer' className='inline-flex items-center justify-center text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded'>
-                                Read More
-                                <FaFacebook className='ml-2' />
+                                Learn More
                             </a>
                         </div>
                     </div>
