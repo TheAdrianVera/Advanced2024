@@ -212,26 +212,26 @@ export const jobs = [
 ]
 
 export const newJobs = [
-  {
-    "id": 4075829012,
-    "position": "Registered Nurse",
-    "department": "Client Care",
-    "acronym": "RN",
-    "type": "Full Time",
-    "city": "Springfield",
-    "state": "Illinois",
-    "text": "Home Health - Registered Nurse",
-    "stateAbbrev": "IL",
-    "path": "registered-nurse",
-    "linkedInUrl": "https://www.linkedin.com/jobs/view/4075829012",
-    "qualifications": [
-      "Graduate of an approved school of professional nursing and currently licensed in the state(s) in which practicing.",
-      "Two (2) years’ nursing experience, preferred.",
-      "Acceptance of philosophy and goals of this Agency.",
-      "Ability to exercise initiative and independent judgment.",
-      "OASIS experience preferred but not required"
-    ],
-  },
+  // {
+  //   "id": 4075829012,
+  //   "position": "Registered Nurse",
+  //   "department": "Client Care",
+  //   "acronym": "RN",
+  //   "type": "Full Time",
+  //   "city": "Springfield",
+  //   "state": "Illinois",
+  //   "text": "Home Health - Registered Nurse",
+  //   "stateAbbrev": "IL",
+  //   "path": "registered-nurse",
+  //   "linkedInUrl": "https://www.linkedin.com/jobs/view/4075829012",
+  //   "qualifications": [
+  //     "Graduate of an approved school of professional nursing and currently licensed in the state(s) in which practicing.",
+  //     "Two (2) years’ nursing experience, preferred.",
+  //     "Acceptance of philosophy and goals of this Agency.",
+  //     "Ability to exercise initiative and independent judgment.",
+  //     "OASIS experience preferred but not required"
+  //   ],
+  // },
   // {
   //   "id": 4048492869,
   //   "position": "Licensed Practical Nurse",
@@ -251,60 +251,60 @@ export const newJobs = [
   //     "Hard working & self starter"
   //   ]
   // },
-  {
-    "id": 4080561564,
-    "position": "Occupational Therapist",
-    "department": "Client Care",
-    "acronym": "OT",
-    "type": "Full Time",
-    "city": "Springfield",
-    "state": "Illinois",
-    "text": "Home Health - Occupational Therapist",
-    "stateAbbrev": "IL",
-    "path": "occupational-therapist",
-    "linkedInUrl": "https://www.linkedin.com/jobs/view/4080561564",
-    "description": "This is a full-time on-site role for an Occupational Therapist at Advanced HealthCare Services, LLC a home health agency located servicing Central Illinois. The Occupational Therapist will be responsible for providing occupational therapy services to patients, developing treatment plans, conducting therapy sessions, and collaborating with other healthcare professionals to ensure optimal patient care.",
-    "qualifications": [
-      "Illinois Occupational Therapy License",
-      "Ability to build rapport with patients",
-      "Excellent written and verbal communication skills",
-      "Positive and patient demeanor",
-    ],
-    "responsibilities": [
-      "Develop therapy and treatment plans for OT orders.",
-      "Establish treatment goals and milestones with patients",
-      "Document and store treatment plans and progress reports",
-      "Update patient progress to relevant parties",
-    ]
-  },
-  {
-    "id": 4052190006,
-    "position": "Certified Occupational Therapist Assistant",
-    "department": "Client Care",
-    "acronym": "COTA",
-    "type": "Full Time",
-    "city": "Springfield",
-    "state": "Illinois",
-    "text": "Home Health - Certified Occupational Therapist Assistant",
-    "stateAbbrev": "IL",
-    "path": "certified-occupational-therapist-assistant",
-    "linkedInUrl": "https://www.linkedin.com/jobs/view/4052190006",
-    "description": `A Certified Occupational Therapy Assistant (COTA) administers occupational therapy to patients on an intermittent basis in their place of residence. This is performed in accordance with physician orders and plan of care under the direction and supervision of the Occupational Therapist and Director of Clinical Services/Nursing Supervisor.`,
-    "qualifications": [
-      "A person who is a graduate and meets the requirements for certification as an Occupational Therapy Assistant from a program accredited by the Accreditation Council for Occupational Therapy Education of the American Occupational Therapy Association (AOTO).",
-      "Certification is maintained by the National Board for Certification in Occupational Therapy, Inc.",
-      "Currently certified in the state(s) in which practicing.",
-      "Is licensed or otherwise regulated, if applicable, as an Occupational Therapy Assistant by the State in which practicing, unless licensure does not apply.",
-      "Two (2) years’ experience, preferred."
-    ],
-    "lifting": [
-      "Ability to perform the following tasks if necessary:",
-      "Ability to participate in physical activity.",
-      "Ability to work for extended period of time while standing and being involved in physical activity.",
-      "Moderate lifting.",
-      "Ability to do extensive bending, lifting and standing on a regular basis."
-    ],
-  }
+  // {
+  //   "id": 4080561564,
+  //   "position": "Occupational Therapist",
+  //   "department": "Client Care",
+  //   "acronym": "OT",
+  //   "type": "Full Time",
+  //   "city": "Springfield",
+  //   "state": "Illinois",
+  //   "text": "Home Health - Occupational Therapist",
+  //   "stateAbbrev": "IL",
+  //   "path": "occupational-therapist",
+  //   "linkedInUrl": "https://www.linkedin.com/jobs/view/4080561564",
+  //   "description": "This is a full-time on-site role for an Occupational Therapist at Advanced HealthCare Services, LLC a home health agency located servicing Central Illinois. The Occupational Therapist will be responsible for providing occupational therapy services to patients, developing treatment plans, conducting therapy sessions, and collaborating with other healthcare professionals to ensure optimal patient care.",
+  //   "qualifications": [
+  //     "Illinois Occupational Therapy License",
+  //     "Ability to build rapport with patients",
+  //     "Excellent written and verbal communication skills",
+  //     "Positive and patient demeanor",
+  //   ],
+  //   "responsibilities": [
+  //     "Develop therapy and treatment plans for OT orders.",
+  //     "Establish treatment goals and milestones with patients",
+  //     "Document and store treatment plans and progress reports",
+  //     "Update patient progress to relevant parties",
+  //   ]
+  // },
+  // {
+  //   "id": 4052190006,
+  //   "position": "Certified Occupational Therapist Assistant",
+  //   "department": "Client Care",
+  //   "acronym": "COTA",
+  //   "type": "Full Time",
+  //   "city": "Springfield",
+  //   "state": "Illinois",
+  //   "text": "Home Health - Certified Occupational Therapist Assistant",
+  //   "stateAbbrev": "IL",
+  //   "path": "certified-occupational-therapist-assistant",
+  //   "linkedInUrl": "https://www.linkedin.com/jobs/view/4052190006",
+  //   "description": `A Certified Occupational Therapy Assistant (COTA) administers occupational therapy to patients on an intermittent basis in their place of residence. This is performed in accordance with physician orders and plan of care under the direction and supervision of the Occupational Therapist and Director of Clinical Services/Nursing Supervisor.`,
+  //   "qualifications": [
+  //     "A person who is a graduate and meets the requirements for certification as an Occupational Therapy Assistant from a program accredited by the Accreditation Council for Occupational Therapy Education of the American Occupational Therapy Association (AOTO).",
+  //     "Certification is maintained by the National Board for Certification in Occupational Therapy, Inc.",
+  //     "Currently certified in the state(s) in which practicing.",
+  //     "Is licensed or otherwise regulated, if applicable, as an Occupational Therapy Assistant by the State in which practicing, unless licensure does not apply.",
+  //     "Two (2) years’ experience, preferred."
+  //   ],
+  //   "lifting": [
+  //     "Ability to perform the following tasks if necessary:",
+  //     "Ability to participate in physical activity.",
+  //     "Ability to work for extended period of time while standing and being involved in physical activity.",
+  //     "Moderate lifting.",
+  //     "Ability to do extensive bending, lifting and standing on a regular basis."
+  //   ],
+  // }
 ]
 
 export const companyInfo = [

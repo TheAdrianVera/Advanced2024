@@ -7,6 +7,17 @@ interface OpenPositionsSectionProps {
 
 
 const OpenPositionsSection: React.FC<OpenPositionsSectionProps> = ({jobs}) => {
+    if(jobs.length === 0) {
+        return (
+            <div id='open-positions' className='section px-5 md:px-20 bg-advancedNavyBlue text-white pb-20'>
+                <div className='flex flex-col items-center py-10'>
+                    <h1 className='section-title mb-4'>Open Positions</h1>
+                    <h2 className='text-xl font-arial-narrow md:text-2xl text-gray-200 mb-6'>No positions available at the moment. Please check back later!</h2>
+                </div>
+            </div> 
+        )
+    }
+
     return (
         <div id='open-positions' className='section px-5 md:px-20 bg-advancedNavyBlue text-white pb-20'>
             <div className='flex flex-col items-center py-10'>
