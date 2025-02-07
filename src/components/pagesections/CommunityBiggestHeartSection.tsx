@@ -8,7 +8,7 @@ const biggestHeartAwards = [
         content1: 'To wrap up 2024, we had the honor of awarding Brandon Price of Arcadia Care Auburn with our quarterly Biggest Heart Award.',
         content2: 'Hearing stories of Brandon’s dedication to the residents of Arcadia Care Auburn were beyond heart warming. Brandon is known for his compassion & kindness. Numerous stories were shared about Brandon going above and beyond to make his patients feel loved. There is truly no one more deserving! Congratulations Brandon!',
         link: 'https://www.facebook.com/share/p/14sYteLvBP/',
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/holiday2024/biggestheartwinter24.jpeg',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/holiday2024/biggestheartwinter24.jpeg',
         imgAlt: 'Biggest Heart Award Winner Brandon Price',
     },
     {
@@ -18,7 +18,7 @@ const biggestHeartAwards = [
         content1: 'Peggy Dyson, Executive Director of the Educational Center for the Visually Impaired is our quarterly Biggest Heart.',
         content2: 'Peggy pours her heart and soul into our community by providing education, training & resources so the visually impaired are able to live safe, independent and fulfilling lives.',
         link: 'https://www.ecvispringfield.org',
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/biggestheartfall2024.jpeg',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/biggestheartfall2024.jpeg',
         imgAlt: 'Biggest Heart Award Winner Peggy Dyson'
     },
     {
@@ -28,7 +28,7 @@ const biggestHeartAwards = [
         content1: 'Our Biggest Heart Award goes to Illinois Assistive Technology Program!',
         content2: 'The impact they have on our community unequivocally has changed countless lives. Because of the dedicated staff and countless accessible programs, we have witnessed individuals in our community thrive while maintaining their independence.',
         link: 'https://www.facebook.com/share/p/Ma2FN7xroYzpkeWx/',
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/bh-kelley.png',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/bh-kelley.png',
         imgAlt: 'Biggest Heart Award Winners Posing and Smiling',
 
     },
@@ -39,7 +39,7 @@ const biggestHeartAwards = [
         content1: 'Our Winter Biggest Heart Award goes to Misty Duncan the Assistant Executive Director at Mary Bryant Home For the Blind and Visually Impaired',
         content2: 'Misty has gone above and beyond in being an advocate for Blind and Visually impared residents. Thank you for everything you do for the residents!',
         link: 'https://www.facebook.com/share/p/ifvkevcEEcUcjUAf/',
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/mistyduncan.png',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/mistyduncan.png',
         imgAlt: 'Biggest Heart Award Winners Posing and Smiling with their Award',
     },
     {
@@ -49,7 +49,7 @@ const biggestHeartAwards = [
         content1: 'We love celebrating the Biggest Hearts in our community.',
         content2: 'Kelley cares deeply, loves big and spreads joy and compassion to all that meet her. Thank you Kelley King Tierne from Carriage Crossing Rochester for so generously impacting the lives of our seniors.',
         link: 'https://www.facebook.com/share/p/YWk43Wt5W7pa8n8k/',
-        imgUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/biggest_heart.png',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/biggest_heart.png',
         imgAlt: 'Biggest Heart Award Winners Posing and Presenting their Award',
     },
 ]

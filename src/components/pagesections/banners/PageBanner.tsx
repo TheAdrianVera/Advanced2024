@@ -29,7 +29,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, button, backgr
         backgroundSize: 'cover',
         backgroundPosition: isMediumOrLarger ? 'center -155px' : 'center'
     }
-    const companyPhotoUrl = 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png'
+    const companyPhotoUrl = 'https://d3978e1lxwwpv4.cloudfront.net/oct-2024/companyphoto2024.png'
     const style = backgroundUrl === companyPhotoUrl ? companyPhotoBackgroundStyle : backgroundStyle;
 
     const handleClick = (label: string) => {

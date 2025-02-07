@@ -64,7 +64,7 @@ const About: React.FC = () => {
     const fileName = `${nameParts.join('-')}-${nameExtension}`
     
 
-    return `https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/team-2022/${fileName}.jpg`
+    return `https://d3978e1lxwwpv4.cloudfront.net/team-2022/${fileName}.jpg`
   }
 
   const teamMembers = [
@@ -229,13 +229,13 @@ const About: React.FC = () => {
         <meta name='keywords' content='Skilled Care, Skilled Health Care, Springfield, Illinois, Home Health, Home, Assisted Living, Long Term Care, Nurses, Physical Therapist' />
         <meta property='og:title' content='About | Advanced Healthcare Services LLC.' />
         <meta property='og:description' content='Learn more about Advanced Healthcare Services LLC. in Springfield, IL' />
-        <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
+        <meta property='og:image' content='https://d3978e1lxwwpv4.cloudfront.net/advanced-background-thumbnail.png' />
         <meta property='og:url' content='https://ahsllc.org/about' />
       </Helmet>
       <PageBanner 
         title='About Our Practice' 
         subtitle='Learn more about the high quality Home Healthcare we provide.'
-        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/oct-2024/companyphoto2024.png'
+        backgroundUrl='https://d3978e1lxwwpv4.cloudfront.net/oct-2024/companyphoto2024.png'
       />
       <AboutSection />
       <FocusSection 

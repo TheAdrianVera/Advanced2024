@@ -20,8 +20,8 @@ const aboutData = {
             content3: `To determine whether the beneficiary has the general ability to leave the home, look at the beneficiary's condition over a period of a time rather than short periods within the home health stay.`
         }
     ],
-    videoUrl: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced_home_video.mp4',
-    videoPoster: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/home-video-ph.png',
+    videoUrl: 'https://d3978e1lxwwpv4.cloudfront.net/advanced_home_video.mp4',
+    videoPoster: 'https://d3978e1lxwwpv4.cloudfront.net/home-video-ph.png',
 }
 
 const AboutSection: React.FC = () => {

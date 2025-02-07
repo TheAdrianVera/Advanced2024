@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <meta name='keywords' content='Skilled Care, Skilled Health Care, Springfield, Illinois, Home Health, Home, Assisted Living, Long Term Care, Nurses, Physical Therapist' />
         <meta property='og:title' content='Home | Advanced Healthcare Services LLC.' />
         <meta property='og:description' content='Advanced Health Care Services LLC. proudly provides skilled health care services to our patients in private homes, assisted living, and long term care facilities around Springfield, Illinois.' />
-        <meta property='og:image' content='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/advanced-background-thumbnail.png' />
+        <meta property='og:image' content='https://d3978e1lxwwpv4.cloudfront.net/advanced-background-thumbnail.png' />
         <meta property='og:url' content='https://ahsllc.org' />
       </Helmet>
       <PageBanner 
@@ -43,9 +43,9 @@ const Home: React.FC = () => {
           text: 'Learn More', 
           link: '/#services'}}
         subtitle='Known our Expertise, Chosen for our Care'
-        backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'
+        backgroundUrl='https://d3978e1lxwwpv4.cloudfront.net/header-bg.jpg'
         logo={true}
-        logoUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/ahsllc_logo.png'
+        logoUrl='https://d3978e1lxwwpv4.cloudfront.net/ahsllc_logo.png'
       />
       <ServicesSection />
       <CoverageAreasSection />

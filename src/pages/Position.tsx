@@ -25,7 +25,7 @@ const Position: React.FC<PositionProps> = ({id, position, department, descriptio
 
     return (
         <>
-            <PageBanner title={position} backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'/>
+            <PageBanner title={position} backgroundUrl='https://d3978e1lxwwpv4.cloudfront.net/header-bg.jpg'/>
             <div className='job section text-center'>
                 <div className='flex flex-col justify-center items-center'>
                     <h1>{position} - {acroynm}</h1>
