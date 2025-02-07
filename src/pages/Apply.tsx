@@ -10,7 +10,7 @@ const Apply: React.FC<ApplyProps> = ({position}) => {
     
     return (
         <>
-            <PageBanner title={`${position} APPLICATION`} backgroundUrl='https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/header-bg.jpg'/>
+            <PageBanner title={`${position} APPLICATION`} backgroundUrl='https://d3978e1lxwwpv4.cloudfront.net/header-bg.jpg'/>
             <ApplySection position={position} />
         </>
     )   

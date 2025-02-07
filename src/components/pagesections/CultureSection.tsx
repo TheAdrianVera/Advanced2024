@@ -2,15 +2,15 @@ import React from "react"
 
 const culuturePhotoGalleryUrls = [
     {
-        url: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/advancecareertop1.jpg',
+        url: 'https://d3978e1lxwwpv4.cloudfront.net/career/advancecareertop1.jpg',
         alt: 'Advanced Team Member with Advanced Dog at Office'
     },
     {
-        url: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/advancecareertop3.jpg',
+        url: 'https://d3978e1lxwwpv4.cloudfront.net/career/advancecareertop3.jpg',
         alt: 'Advanced Team Posing In Front of Office'
     },
     {
-        url: 'https://advanced-healthcare-llc-web-images.s3.us-east-2.amazonaws.com/career/advancecareertop2.JPG',
+        url: 'https://d3978e1lxwwpv4.cloudfront.net/career/advancecareertop2.JPG',
         alt: 'Advanced Team Member Taking Patient Vitals'
     }
 ]
