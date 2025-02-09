@@ -25,8 +25,8 @@ const NavCareerOpenings: React.FC<NavCareerOpeningsProps> = ({className}) => {
             <div className='flex space-x-10 text-2xl'>
                 <NavLink 
                     to="/careers" 
-                    onClick={() => handleMenuItemClick('/careers')} 
-                    className={`hover:text-advancedLightBlue ${selected === '/careers' ? 'text-blue-500' : ''}`}
+                    onClick={() => handleMenuItemClick('/careers')}
+                    className={({isActive}) => (isActive ? 'text-blue-500 hover:text-advancedLightBlue' : 'hover:text-advancedLightBlue' ) }
                 >
                     Careers
                 </NavLink>

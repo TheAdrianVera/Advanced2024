@@ -16,7 +16,10 @@ const Nav: React.FC<NavProps> = ({className}) => {
     return (
 
         <nav className={`${className} hidden md:flex flex-row items-center justify-between w-[100%] px-20`}>
-            <NavLink to="/" onClick={() => handleMenuItemClick('/')}>
+            <NavLink 
+                to="/" 
+                onClick={() => handleMenuItemClick('/')}
+            >
                 <Logo size={40} className='' />
             </NavLink>
             <ul className="flex space-x-10 text-xl">
@@ -30,9 +33,12 @@ const Nav: React.FC<NavProps> = ({className}) => {
                 ].map((item) => (
                     <li
                         key={item.path}
-                        className={`hover:text-advancedLightBlue ${selected === item.path ? 'text-blue-500' : ''}`}
                     >
-                        <NavLink to={item.path} onClick={() => handleMenuItemClick(item.path)}>
+                        <NavLink 
+                            to={item.path}
+                            className={({ isActive }) => (isActive ? 'text-blue-500 hover:text-advancedLightBlue' : 'hover:text-advancedLightBlue')}
+                            onClick={() => handleMenuItemClick(item.path)}
+                        >
                             {item.label}
                         </NavLink>
                     </li>
