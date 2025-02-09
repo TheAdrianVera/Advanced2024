@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Link, useLocation} from 'react-router-dom'
+import {NavLink, useLocation} from 'react-router-dom'
 import Logo from '../../logos/Logo'
 
 interface NavCareerOpeningsProps {
@@ -15,21 +15,21 @@ const NavCareerOpenings: React.FC<NavCareerOpeningsProps> = ({className}) => {
 
     return (
         <nav className={`${className} flex flex-row items-center justify-between w-[100%] px-20`}>
-            <Link 
+            <NavLink 
                 to="/" 
                 onClick={() => handleMenuItemClick('/')}
                 className={selected === '/' ? 'selected-class' : ''}    
             >
                 <Logo size={40} className='' />
-            </Link>
+            </NavLink>
             <div className='flex space-x-10 text-2xl'>
-                <Link 
+                <NavLink 
                     to="/careers" 
                     onClick={() => handleMenuItemClick('/careers')} 
                     className={`hover:text-advancedLightBlue ${selected === '/careers' ? 'text-blue-500' : ''}`}
                 >
                     Careers
-                </Link>
+                </NavLink>
             </div>
         </nav>
     )
