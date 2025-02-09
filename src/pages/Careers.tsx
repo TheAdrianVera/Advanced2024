@@ -45,9 +45,6 @@ const Careers: React.FC<CareersProps> = ({openings, benefitsData}) => {
         title='Careers at Advanced' 
         subtitle='Join our Advanced team and make a difference.' 
         backgroundUrl='https://d3978e1lxwwpv4.cloudfront.net/header-bg.jpg'
-        careerButton={{ 
-          text: 'Open Positions', 
-          link: '/careers/#open-positions'}}
       />
       <CultureSection />
       <BenefitsSection benefitsData={benefitsData}/>

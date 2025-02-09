@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Logo from '../../logos/Logo'
 import { TiThMenu } from "react-icons/ti"
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { TiHome } from "react-icons/ti"
 import { PiBooksFill } from "react-icons/pi"
 import { FaNotesMedical } from "react-icons/fa"
@@ -32,37 +32,74 @@ const MobileNav: React.FC<MobileNavProps> = ({ className }) => {
 
     return (
         <div className={`${className} flex flex-row items-center justify-between px-5 w-[100%]`}>
-            <Link to="/" onClick={() => handleMenuItemClick('/')}>
+            <NavLink to="/" onClick={() => handleMenuItemClick('/')}>
                 <Logo size={40} className=''/>
-            </Link>
+            </NavLink>
             <TiThMenu className='hover:text-advancedLightBlue' size={32} onClick={toggleMenu}/>
             {isMenuOpen && (
                 <div className="fixed inset-0 bg-advancedBlue flex flex-col items-center justify-center z-50">
                     <button className="hover:text-rose-500 absolute top-5 right-5 text-white text-5xl"onClick={toggleMenu}>&times;</button>
                     <ul className="flex flex-col space-y-4 text-white text-2xl">
-                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
-                            <TiHome className="mr-2"/>
-                            <Link to="/" onClick={toggleMenu}>Home</Link>
+                        <li className='flex items-center pb-2'>
+                            
+                            <NavLink 
+                                to="/" 
+                                onClick={toggleMenu}
+                                className={({isActive}) => (isActive ? 'text-advancedNavyBlue flex items-center pb-2' : 'flex items-center pb-2')}
+                            >
+                                <TiHome className='mr-2'/>
+                                Home
+                            </NavLink>
                         </li>
-                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
-                            <PiBooksFill className="mr-2"/>
-                            <Link to="/about" onClick={toggleMenu}>About</Link>
+                        <li className='flex items-center pb-2'>
+                            <NavLink 
+                                to="/about" 
+                                onClick={toggleMenu}
+                                className={({isActive}) => (isActive ? 'text-advancedNavyBlue flex items-center pb-2' : 'flex items-center pb-2')}
+                            >
+                                <PiBooksFill className="mr-2"/>
+                                About
+                            </NavLink>
                         </li>
-                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
-                            <FaNotesMedical className="mr-2"/>
-                            <Link to="/careers" onClick={toggleMenu}>Careers</Link>
+                        <li className='flex items-center pb-2'>
+                            <NavLink 
+                                to="/careers" 
+                                onClick={toggleMenu}
+                                className={({isActive}) => (isActive ? 'text-advancedNavyBlue flex items-center pb-2' : 'flex items-center pb-2')}
+                            >
+                                <FaNotesMedical className="mr-2"/>
+                                Careers
+                            </NavLink>
                         </li>
-                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
-                            <MdGroups className="mr-2"/>
-                            <Link to="/community" onClick={toggleMenu}>Community</Link>
+                        <li className='flex items-center pb-2'>
+                            <NavLink 
+                                to="/community" 
+                                onClick={toggleMenu}
+                                className={({isActive}) => (isActive ? 'text-advancedNavyBlue flex items-center pb-2' : 'flex items-center pb-2')}
+                            >
+                                <MdGroups className="mr-2"/>
+                                Community
+                            </NavLink>
                         </li>
-                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
-                            <FaHandHoldingMedical className="mr-2"/>
-                            <Link to="/services" onClick={toggleMenu}>Services</Link>
+                        <li className='flex items-center pb-2'>
+                            <NavLink 
+                                to="/services" 
+                                onClick={toggleMenu}
+                                className={({isActive}) => (isActive ? 'text-advancedNavyBlue flex items-center pb-2' : 'flex items-center pb-2')}
+                            >
+                                <FaHandHoldingMedical className="mr-2"/>
+                                Services
+                            </NavLink>
                         </li>
-                        <li className='hover:text-advancedNavyBlue flex items-center pb-2'>
-                            <MdContactPage className="mr-2"/>
-                            <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+                        <li className='flex items-center pb-2'>
+                            <NavLink 
+                                to="/contact" 
+                                onClick={toggleMenu}
+                                className={({isActive}) => (isActive ? 'text-advancedNavyBlue flex items-center pb-2' : 'flex items-center pb-2')}
+                            >
+                                <MdContactPage className="mr-2"/>
+                                Contact
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
