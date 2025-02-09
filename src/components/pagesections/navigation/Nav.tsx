@@ -1,24 +1,17 @@
-import React, {useState} from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Logo from '../../logos/Logo'
 interface NavProps {
     className?: string
 }
 
 const Nav: React.FC<NavProps> = ({className}) => {
-    const location = useLocation()
-    const [selected, setSelected] = useState(location.pathname)
-
-    const handleMenuItemClick = (path: string) => {
-        setSelected(path)
-    }
 
     return (
 
         <nav className={`${className} hidden md:flex flex-row items-center justify-between w-[100%] px-20`}>
             <NavLink 
                 to="/" 
-                onClick={() => handleMenuItemClick('/')}
             >
                 <Logo size={40} className='' />
             </NavLink>
@@ -37,7 +30,6 @@ const Nav: React.FC<NavProps> = ({className}) => {
                         <NavLink 
                             to={item.path}
                             className={({ isActive }) => (isActive ? 'text-blue-500 hover:text-advancedLightBlue' : 'hover:text-advancedLightBlue')}
-                            onClick={() => handleMenuItemClick(item.path)}
                         >
                             {item.label}
                         </NavLink>
