@@ -139,11 +139,6 @@ const About: React.FC = () => {
       imgUrl: nameToPngFileName('Meghan Burtle', 'Certified Occupational Therapist Assistant'),
     },
     {
-      name: 'Nicole Roos',
-      title: 'Licensed Practical Nurse (LPN)',
-      imgUrl: nameToPngFileName('Nicole Roos', 'Licensed Practical Nurse (LPN)'),
-    },
-    {
       name: 'Crystal Hampton',
       title: 'Licensed Practical Nurse (LPN)',
       imgUrl: nameToPngFileName('Crystal Hampton', 'Licensed Practical Nurse (LPN)'),
@@ -162,16 +157,6 @@ const About: React.FC = () => {
       name: 'Annette Castleberry',
       title: 'LPN / Quality Assurance',
       imgUrl: nameToPngFileName('Annette Castleberry', 'LPN / Quality Assurance'),
-    },
-    {
-      name: 'Melinda Schnake',
-      title: 'Quality Assurance',
-      imgUrl: nameToPngFileName('Melinda Schnake', 'Quality Assurance'),
-    },
-    {
-      name: 'Kristine Buss',
-      title: 'Quality Assurance',
-      imgUrl: nameToPngFileName('Kristine Buss', 'Quality Assurance'),
     },
     {
       name: 'Heather Hopper',
