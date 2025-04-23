@@ -84,6 +84,10 @@ const communityGallery = [
     },
     // Forth Column
     {
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/nursehonorguard.jpeg',
+        alt: 'Nurse Honor Guard Members'
+    },
+    {
         imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/holiday2024/communitypresentation.jpeg',
         alt: 'Community Presentation',
     },
