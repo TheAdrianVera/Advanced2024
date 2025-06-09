@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({testimonials})
                         className='flex flex-col items-center p-10 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105'
                     >
                         <div className='w-full h-full flex flex-col items-center justify-between'>
-                            <p className='text-gray-700 text-center font-arial-italic p-2'>{`" ${testimonial.content} "`}</p>
+                            <p className='text-gray-700 text-center font-arial-italic p-2'>{`"${testimonial.content}"`}</p>
                             <h3 className='text-xl font-arial-rounded text-gray-800 mt-4'>{testimonial.name}</h3>
                         </div>
                     </div>
