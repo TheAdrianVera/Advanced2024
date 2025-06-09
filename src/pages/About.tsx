@@ -167,12 +167,32 @@ const About: React.FC = () => {
   
   const testimonialList = [
     {
+      name: 'Mr. Robert A.',
+      content: 'Thank you for the care I received from your Advanced Healthcare Services. They listened to me and were gentle when I told them about my pain. They were there to help. The care was first class and up-to-date about the help I needed. I would recommend this agency to anyone who needed home health care. They are the best!!'
+    },
+    {
+      name: 'Mr. Douglas B.',
+      content: 'Every agency staff (members) was professional, understanding, listened and concerned about my health. This type of care is imortant to improving individual health. I will recommend this agency to anyone.'
+    },
+    {
+      name: 'Ms. Rita K.',
+      content: 'Lynn was an excellent physical therapist. She encouraged me to go to the next step. She was complimentary and always helped me to feel good about myself. I looked forwared to her visits as she was always cheerful and truly cared and attentive to any concerns I may have had.'
+    },
+    {
+      name: 'Ms. Marianne S.',
+      content: 'The care I received from Advanced Healthcare Services was exceptional from the beginning. The nurse was kind and professional. The therapist, Joe, was also kind and professional. He encouraged me and helped me advanced rapidly during my recovvery processat home. I HIGHLY recommend Advanced.'
+    },
+    {
       name: 'A.W. & Family',
       content: 'Dear Advanced Healthcare services, your help was so special. You brightened Mamma‘s days and shared my burdens and fears. You were a ray of sunshine. Thank you so much for your ministry. Everyone was extra helpful and kind.'
     },
     {
       name: 'Satisfied Patient',
       content: 'Everyone was so polite and courteous. If I didn’t understand something they would explain it to me. I really enjoyed all the help I had.'
+    },
+    {
+      name: 'Ms. Mary A.',
+      content: 'Excellent Care, very nice and kind health providers'
     },
     {
       name: 'Former Patient',
