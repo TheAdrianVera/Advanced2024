@@ -59,15 +59,15 @@ const AboutSection: React.FC = () => {
                 <div className='flex flex-col mt-5 w-full md:w-3/4 lg:w-2/3'>
                     {aboutData.section3Criteria.map((criteria, index) => (
                         <div key={index} className='flex flex-col w-full lg:flex-row lg:pb-10'>
-                            <div className='flex flex-col p-6 bg-gray-100 rounded-lg shadow-lg mb-2 w-full lg:w-1/2'>
+                            <div className='flex flex-col p-6 bg-advancedNavyBlue rounded-lg shadow-lg mb-2 w-full lg:w-1/2'>
                                 <div className='flex flex-col items-center'>
-                                    <h3 className='text-xl font-arial-rounded-bold text-gray-800 mb-6'>Criteria {index + 1}</h3>
+                                    <h3 className='text-xl font-arial-rounded-bold text-white mb-6'>Criteria {index + 1}</h3>
                                 </div>
-                                <p className='text-gray-700 text-lg pb-2'>{`1. ${criteria.content1}`}</p>
-                                <p className='text-gray-700 text-lg pb-2'>{`2. ${criteria.content2}`}</p>
+                                <p className='text-gray-100 text-lg pb-2'>{`1. ${criteria.content1}`}</p>
+                                <p className='text-gray-100 text-lg pb-2'>{`2. ${criteria.content2}`}</p>
                             </div>
                             <div className='p-6 mb-5 md:mb-10 w-full lg:w-1/2 lg:flex lg:flex-col lg:justify-center'>
-                                <p className='text-gray-700 text-lg '>{`${criteria.content3}`}</p>
+                                <p className='text-lg '>{`${criteria.content3}`}</p>
                             </div>
                         </div>
                     ))}
