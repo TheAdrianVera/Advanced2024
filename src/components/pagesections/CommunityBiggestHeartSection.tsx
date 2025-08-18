@@ -2,6 +2,16 @@ import React from "react"
 
 const biggestHeartAwards = [
     {
+        name:'SIU Center for Healthy Aging and Wellness',
+        period:'June Winner',
+        year:'2025',
+        content1:'AHS had the honor of awarding "The Biggest Heart" to SIU Center for Healthy Aging and Wellness yesterday. There is no more deserving group than these individuals right here! With top notch, patient centered care, this clinic is one of kind for our area. Their website says it all... "Our goal is to provide you with individualized, compassionate care, help you live a healthy, productive life and improve or maintain your well-being, comfort and quality of life."',
+        content2:'Thank you SIU Center for Healthy Aging and Wellness for going above and beyond for our community! Check out their website at the link below!',
+        link: 'https://www.siumed.org/chaw',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/biggestheart082025.jpg',
+        imgAlt: 'Biggest Heart Award Winner SIU Center for Healthy Aging and Wellness'
+    },
+    {
         name: 'Brandon Price',
         period: 'December Winner',
         year: '2024',
