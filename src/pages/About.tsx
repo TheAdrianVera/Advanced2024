@@ -167,6 +167,10 @@ const About: React.FC = () => {
   
   const testimonialList = [
     {
+      name: 'Thankful Patient',
+      content: ' I wanted to give a big shout out to the therapist that saw my loved one last Thursday. She has lived at Mary Bryant home for over 30 years and has been struggling. She was very concerned that she was going to have to leave her home because she has declined so much. She needed to meet with the director and was very emotional about needing his help. Our therapist walked in and sat down with us, and just explained that Advanced is here to help do everything possible to keep my loved one at her home, and to make her quality of life even better. It makes me emotional thinking about the team went above and beyond to make her comfortable.'
+    },
+    {
       name: 'Mr. Robert A.',
       content: 'Thank you for the care I received from your Advanced Healthcare Services. They listened to me and were gentle when I told them about my pain. They were there to help. The care was first class and up-to-date about the help I needed. I would recommend this agency to anyone who needed home health care. They are the best!!'
     },
