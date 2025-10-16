@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         button={{ 
           text: 'Learn More', 
           link: '/#services'}}
-        subtitle='Known our Expertise, Chosen for our Care'
+        subtitle='Known for our Expertise, Chosen for our Care'
         backgroundUrl='https://d3978e1lxwwpv4.cloudfront.net/header-bg.jpg'
         logo={true}
         logoUrl='https://d3978e1lxwwpv4.cloudfront.net/ahsllc_logo.png'

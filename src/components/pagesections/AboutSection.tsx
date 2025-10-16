@@ -5,7 +5,7 @@ const aboutData = {
     section1Para2: 'We will do everything we can to meet your expectations. With a variety of services - from Skilled Nursing to Podiatry - we’re sure you’ll be happy working with us.',
     section2Title: 'Home Health Care',
     section2Para1: 'Home health care allows patients to maintain quality of life and receive personlized health care in the comfort of their home.',
-    section2Para2: 'In addition ot being a cost-effective option for receiving health care services, home health promotes quicker recover and improves the quality of life for both patient and their family.',
+    section2Para2: 'In addition to being a cost-effective option for receiving health care services, home health promotes quicker recover and improves the quality of life for both patient and their family.',
     section3Title: 'Criteria For Homebound Status',
     section3SubTitle: `The following criteria are considered when determining homebound status. To be considered homebound, both criteria one and two must be met.`,
     section3Criteria: [
