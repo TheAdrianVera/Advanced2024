@@ -2,6 +2,16 @@ import React from "react"
 
 const biggestHeartAwards = [
     {
+        name:'Lara Bowen with The Villas Senior Care Community',
+        period:'September Winner',
+        year:'2025',
+        content1:'We are pleased to announce Lara Bowen with The Villas Senior Care Community as our Quarterly Biggest Heart recipient.',
+        content2:`Lara's service to seniors at The Villas has earned her this distinction, as she consistently provides a calming influence during challenging times. Families trust her throughout their stay and at discharge. With a smile on her face, Lara takes the time to develop meaningful relationships with residents and their families.`,
+        link: 'https://www.villasseniorcare.com/',
+        imgUrl: 'https://d3978e1lxwwpv4.cloudfront.net/biggestheart_Q32025.jpg',
+        imgAlt: 'Biggest Heart Award Winner Lara Bowen with The Villas Senior Care Community'
+    },
+    {
         name:'SIU Center for Healthy Aging and Wellness',
         period:'June Winner',
         year:'2025',
